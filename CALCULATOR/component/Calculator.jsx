@@ -10,8 +10,6 @@ class Calculator extends Component {
 			history: [],
 		};
 	}
-
-	// Custom factorial function
 	factorial = (n) => {
 		if (n === 0 || n === 1) return 1;
 		let result = 1;
@@ -25,13 +23,10 @@ class Calculator extends Component {
 		if (value === "=") {
 			try {
 				let modifiedDisplay = this.state.display;
-
-				// Replace '!' with a call to the custom factorial function
 				modifiedDisplay = modifiedDisplay.replace(
 					/(\d+)!/g,
 					"this.factorial($1)"
 				);
-				// Replace '^' with '**' for exponentiation
 				modifiedDisplay = modifiedDisplay.replace(/\^/g, "**");
 
 				const result = eval(modifiedDisplay);
@@ -206,7 +201,6 @@ class Calculator extends Component {
 					>
 						^
 					</button>{" "}
-					{/* Add the '^' button */}
 					<button
 						onClick={() => this.handleClick("Reset")}
 						className="function-button"
