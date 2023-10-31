@@ -154,16 +154,16 @@ class Calculator extends Component {
 						.
 					</button>
 					<button
-						onClick={() => this.handleClick("CE")}
+						onClick={() => this.handleClick("^")}
+						className="operator-button"
+					>
+						^
+					</button>{" "}
+					<button
+						onClick={() => this.handleClick("!")}
 						className="function-button"
 					>
-						CE
-					</button>
-					<button
-						onClick={() => this.handleClick("=")}
-						className="equals-button"
-					>
-						=
+						!
 					</button>
 					<button
 						onClick={() => this.handleClick("/")}
@@ -190,18 +190,6 @@ class Calculator extends Component {
 						x^2
 					</button>
 					<button
-						onClick={() => this.handleClick("!")}
-						className="function-button"
-					>
-						!
-					</button>
-					<button
-						onClick={() => this.handleClick("^")}
-						className="operator-button"
-					>
-						^
-					</button>{" "}
-					<button
 						onClick={() => this.handleClick("Reset")}
 						className="function-button"
 					>
@@ -212,6 +200,18 @@ class Calculator extends Component {
 						className="function-button"
 					>
 						History
+					</button>
+					<button
+						onClick={() => this.handleClick("CE")}
+						className="function-button"
+					>
+						CE
+					</button>
+					<button
+						onClick={() => this.handleClick("=")}
+						className="equals-button"
+					>
+						=
 					</button>
 				</div>
 			</div>
