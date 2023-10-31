@@ -10,6 +10,8 @@ class Calculator extends Component {
 			history: [],
 		};
 	}
+
+	// Custom factorial function
 	factorial = (n) => {
 		if (n === 0 || n === 1) return 1;
 		let result = 1;
@@ -54,6 +56,8 @@ class Calculator extends Component {
 				display: prevState.history.join("\n"),
 				isResult: true,
 			}));
+		} else if (value === "^2") {
+			this.setState({ display: this.state.display + "^2", isResult: false });
 		} else {
 			this.setState({ display: this.state.display + value, isResult: false });
 		}
@@ -154,16 +158,16 @@ class Calculator extends Component {
 						.
 					</button>
 					<button
-						onClick={() => this.handleClick("^")}
-						className="operator-button"
-					>
-						^
-					</button>{" "}
-					<button
-						onClick={() => this.handleClick("!")}
+						onClick={() => this.handleClick("CE")}
 						className="function-button"
 					>
-						!
+						CE
+					</button>
+					<button
+						onClick={() => this.handleClick("=")}
+						className="equals-button"
+					>
+						=
 					</button>
 					<button
 						onClick={() => this.handleClick("/")}
@@ -184,10 +188,16 @@ class Calculator extends Component {
 						)
 					</button>
 					<button
-						onClick={() => this.handleClick("x^2")}
+						onClick={() => this.handleClick("!")}
 						className="function-button"
 					>
-						x^2
+						!
+					</button>
+					<button
+						onClick={() => this.handleClick("^2")}
+						className="function-button"
+					>
+						^2
 					</button>
 					<button
 						onClick={() => this.handleClick("Reset")}
@@ -202,17 +212,12 @@ class Calculator extends Component {
 						History
 					</button>
 					<button
-						onClick={() => this.handleClick("CE")}
-						className="function-button"
+						onClick={() => this.handleClick("^")}
+						className="operator-button"
 					>
-						CE
+						^
 					</button>
-					<button
-						onClick={() => this.handleClick("=")}
-						className="equals-button"
-					>
-						=
-					</button>
+					{/* Add more buttons with appropriate classNames for other functionalities as needed */}
 				</div>
 			</div>
 		);
