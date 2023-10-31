@@ -9,4 +9,16 @@
 		transform: scale(1.1);
 		transition: ease-in-out 0.4s;
 	}
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+		text-align: center;
+		font-size: var(--font-6);
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 }
