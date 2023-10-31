@@ -45,33 +45,158 @@ class Calculator extends Component {
 	render() {
 		return (
 			<div className="calculator">
-				<input type="text" value={this.state.display} readOnly />
+				<input
+					type="text"
+					className="display"
+					value={this.state.display}
+					readOnly
+				/>
 				<div className="buttons">
-					<button onClick={() => this.handleClick("7")}>7</button>
-					<button onClick={() => this.handleClick("8")}>8</button>
-					<button onClick={() => this.handleClick("9")}>9</button>
-					<button onClick={() => this.handleClick("+")}>+</button>
-					<button onClick={() => this.handleClick("4")}>4</button>
-					<button onClick={() => this.handleClick("5")}>5</button>
-					<button onClick={() => this.handleClick("6")}>6</button>
-					<button onClick={() => this.handleClick("-")}>-</button>
-					<button onClick={() => this.handleClick("1")}>1</button>
-					<button onClick={() => this.handleClick("2")}>2</button>
-					<button onClick={() => this.handleClick("3")}>3</button>
-					<button onClick={() => this.handleClick("*")}>*</button>
-					<button onClick={() => this.handleClick("0")}>0</button>
-					<button onClick={() => this.handleClick(".")}>.</button>
-					<button onClick={() => this.handleClick("CE")}>CE</button>
-					<button onClick={() => this.handleClick("=")}>=</button>
-					<button onClick={() => this.handleClick("/")}>/</button>
-					<button onClick={() => this.handleClick("(")}>(</button>
-					<button onClick={() => this.handleClick(")")}>)</button>
-					<button onClick={() => this.handleClick("x^2")}>x^2</button>
-					<button onClick={() => this.handleClick("Math.PI")}>π</button>
-					<button onClick={() => this.handleClick("n!")}>n!</button>
-					<button onClick={() => this.handleClick("Reset")}>Reset</button>
-					<button onClick={() => this.handleClick("History")}>History</button>
-					{/* Add more buttons for other functionalities as needed */}
+					<button
+						onClick={() => this.handleClick("7")}
+						className="number-button"
+					>
+						7
+					</button>
+					<button
+						onClick={() => this.handleClick("8")}
+						className="number-button"
+					>
+						8
+					</button>
+					<button
+						onClick={() => this.handleClick("9")}
+						className="number-button"
+					>
+						9
+					</button>
+					<button
+						onClick={() => this.handleClick("+")}
+						className="operator-button"
+					>
+						+
+					</button>
+					<button
+						onClick={() => this.handleClick("4")}
+						className="number-button"
+					>
+						4
+					</button>
+					<button
+						onClick={() => this.handleClick("5")}
+						className="number-button"
+					>
+						5
+					</button>
+					<button
+						onClick={() => this.handleClick("6")}
+						className="number-button"
+					>
+						6
+					</button>
+					<button
+						onClick={() => this.handleClick("-")}
+						className="operator-button"
+					>
+						-
+					</button>
+					<button
+						onClick={() => this.handleClick("1")}
+						className="number-button"
+					>
+						1
+					</button>
+					<button
+						onClick={() => this.handleClick("2")}
+						className="number-button"
+					>
+						2
+					</button>
+					<button
+						onClick={() => this.handleClick("3")}
+						className="number-button"
+					>
+						3
+					</button>
+					<button
+						onClick={() => this.handleClick("*")}
+						className="operator-button"
+					>
+						*
+					</button>
+					<button
+						onClick={() => this.handleClick("0")}
+						className="number-button"
+					>
+						0
+					</button>
+					<button
+						onClick={() => this.handleClick(".")}
+						className="number-button"
+					>
+						.
+					</button>
+					<button
+						onClick={() => this.handleClick("CE")}
+						className="function-button"
+					>
+						CE
+					</button>
+					<button
+						onClick={() => this.handleClick("=")}
+						className="equals-button"
+					>
+						=
+					</button>
+					<button
+						onClick={() => this.handleClick("/")}
+						className="operator-button"
+					>
+						/
+					</button>
+					<button
+						onClick={() => this.handleClick("(")}
+						className="number-button"
+					>
+						(
+					</button>
+					<button
+						onClick={() => this.handleClick(")")}
+						className="number-button"
+					>
+						)
+					</button>
+					<button
+						onClick={() => this.handleClick("x^2")}
+						className="function-button"
+					>
+						x^2
+					</button>
+					<button
+						onClick={() => this.handleClick("Math.PI")}
+						className="number-button"
+					>
+						π
+					</button>
+					<button
+						onClick={() => this.handleClick("n!")}
+						className="function-button"
+					>
+						n!
+					</button>
+					<button
+						onClick={() => this.handleClick("Reset")}
+						className="function-button"
+					>
+						Reset
+					</button>
+					<button
+						onClick={() => this.handleClick("History")}
+						className="function-button"
+					>
+						History
+					</button>
+					{/* Add more buttons with appropriate classNames for other functionalities as needed */}
 				</div>
 			</div>
 		);
