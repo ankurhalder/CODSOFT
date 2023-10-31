@@ -14,7 +14,10 @@ class Calculator extends Component {
 	handleClick = (value) => {
 		if (value === "=") {
 			try {
-				const result = eval(this.state.display);
+				// Replace '!' with factorial calculation and '^' with exponentiation
+				let modifiedDisplay = this.state.display.replace(/!/g, "factorial");
+				modifiedDisplay = modifiedDisplay.replace(/\^/g, "**");
+				const result = eval(modifiedDisplay);
 				const historyEntry = `${this.state.display} = ${result}`;
 				this.setState((prevState) => ({
 					display: result,
@@ -175,18 +178,7 @@ class Calculator extends Component {
 					>
 						x^2
 					</button>
-					<button
-						onClick={() => this.handleClick("Math.PI")}
-						className="number-button"
-					>
-						π
-					</button>
-					<button
-						onClick={() => this.handleClick("n!")}
-						className="function-button"
-					>
-						n!
-					</button>
+					<button onClick={() => this.handleClick("n!")}>!</button>
 					<button
 						onClick={() => this.handleClick("Reset")}
 						className="function-button"
