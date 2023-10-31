@@ -6,7 +6,8 @@ class Calculator extends Component {
 		super();
 		this.state = {
 			display: "",
-			isResult: false,
+			isResult: false, // New state to track whether the display is a result
+			history: [], // New state to store calculation history
 		};
 	}
 
@@ -14,7 +15,11 @@ class Calculator extends Component {
 		if (value === "=") {
 			try {
 				const result = eval(this.state.display);
-				this.setState({ display: result, isResult: true });
+				this.setState((prevState) => ({
+					display: result,
+					isResult: true,
+					history: [...prevState.history, prevState.display + "=" + result],
+				}));
 			} catch (error) {
 				this.setState({ display: "Error", isResult: true });
 			}
@@ -26,46 +31,12 @@ class Calculator extends Component {
 			} else {
 				this.setState({ display: this.state.display.slice(0, -1) });
 			}
-		} else if (value === "M+") {
-		} else if (value === "M-") {
-		} else if (value === "MR") {
-		} else if (value === "MC") {
-		} else if (value === "x^2") {
-			this.setState({ display: `${this.state.display}^2` });
-		} else if (value === "x^y") {
-			this.setState({ display: `${this.state.display}^` });
-		} else if (value === "sin(") {
-			this.setState({ display: `${this.state.display}Math.sin(` });
-		} else if (value === "cos(") {
-			this.setState({ display: `${this.state.display}Math.cos(` });
-		} else if (value === "tan(") {
-			this.setState({ display: `${this.state.display}Math.tan(` });
-		} else if (value === "log(") {
-			this.setState({ display: `${this.state.display}Math.log10(` });
-		} else if (value === "ln(") {
-			this.setState({ display: `${this.state.display}Math.log(` });
-		} else if (value === "Math.PI") {
-			this.setState({ display: `${this.state.display}Math.PI` });
-		} else if (value === "Math.E") {
-			this.setState({ display: `${this.state.display}Math.E` });
-		} else if (value === "e^") {
-			this.setState({ display: `${this.state.display}Math.exp(` });
-		} else if (value === "ScientificNotation") {
-		} else if (value === "n!") {
-			try {
-				const n = parseInt(this.state.display);
-				if (!isNaN(n)) {
-					let factorial = 1;
-					for (let i = 1; i <= n; i++) {
-						factorial *= i;
-					}
-					this.setState({ display: factorial });
-				} else {
-					this.setState({ display: "Error" });
-				}
-			} catch (error) {
-				this.setState({ display: "Error" });
-			}
+		} else if (value === "Reset") {
+			this.setState({ display: "", isResult: false });
+		} else if (value === "History") {
+			// Show calculation history in the display
+			const historyString = this.state.history.join("\n");
+			this.setState({ display: historyString, isResult: true });
 		} else {
 			this.setState({ display: this.state.display + value, isResult: false });
 		}
@@ -98,18 +69,11 @@ class Calculator extends Component {
 					<button onClick={() => this.handleClick("%")}>%</button>
 					<button onClick={() => this.handleClick("x^2")}>x^2</button>
 					<button onClick={() => this.handleClick("x^y")}>x^y</button>
-					<button onClick={() => this.handleClick("sin(")}>sin</button>
-					<button onClick={() => this.handleClick("cos(")}>cos</button>
-					<button onClick={() => this.handleClick("tan(")}>tan</button>
-					<button onClick={() => this.handleClick("log(")}>log</button>
-					<button onClick={() => this.handleClick("ln(")}>ln</button>
 					<button onClick={() => this.handleClick("Math.PI")}>π</button>
-					<button onClick={() => this.handleClick("Math.E")}>e</button>
-					<button onClick={() => this.handleClick("e^")}>e^</button>
-					<button onClick={() => this.handleClick("ScientificNotation")}>
-						Sci
-					</button>
 					<button onClick={() => this.handleClick("n!")}>n!</button>
+					<button onClick={() => this.handleClick("Reset")}>Reset</button>
+					<button onClick={() => this.handleClick("History")}>History</button>
+					{/* Add more buttons for other functionalities as needed */}
 				</div>
 			</div>
 		);
