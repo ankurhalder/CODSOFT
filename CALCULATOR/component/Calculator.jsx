@@ -66,9 +66,7 @@ class Calculator extends Component {
 					<button onClick={() => this.handleClick("/")}>/</button>
 					<button onClick={() => this.handleClick("(")}>(</button>
 					<button onClick={() => this.handleClick(")")}>)</button>
-					<button onClick={() => this.handleClick("%")}>%</button>
 					<button onClick={() => this.handleClick("x^2")}>x^2</button>
-					<button onClick={() => this.handleClick("x^y")}>x^y</button>
 					<button onClick={() => this.handleClick("Math.PI")}>π</button>
 					<button onClick={() => this.handleClick("n!")}>n!</button>
 					<button onClick={() => this.handleClick("Reset")}>Reset</button>
