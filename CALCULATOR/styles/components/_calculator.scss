@@ -1,12 +1,11 @@
 .calculator {
 	width: 100%;
-	max-width: 320px;
+	max-width: 400px;
 	margin: 0 auto;
 	background: #333;
 	border-radius: 12px;
 	box-shadow: 0 0 20px var(--black-shadow-light-2);
-	font-family: Arial, sans-serif;
-	text-align: right;
+	text-align: center;
 	padding: 15px;
 
 	input {
