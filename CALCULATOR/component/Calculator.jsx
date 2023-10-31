@@ -11,12 +11,27 @@ class Calculator extends Component {
 		};
 	}
 
+	// Custom factorial function
+	factorial = (n) => {
+		if (n === 0 || n === 1) return 1;
+		let result = 1;
+		for (let i = 2; i <= n; i++) {
+			result *= i;
+		}
+		return result;
+	};
+
 	handleClick = (value) => {
 		if (value === "=") {
 			try {
-				// Replace '!' with factorial calculation and '^' with exponentiation
-				let modifiedDisplay = this.state.display.replace(/!/g, "factorial");
-				modifiedDisplay = modifiedDisplay.replace(/\^/g, "**");
+				let modifiedDisplay = this.state.display;
+
+				// Replace '!' with a call to the custom factorial function
+				modifiedDisplay = modifiedDisplay.replace(
+					/(\d+)!/g,
+					"this.factorial($1)"
+				);
+
 				const result = eval(modifiedDisplay);
 				const historyEntry = `${this.state.display} = ${result}`;
 				this.setState((prevState) => ({
@@ -178,7 +193,13 @@ class Calculator extends Component {
 					>
 						x^2
 					</button>
-					<button onClick={() => this.handleClick("n!")}>!</button>
+					<button
+						onClick={() => this.handleClick("!")}
+						className="function-button"
+					>
+						!
+					</button>{" "}
+					{/* Add the '!' button */}
 					<button
 						onClick={() => this.handleClick("Reset")}
 						className="function-button"
