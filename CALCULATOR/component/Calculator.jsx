@@ -51,6 +51,22 @@ class Calculator extends Component {
 			this.setState({ display: `${this.state.display}Math.exp(` });
 		} else if (value === "ScientificNotation") {
 			// Implement scientific notation
+		} else if (value === "n!") {
+			// Implement factorial calculation
+			try {
+				const n = parseInt(this.state.display);
+				if (!isNaN(n)) {
+					let factorial = 1;
+					for (let i = 1; i <= n; i++) {
+						factorial *= i;
+					}
+					this.setState({ display: factorial });
+				} else {
+					this.setState({ display: "Error" });
+				}
+			} catch (error) {
+				this.setState({ display: "Error" });
+			}
 		} else {
 			this.setState({ display: this.state.display + value });
 		}
@@ -94,6 +110,7 @@ class Calculator extends Component {
 					<button onClick={() => this.handleClick("ScientificNotation")}>
 						Sci
 					</button>
+					<button onClick={() => this.handleClick("n!")}>n!</button>
 					{/* Add more buttons for other functionalities as needed */}
 				</div>
 			</div>
