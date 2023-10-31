@@ -7,7 +7,16 @@
 	box-shadow: 0 0 20px var(--black-shadow-light-2);
 	text-align: center;
 	padding: 15px;
-
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 	input {
 		width: 100%;
 		padding: 10px;
@@ -19,13 +28,32 @@
 		color: var(--white);
 		margin-bottom: 5%;
 		box-shadow: 0 0 10px var(--black-shadow-light-2);
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	.buttons {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 10px;
-
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		button {
 			width: 100%;
 			height: 60px;
@@ -41,6 +69,16 @@
 
 			&:hover {
 				background: linear-gradient(135deg, #222, #333);
+			}
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
 			}
 		}
 	}
