@@ -1,10 +1,12 @@
 /* eslint-disable no-eval */
 import React, { Component } from "react";
+
 class Calculator extends Component {
 	constructor() {
 		super();
 		this.state = {
 			display: "",
+			isResult: false,
 		};
 	}
 
@@ -12,14 +14,18 @@ class Calculator extends Component {
 		if (value === "=") {
 			try {
 				const result = eval(this.state.display);
-				this.setState({ display: result });
+				this.setState({ display: result, isResult: true });
 			} catch (error) {
-				this.setState({ display: "Error" });
+				this.setState({ display: "Error", isResult: true });
 			}
 		} else if (value === "C") {
-			this.setState({ display: "" });
+			this.setState({ display: "", isResult: false });
 		} else if (value === "CE") {
-			this.setState({ display: this.state.display.slice(0, -1) });
+			if (this.state.isResult) {
+				this.setState({ display: "", isResult: false });
+			} else {
+				this.setState({ display: this.state.display.slice(0, -1) });
+			}
 		} else if (value === "M+") {
 		} else if (value === "M-") {
 		} else if (value === "MR") {
@@ -61,7 +67,7 @@ class Calculator extends Component {
 				this.setState({ display: "Error" });
 			}
 		} else {
-			this.setState({ display: this.state.display + value });
+			this.setState({ display: this.state.display + value, isResult: false });
 		}
 	};
 
