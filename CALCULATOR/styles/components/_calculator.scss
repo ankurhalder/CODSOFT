@@ -17,6 +17,7 @@
 		max-width: 300px;
 	}
 	@media (max-width: $breakpoint-phone) {
+		max-width: 250px;
 	}
 	input {
 		width: 100%;
@@ -54,6 +55,7 @@
 		@media (max-width: $breakpoint-tablet) {
 		}
 		@media (max-width: $breakpoint-phone) {
+			grid-template-columns: repeat(3, 1fr);
 		}
 		button {
 			width: 100%;
@@ -74,12 +76,14 @@
 			@media (max-width: $breakpoint-desktop-wide) {
 			}
 			@media (max-width: $breakpoint-desktop) {
+				height: 50px;
 			}
 			@media (max-width: $breakpoint-large-tablet) {
 			}
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
+				height: 50px;
 			}
 		}
 	}
