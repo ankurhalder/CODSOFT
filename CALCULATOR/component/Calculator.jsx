@@ -6,8 +6,8 @@ class Calculator extends Component {
 		super();
 		this.state = {
 			display: "",
-			isResult: false, // New state to track whether the display is a result
-			history: [], // New state to store calculation history
+			isResult: false,
+			history: [],
 		};
 	}
 
@@ -31,6 +31,8 @@ class Calculator extends Component {
 					/(\d+)!/g,
 					"this.factorial($1)"
 				);
+				// Replace '^' with '**' for exponentiation
+				modifiedDisplay = modifiedDisplay.replace(/\^/g, "**");
 
 				const result = eval(modifiedDisplay);
 				const historyEntry = `${this.state.display} = ${result}`;
@@ -53,7 +55,6 @@ class Calculator extends Component {
 		} else if (value === "Reset") {
 			this.setState({ display: "", isResult: false });
 		} else if (value === "History") {
-			// Show calculation history in the main display
 			this.setState((prevState) => ({
 				display: prevState.history.join("\n"),
 				isResult: true,
@@ -198,8 +199,14 @@ class Calculator extends Component {
 						className="function-button"
 					>
 						!
+					</button>
+					<button
+						onClick={() => this.handleClick("^")}
+						className="operator-button"
+					>
+						^
 					</button>{" "}
-					{/* Add the '!' button */}
+					{/* Add the '^' button */}
 					<button
 						onClick={() => this.handleClick("Reset")}
 						className="function-button"
@@ -212,7 +219,6 @@ class Calculator extends Component {
 					>
 						History
 					</button>
-					{/* Add more buttons with appropriate classNames for other functionalities as needed */}
 				</div>
 			</div>
 		);
