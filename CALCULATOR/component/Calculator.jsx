@@ -1,6 +1,5 @@
 /* eslint-disable no-eval */
 import React, { Component } from "react";
-
 class Calculator extends Component {
 	constructor() {
 		super();
@@ -22,13 +21,9 @@ class Calculator extends Component {
 		} else if (value === "CE") {
 			this.setState({ display: this.state.display.slice(0, -1) });
 		} else if (value === "M+") {
-			// Implement memory functionality to add to memory
 		} else if (value === "M-") {
-			// Implement memory functionality to subtract from memory
 		} else if (value === "MR") {
-			// Implement memory functionality to recall memory
 		} else if (value === "MC") {
-			// Implement memory functionality to clear memory
 		} else if (value === "x^2") {
 			this.setState({ display: `${this.state.display}^2` });
 		} else if (value === "x^y") {
@@ -50,9 +45,7 @@ class Calculator extends Component {
 		} else if (value === "e^") {
 			this.setState({ display: `${this.state.display}Math.exp(` });
 		} else if (value === "ScientificNotation") {
-			// Implement scientific notation
 		} else if (value === "n!") {
-			// Implement factorial calculation
 			try {
 				const n = parseInt(this.state.display);
 				if (!isNaN(n)) {
@@ -111,7 +104,6 @@ class Calculator extends Component {
 						Sci
 					</button>
 					<button onClick={() => this.handleClick("n!")}>n!</button>
-					{/* Add more buttons for other functionalities as needed */}
 				</div>
 			</div>
 		);
