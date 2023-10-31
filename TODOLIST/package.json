@@ -12,7 +12,8 @@
 	},
 	"dependencies": {
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.18.0"
 	},
 	"devDependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -21,8 +22,8 @@
 		"@vitejs/plugin-react": "^4.0.3",
 		"eslint": "^8.52.0",
 		"eslint-config-react-app": "^7.0.1",
+		"sass": "^1.69.5",
 		"vite": "^4.4.5",
-		"vite-plugin-eslint": "^1.8.1",
-		"sass": "^1.69.5"
+		"vite-plugin-eslint": "^1.8.1"
 	}
 }
