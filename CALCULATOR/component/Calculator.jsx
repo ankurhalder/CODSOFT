@@ -10,8 +10,6 @@ class Calculator extends Component {
 			history: [],
 		};
 	}
-
-	// Custom factorial function
 	factorial = (n) => {
 		if (n === 0 || n === 1) return 1;
 		let result = 1;
@@ -158,17 +156,12 @@ class Calculator extends Component {
 						.
 					</button>
 					<button
-						onClick={() => this.handleClick("CE")}
-						className="function-button"
+						onClick={() => this.handleClick("^")}
+						className="operator-button"
 					>
-						CE
+						^
 					</button>
-					<button
-						onClick={() => this.handleClick("=")}
-						className="equals-button"
-					>
-						=
-					</button>
+
 					<button
 						onClick={() => this.handleClick("/")}
 						className="operator-button"
@@ -212,12 +205,17 @@ class Calculator extends Component {
 						History
 					</button>
 					<button
-						onClick={() => this.handleClick("^")}
-						className="operator-button"
+						onClick={() => this.handleClick("CE")}
+						className="function-button"
 					>
-						^
+						CE
 					</button>
-					{/* Add more buttons with appropriate classNames for other functionalities as needed */}
+					<button
+						onClick={() => this.handleClick("=")}
+						className="equals-button"
+					>
+						=
+					</button>
 				</div>
 			</div>
 		);
