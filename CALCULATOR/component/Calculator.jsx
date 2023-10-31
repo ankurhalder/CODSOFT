@@ -1,5 +1,4 @@
-// src/Calculator.js
-
+/* eslint-disable no-eval */
 import React, { Component } from "react";
 
 class Calculator extends Component {
@@ -20,6 +19,38 @@ class Calculator extends Component {
 			}
 		} else if (value === "C") {
 			this.setState({ display: "" });
+		} else if (value === "CE") {
+			this.setState({ display: this.state.display.slice(0, -1) });
+		} else if (value === "M+") {
+			// Implement memory functionality to add to memory
+		} else if (value === "M-") {
+			// Implement memory functionality to subtract from memory
+		} else if (value === "MR") {
+			// Implement memory functionality to recall memory
+		} else if (value === "MC") {
+			// Implement memory functionality to clear memory
+		} else if (value === "x^2") {
+			this.setState({ display: `${this.state.display}^2` });
+		} else if (value === "x^y") {
+			this.setState({ display: `${this.state.display}^` });
+		} else if (value === "sin(") {
+			this.setState({ display: `${this.state.display}Math.sin(` });
+		} else if (value === "cos(") {
+			this.setState({ display: `${this.state.display}Math.cos(` });
+		} else if (value === "tan(") {
+			this.setState({ display: `${this.state.display}Math.tan(` });
+		} else if (value === "log(") {
+			this.setState({ display: `${this.state.display}Math.log10(` });
+		} else if (value === "ln(") {
+			this.setState({ display: `${this.state.display}Math.log(` });
+		} else if (value === "Math.PI") {
+			this.setState({ display: `${this.state.display}Math.PI` });
+		} else if (value === "Math.E") {
+			this.setState({ display: `${this.state.display}Math.E` });
+		} else if (value === "e^") {
+			this.setState({ display: `${this.state.display}Math.exp(` });
+		} else if (value === "ScientificNotation") {
+			// Implement scientific notation
 		} else {
 			this.setState({ display: this.state.display + value });
 		}
@@ -43,9 +74,27 @@ class Calculator extends Component {
 					<button onClick={() => this.handleClick("3")}>3</button>
 					<button onClick={() => this.handleClick("*")}>*</button>
 					<button onClick={() => this.handleClick("0")}>0</button>
-					<button onClick={() => this.handleClick("C")}>C</button>
+					<button onClick={() => this.handleClick(".")}>.</button>
+					<button onClick={() => this.handleClick("CE")}>CE</button>
 					<button onClick={() => this.handleClick("=")}>=</button>
 					<button onClick={() => this.handleClick("/")}>/</button>
+					<button onClick={() => this.handleClick("(")}>(</button>
+					<button onClick={() => this.handleClick(")")}>)</button>
+					<button onClick={() => this.handleClick("%")}>%</button>
+					<button onClick={() => this.handleClick("x^2")}>x^2</button>
+					<button onClick={() => this.handleClick("x^y")}>x^y</button>
+					<button onClick={() => this.handleClick("sin(")}>sin</button>
+					<button onClick={() => this.handleClick("cos(")}>cos</button>
+					<button onClick={() => this.handleClick("tan(")}>tan</button>
+					<button onClick={() => this.handleClick("log(")}>log</button>
+					<button onClick={() => this.handleClick("ln(")}>ln</button>
+					<button onClick={() => this.handleClick("Math.PI")}>π</button>
+					<button onClick={() => this.handleClick("Math.E")}>e</button>
+					<button onClick={() => this.handleClick("e^")}>e^</button>
+					<button onClick={() => this.handleClick("ScientificNotation")}>
+						Sci
+					</button>
+					{/* Add more buttons for other functionalities as needed */}
 				</div>
 			</div>
 		);
