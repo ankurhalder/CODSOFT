@@ -2,7 +2,7 @@ import { Calculator } from "../component";
 function App() {
 	return (
 		<div>
-			<h1>Calculator</h1>
+			<h1 className="calculator-heading">Calculator by Ankur halder</h1>
 			<Calculator></Calculator>
 		</div>
 	);
