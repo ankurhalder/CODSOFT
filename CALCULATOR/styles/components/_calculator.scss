@@ -1,5 +1,6 @@
 .calculator {
-	width: 320px;
+	width: 100%;
+	max-width: 320px; /* Set a maximum width for larger screens */
 	margin: 0 auto;
 	background: #333;
 	border-radius: 12px;
@@ -42,5 +43,12 @@
 				background: linear-gradient(135deg, #222, #333);
 			}
 		}
+	}
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+	.calculator {
+		max-width: 480px; /* Adjust the maximum width for larger screens */
 	}
 }
