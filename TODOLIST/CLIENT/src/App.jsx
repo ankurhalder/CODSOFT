@@ -1,8 +1,15 @@
+import { Fragment } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SignIn, SignUp, NoPage } from "../pages";
 function App() {
 	return (
-		<div>
-			<h1>ToDo List</h1>
-		</div>
+		<Fragment>
+			<BrowserRouter>
+				<Routes>
+					<Route></Route>
+				</Routes>
+			</BrowserRouter>
+		</Fragment>
 	);
 }
 

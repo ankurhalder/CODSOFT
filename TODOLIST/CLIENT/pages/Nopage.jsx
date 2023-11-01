@@ -1,4 +1,4 @@
-function Nopage() {
+function NoPage() {
 	return (
 		<div>
 			<h1>404</h1>
@@ -6,4 +6,4 @@ function Nopage() {
 	);
 }
 
-export default Nopage;
+export default NoPage;
