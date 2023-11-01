@@ -2,16 +2,17 @@
 	width: 100%;
 	max-width: 400px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 30px;
 	background: #f4f4f4;
-	border-radius: 10px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	text-align: center;
 
 	h2 {
-		font-size: 2rem;
-		text-align: center;
+		font-size: 2.5rem;
 		color: #333;
 		margin-bottom: 20px;
+		text-transform: uppercase;
 	}
 
 	.form-group {
@@ -19,19 +20,19 @@
 
 		label {
 			display: block;
-			font-weight: 600;
+			font-weight: 700;
 			margin-bottom: 10px;
-			color: #333;
+			color: #444;
 		}
 
 		input {
 			width: 100%;
 			padding: 15px;
 			border: 2px solid #ccc;
-			border-radius: 8px;
+			border-radius: 15px;
 			font-size: 1.2rem;
 			background-color: #f9f9f9;
-			color: #333;
+			color: #444;
 			transition: border-color 0.3s;
 
 			&:focus {
@@ -43,8 +44,8 @@
 
 	.error-message {
 		color: #d9534f;
-		font-size: 1rem;
-		margin-top: 5px;
+		font-size: 1.1rem;
+		margin-top: 10px;
 	}
 
 	button {
@@ -53,10 +54,11 @@
 		background-color: #007bff;
 		color: #fff;
 		border: none;
-		border-radius: 8px;
+		border-radius: 15px;
 		font-size: 1.5rem;
 		cursor: pointer;
 		transition: background-color 0.3s;
+		text-transform: uppercase;
 
 		&:hover {
 			background-color: #0056b3;
