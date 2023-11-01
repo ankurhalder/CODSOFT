@@ -2,9 +2,8 @@
 	width: 100%;
 	max-width: 400px;
 	margin: 0 auto;
-	padding: 40px;
+	padding: 30px;
 	background: #f9f9f9;
-	border: 1px solid #e0e0e0;
 	border-radius: 15px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	text-align: center;
@@ -13,6 +12,7 @@
 		font-size: 2.5rem;
 		color: #333;
 		margin-bottom: 20px;
+		text-transform: uppercase;
 	}
 
 	.form-group {
@@ -23,7 +23,7 @@
 			font-weight: 700;
 			font-size: 1.3rem;
 			margin-bottom: 10px;
-			color: #555;
+			color: #444;
 		}
 
 		input {
@@ -32,8 +32,8 @@
 			border: 2px solid #ccc;
 			border-radius: 10px;
 			font-size: 1.2rem;
-			background-color: #f9f9f9;
-			color: #333;
+			background-color: #f6f6f6;
+			color: #444;
 			transition: border-color 0.3s;
 
 			&:focus {
@@ -45,8 +45,8 @@
 
 	.error-message {
 		color: #d9534f;
-		font-size: 1.1rem;
-		margin-top: 10px;
+		font-size: 1.2rem;
+		margin-top: 15px;
 	}
 
 	button {
@@ -56,12 +56,13 @@
 		color: #fff;
 		border: none;
 		border-radius: 10px;
-		font-size: 1.4rem;
+		font-size: 1.5rem;
 		cursor: pointer;
 		transition: background 0.3s;
+		text-transform: uppercase;
 
 		&:hover {
-			background: linear-gradient(45deg, #0056b3, #004189);
+			background: linear-gradient(45deg, #0056b3, #003c75);
 		}
 	}
 }
