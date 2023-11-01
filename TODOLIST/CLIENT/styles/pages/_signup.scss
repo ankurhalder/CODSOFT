@@ -3,23 +3,25 @@
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 20px;
-	border: 1px solid #ccc;
+	border: 1px solid #e0e0e0;
 	border-radius: 5px;
-	background-color: #fff;
+	background-color: #f9f9f9;
 
 	h2 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 		text-align: center;
+		color: #333;
 		margin-bottom: 20px;
 	}
 
 	.form-group {
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 
 		label {
 			display: block;
 			font-weight: 600;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
+			color: #555;
 		}
 
 		input {
@@ -28,28 +30,35 @@
 			border: 1px solid #ccc;
 			border-radius: 5px;
 			font-size: 1rem;
+			background-color: #fff;
+			color: #333;
+			transition: border-color 0.2s;
+
+			&:focus {
+				border-color: #007bff;
+				outline: none;
+			}
 		}
 	}
 
 	.error-message {
-		color: #d9534f; /* Red color for error messages */
-		margin-top: 5px;
+		color: #d9534f;
 		font-size: 0.9rem;
 	}
 
 	button {
 		width: 100%;
 		padding: 10px;
-		background-color: #007bff; /* Blue color for the button */
+		background-color: #007bff;
 		color: #fff;
 		border: none;
 		border-radius: 5px;
-		font-size: 1rem;
+		font-size: 1.2rem;
 		cursor: pointer;
 		transition: background-color 0.2s;
 
 		&:hover {
-			background-color: #0056b3; /* Darker blue on hover */
+			background-color: #0056b3;
 		}
 	}
 }
