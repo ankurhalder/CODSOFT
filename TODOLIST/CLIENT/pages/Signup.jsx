@@ -19,6 +19,7 @@ function SignUp() {
 			[name]: value,
 		});
 	};
+
 	const validatePassword = (password) => {
 		const passwordRegex =
 			/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -61,10 +62,9 @@ function SignUp() {
 			<h2>Sign Up</h2>
 			<form onSubmit={handleSubmit}>
 				<div className="form-group">
-					<label htmlFor="firstName">First Name</label>
 					<input
 						type="text"
-						id="firstName"
+						placeholder="First Name"
 						name="firstName"
 						value={formData.firstName}
 						onChange={handleChange}
@@ -73,10 +73,9 @@ function SignUp() {
 				</div>
 
 				<div className="form-group">
-					<label htmlFor="lastName">Last Name</label>
 					<input
 						type="text"
-						id="lastName"
+						placeholder="Last Name"
 						name="lastName"
 						value={formData.lastName}
 						onChange={handleChange}
@@ -85,10 +84,9 @@ function SignUp() {
 				</div>
 
 				<div className="form-group">
-					<label htmlFor="email">Email</label>
 					<input
 						type="email"
-						id="email"
+						placeholder="Email"
 						name="email"
 						value={formData.email}
 						onChange={handleChange}
@@ -97,10 +95,9 @@ function SignUp() {
 				</div>
 
 				<div className="form-group">
-					<label htmlFor="password">Password</label>
 					<input
 						type="password"
-						id="password"
+						placeholder="Password"
 						name="password"
 						value={formData.password}
 						onChange={handleChange}
@@ -109,10 +106,9 @@ function SignUp() {
 				</div>
 
 				<div className="form-group">
-					<label htmlFor="confirmPassword">Confirm Password</label>
 					<input
 						type="password"
-						id="confirmPassword"
+						placeholder="Confirm Password"
 						name="confirmPassword"
 						value={formData.confirmPassword}
 						onChange={handleChange}
