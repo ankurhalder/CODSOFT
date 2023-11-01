@@ -3,13 +3,12 @@
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 20px;
-	border: 1px solid #e0e0e0;
+	background: #f4f4f4;
 	border-radius: 10px;
-	background-color: #f4f4f4;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
 	h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		text-align: center;
 		color: #333;
 		margin-bottom: 20px;
@@ -22,16 +21,16 @@
 			display: block;
 			font-weight: 600;
 			margin-bottom: 10px;
-			color: #555;
+			color: #333;
 		}
 
 		input {
 			width: 100%;
 			padding: 15px;
-			border: 1px solid #ccc;
+			border: 2px solid #ccc;
 			border-radius: 8px;
 			font-size: 1.2rem;
-			background-color: #fff;
+			background-color: #f9f9f9;
 			color: #333;
 			transition: border-color 0.3s;
 
@@ -45,6 +44,7 @@
 	.error-message {
 		color: #d9534f;
 		font-size: 1rem;
+		margin-top: 5px;
 	}
 
 	button {
