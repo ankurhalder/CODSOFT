@@ -1,0 +1,79 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		font-size: 24px;
+
+		img {
+			width: 40px;
+			height: 40px;
+			margin-right: 10px;
+		}
+	}
+
+	&__menu {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+		}
+
+		li {
+			margin-right: 20px;
+
+			a {
+				text-decoration: none;
+				color: #fff;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 10px;
+
+		a {
+			text-decoration: none;
+		}
+
+		button {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+
+			&:hover {
+				background-color: #0056b3;
+			}
+		}
+
+		&__signin {
+			&:hover {
+				background-color: #e74c3c;
+			}
+		}
+
+		&__signup {
+			background-color: #2ecc71;
+
+			&:hover {
+				background-color: #27ae60;
+			}
+		}
+	}
+}
