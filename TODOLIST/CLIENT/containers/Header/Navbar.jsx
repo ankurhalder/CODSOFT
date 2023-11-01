@@ -7,6 +7,11 @@ function Navbar() {
 				<img src="/mytoodle.png" alt="mytoodle" />
 				<label htmlFor="mytoddle">MyToodle</label>
 			</div>
+			<div className="navbar__menu">
+				<ul className="menu__items">
+					<li></li>
+				</ul>
+			</div>
 			<div className="navbar__buttons">
 				<button className="navbar__login">Login</button>
 				<button className="navbar__signup">Sign Up</button>
