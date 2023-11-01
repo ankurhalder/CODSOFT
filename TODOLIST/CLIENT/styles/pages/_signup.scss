@@ -3,16 +3,17 @@
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 30px;
-	background: #f5f5f5;
-	border: 1px solid #e0e0e0;
+	background: #333; /* Dark background color */
+	border: 1px solid #444; /* Dark border color */
 	border-radius: 20px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 	text-align: center;
+	color: #fff; /* Light text color */
 	transition: transform 0.3s, box-shadow 0.3s;
 
 	h2 {
 		font-size: 2.8rem;
-		color: #007bff;
+		color: #007bff; /* Blue title color */
 		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
@@ -23,16 +24,16 @@
 		input {
 			width: 100%;
 			padding: 16px;
-			border: 2px solid #007bff;
+			border: 2px solid #007bff; /* Blue border for inputs */
 			border-radius: 15px;
 			font-size: 1.4rem;
-			background-color: #f9f9f9;
-			color: #333;
+			background-color: #444; /* Dark input background */
+			color: #fff;
 			transition: border-color 0.3s, transform 0.3s;
 			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
 			&:focus {
-				border-color: #0056b3;
+				border-color: #0056b3; /* Brighter blue on focus */
 				transform: scale(1.02);
 				outline: none;
 			}
@@ -40,7 +41,7 @@
 	}
 
 	.error-message {
-		color: #d9534f;
+		color: #ff6666; /* Red error message color */
 		font-size: 1.3rem;
 		margin-top: 12px;
 	}
