@@ -2,10 +2,10 @@
 	width: 100%;
 	max-width: 400px;
 	margin: 0 auto;
-	padding: 30px;
-	background: #f4f4f4;
+	padding: 40px;
+	background: #f8f8f8;
 	border-radius: 20px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 	text-align: center;
 
 	h2 {
@@ -22,7 +22,7 @@
 			display: block;
 			font-weight: 700;
 			margin-bottom: 10px;
-			color: #444;
+			color: #333;
 		}
 
 		input {
@@ -30,9 +30,9 @@
 			padding: 15px;
 			border: 2px solid #ccc;
 			border-radius: 15px;
-			font-size: 1.2rem;
-			background-color: #f9f9f9;
-			color: #444;
+			font-size: 1.3rem;
+			background-color: #f6f6f6;
+			color: #333;
 			transition: border-color 0.3s;
 
 			&:focus {
@@ -44,24 +44,25 @@
 
 	.error-message {
 		color: #d9534f;
-		font-size: 1.1rem;
-		margin-top: 10px;
+		font-size: 1.2rem;
+		margin-top: 15px;
 	}
 
 	button {
 		width: 100%;
 		padding: 15px;
-		background-color: #007bff;
+		background: linear-gradient(45deg, #007bff, #0056b3);
 		color: #fff;
 		border: none;
 		border-radius: 15px;
 		font-size: 1.5rem;
 		cursor: pointer;
-		transition: background-color 0.3s;
+		transition: background 0.3s;
 		text-transform: uppercase;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
 		&:hover {
-			background-color: #0056b3;
+			background: linear-gradient(45deg, #0056b3, #003c75);
 		}
 	}
 }
