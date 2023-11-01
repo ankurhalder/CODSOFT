@@ -15,13 +15,10 @@ function Navbar() {
 					<li className="item">
 						<Link to="/signup">Sample</Link>
 					</li>
-					<li className="item">
-						<Link to="/signin">Sample</Link>
-					</li>
 				</ul>
 			</div>
 			<div className="navbar__buttons">
-				<Link to="signin">
+				<Link to="/">
 					<button className="navbar__signin">Sign In</button>
 				</Link>
 				<Link to="signup">
@@ -31,5 +28,4 @@ function Navbar() {
 		</nav>
 	);
 }
-
 export default Navbar;

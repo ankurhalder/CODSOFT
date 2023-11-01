@@ -1,8 +1,10 @@
 import { Fragment } from "react";
+import { Navbar } from "../containers";
 const Layout = ({ children }) => {
 	return (
 		<Fragment>
-			<div>{children}</div>
+			<Navbar />
+			{children}
 		</Fragment>
 	);
 };
