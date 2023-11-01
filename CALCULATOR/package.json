@@ -4,6 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"author": "Ankur Halder",
+	"website": "https://ankurhalder-calculator.netlify.app/",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
