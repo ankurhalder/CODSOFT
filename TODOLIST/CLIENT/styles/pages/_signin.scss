@@ -15,7 +15,7 @@
 		font-family: var(--font-elianto);
 		font-size: var(--font-5);
 		letter-spacing: 3px;
-		color: #007bff;
+		color: var(--blue-1);
 		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
@@ -36,7 +36,7 @@
 				inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 
 			&:focus {
-				border-color: #007bff; /* Brighter blue on focus */
+				border-color: var(--blue-1); /* Brighter blue on focus */
 				transform: scale(1.02);
 				outline: none;
 			}
@@ -53,7 +53,7 @@
 		width: 100%;
 		padding: 16px;
 		background: #f0f0f0; /* Light button background */
-		color: #007bff; /* Blue button text color */
+		color: var(--blue-1); /* Blue button text color */
 		border: none;
 		border-radius: 15px;
 		font-size: 1.6rem;
