@@ -4,7 +4,7 @@
 	"description": "Mytoodle is a todo list website created by Ankur Halder",
 	"main": "server.js",
 	"scripts": {
-    "dev": "nodemon server.js",
+		"dev": "nodemon server.js",
 		"build": "set NODE_ENV=production && nodemon server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
