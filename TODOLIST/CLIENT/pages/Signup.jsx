@@ -59,9 +59,11 @@ function SignUp() {
 			console.log("formData:", formData);
 			const response = await signUpUser(formData);
 			console.log("Sign up successful:", response);
-			alert("Sign up successful");
+			alert("Sign up successful - Please login in");
+			window.location.href = "/";
 		} catch (error) {
 			console.error("Sign up error:", error);
+			alert("There was an error signing up. Please Contact Support.");
 		}
 	};
 
