@@ -6,7 +6,6 @@ const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controller/errorController");
 const userRouter = require("./routes/userRoutes");
 const profileImageRouter = require("./routes/profileImageRoutes");
-const blogRouter = require("./routes/blogRoutes");
 
 const app = express();
 
