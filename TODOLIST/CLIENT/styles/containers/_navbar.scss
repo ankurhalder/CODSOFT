@@ -1,7 +1,8 @@
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	// display: flex;
+	// justify-content: space-between;
+	// align-items: center;
+	@include flex-container(row, nowrap, space-between, center);
 	background: linear-gradient(to right, #007bff, #3a76a1);
 	color: #fff;
 	padding: 15px 20px;
