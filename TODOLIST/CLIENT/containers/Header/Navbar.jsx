@@ -27,7 +27,7 @@ function Navbar() {
 					<button className="navbar__signout">Sign Out</button>
 				) : (
 					<>
-						<Link to="/signin">
+						<Link to="/">
 							<button className="navbar__signin">Sign In</button>
 						</Link>
 						<Link to="/signup">
