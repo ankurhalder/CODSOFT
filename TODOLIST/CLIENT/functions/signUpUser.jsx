@@ -10,13 +10,13 @@ const signUpUser = async (formData) => {
 		};
 
 		const response = await fetch(apiUrl, requestOptions);
-		console.log("response:", response);
+		// console.log("response:", response);
 		if (!response.ok) {
 			throw new Error("Failed to sign up. Please try again.");
 		}
 
 		const data = await response.json();
-		console.log("data:", data);
+		// console.log("data:", data);
 		return data;
 	} catch (error) {
 		console.error("Error signing up:", error);
