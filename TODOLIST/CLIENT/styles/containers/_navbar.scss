@@ -1,15 +1,11 @@
 .navbar {
-	// display: flex;
-	// justify-content: space-between;
-	// align-items: center;
 	@include flex-container(row, nowrap, space-between, center);
 	background: linear-gradient(to right, #007bff, #3a76a1);
-	color: #fff;
+	color: var(--white);
 	padding: 15px 20px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
 	transition: background 0.3s, transform 0.3s;
-
 	&:hover {
 		background: linear-gradient(to right, #3a76a1, #007bff);
 		transform: translateY(-3px);
