@@ -62,12 +62,15 @@
 			}
 		}
 
-		&__signin {
+		&__signout {
+			background-color: #e74c3c;
+
 			&:hover {
-				background-color: #e74c3c;
+				background-color: #c73c2c;
 			}
 		}
 
+		&__signin,
 		&__signup {
 			background-color: #2ecc71;
 
