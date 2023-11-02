@@ -1,0 +1,74 @@
+@keyframes custom-dual-ball-loader-move {
+	0% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+	49.99% {
+		opacity: 1;
+		transform: translate(100px, 0);
+	}
+	50% {
+		opacity: 0;
+		transform: translate(100px, 0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes custom-dual-ball-loader {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(100px, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.custom-dual-ball-loader {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	overflow: hidden;
+	background: none;
+
+	.ball-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transform: translateZ(0) scale(1);
+		backface-visibility: hidden;
+		transform-origin: 0 0;
+
+		div {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			top: 50px;
+			left: 0;
+
+			&:nth-child(1) {
+				background: #e90c59;
+				animation: custom-dual-ball-loader 1s linear infinite;
+				animation-delay: -0.5s;
+			}
+
+			&:nth-child(2) {
+				background: #46dff0;
+				animation: custom-dual-ball-loader 1s linear infinite;
+				animation-delay: 0s;
+			}
+
+			&:nth-child(3) {
+				background: #e90c59;
+				animation: custom-dual-ball-loader-move 1s linear infinite;
+				animation-delay: -0.5s;
+			}
+		}
+	}
+}
