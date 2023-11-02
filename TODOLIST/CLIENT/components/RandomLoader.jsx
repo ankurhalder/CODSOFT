@@ -16,9 +16,9 @@ const RandomLoader = () => {
 	const SelectedLoader = loadingComponents[randomIndex];
 
 	return (
-		<div>
+		<>
 			<SelectedLoader />
-		</div>
+		</>
 	);
 };
 
