@@ -4,6 +4,10 @@ function LandingLayout({ children }) {
 	return (
 		<Fragment>
 			<Navbar></Navbar>
+			<h1 className="landing-heading">
+				{" "}
+				Welcome To MyToodle! Your Todo Wonderland.
+			</h1>
 			{children}
 		</Fragment>
 	);
