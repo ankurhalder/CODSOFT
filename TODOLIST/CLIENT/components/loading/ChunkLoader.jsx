@@ -1,6 +1,4 @@
 import React from "react";
-import "./ChunkLoader.scss";
-
 const ChunkLoader = () => {
 	return (
 		<div className="custom-chunk-loader">
