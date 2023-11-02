@@ -39,6 +39,7 @@ function SignIn() {
 			return;
 		} else {
 			setPasswordError("");
+			console.log("Password is valid");
 		}
 
 		if (!validateEmail(formData.email)) {
@@ -46,9 +47,11 @@ function SignIn() {
 			return;
 		} else {
 			setEmailError("");
+			console.log("Email is valid");
 		}
 
 		try {
+			console.log("formData:", formData);
 			const response = await signInUser(formData);
 
 			console.log("Sign in successful:", response);

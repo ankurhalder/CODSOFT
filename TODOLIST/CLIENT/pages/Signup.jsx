@@ -43,6 +43,7 @@ function SignUp() {
 			);
 			return;
 		} else {
+			console.log("Password is valid");
 			setPasswordError("");
 		}
 
@@ -50,10 +51,12 @@ function SignUp() {
 			setEmailError("Invalid email format");
 			return;
 		} else {
+			console.log("Email is valid");
 			setEmailError("");
 		}
 
 		try {
+			console.log("formData:", formData);
 			const response = await signUpUser(formData);
 			console.log("Sign up successful:", response);
 			alert("Sign up successful");

@@ -10,13 +10,13 @@ const signInUser = async (formData) => {
 		};
 
 		const response = await fetch(apiUrl, requestOptions);
-
+		console.log("response:", response);
 		if (!response.ok) {
 			throw new Error("Failed to sign in. Please check your credentials.");
 		}
 
 		const data = await response.json();
-
+		console.log("data:", data);
 		return data;
 	} catch (error) {
 		console.error("Error signing in:", error);
