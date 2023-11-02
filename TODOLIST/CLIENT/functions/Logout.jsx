@@ -1,9 +1,10 @@
 const logoutUser = async () => {
 	try {
+		console.log("Logout function called");
 		const authToken = localStorage.getItem("authToken");
 
 		if (authToken) {
-			const apiUrl = "http://localhost:8000/api/v1/users/logout";
+			const apiUrl = "https://mytoodle.onrender.com/api/v1/users/logout";
 			const requestOptions = {
 				method: "POST",
 				headers: {

@@ -1,6 +1,6 @@
 const signUpUser = async (formData) => {
 	try {
-		const apiUrl = "http://localhost:8000/api/v1/users/signup";
+		const apiUrl = "https://mytoodle.onrender.com/api/v1/users/signup";
 		const requestOptions = {
 			method: "POST",
 			headers: {
