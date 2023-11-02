@@ -1,11 +1,11 @@
 {
-  "name": "mytoodle",
-  "version": "1.0.0",
-  "description": "Mytoodle is a todo list website created by Ankur Halder",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ankur Halder",
-  "license": "MIT"
+	"name": "mytoodle",
+	"version": "1.0.0",
+	"description": "Mytoodle is a todo list website created by Ankur Halder",
+	"main": "server.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Ankur Halder",
+	"license": "MIT"
 }
