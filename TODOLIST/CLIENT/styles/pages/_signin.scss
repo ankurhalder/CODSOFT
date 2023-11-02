@@ -4,13 +4,12 @@
 	margin: 5% auto;
 	padding: 30px;
 	background: var(--white-1);
-	border: 1px solid #d1d1d1;
+	border: 1px solid var(--white-2);
 	border-radius: 20px;
 	text-align: center;
 	transition: border-color 0.3s, transform 0.3s;
 	box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
 		inset -5px -5px 10px rgba(0, 0, 0, 0.1);
-
 	h2 {
 		font-family: var(--font-elianto);
 		font-size: var(--font-5);
@@ -25,7 +24,7 @@
 		input {
 			width: 100%;
 			padding: 16px;
-			border: 2px solid #d1d1d1;
+			border: 2px solid var(--white-2);
 			border-radius: 15px;
 			font-family: var(--font-tektur);
 			font-size: var(--font-11);
@@ -45,7 +44,7 @@
 	}
 
 	.error-message {
-		color: #ff6666; /* Red error message color */
+		color: #ff6666;
 		font-size: 1.3rem;
 		margin-top: 12px;
 	}
@@ -53,8 +52,8 @@
 	button {
 		width: 100%;
 		padding: 16px;
-		background: var(--white-1); /* Light button background */
-		color: var(--blue-1); /* Blue button text color */
+		background: var(--white-1);
+		color: var(--blue-1);
 		border: none;
 		border-radius: 15px;
 		font-size: 1.6rem;
@@ -65,7 +64,7 @@
 			5px 5px 10px rgba(0, 0, 0, 0.2);
 
 		&:hover {
-			background: #d1d1d1; /* Slightly darker background on hover */
+			background: var(--white-2);
 			transform: scale(1.02);
 			box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.7),
 				10px 10px 20px rgba(0, 0, 0, 0.2);
