@@ -1,13 +1,16 @@
 const ChunkLoader = () => {
+	console.log("ChunkLoader");
 	return (
-		<div className="custom-chunk-loader">
-			<div className="loader-container">
-				<div>
+		<div className="universal-loader-container">
+			<div className="custom-chunk-loader">
+				<div className="loader-container">
 					<div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
+						<div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
 					</div>
 				</div>
 			</div>

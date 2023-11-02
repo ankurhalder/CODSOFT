@@ -1,18 +1,14 @@
 import {
 	ChunkLoader,
 	CubeLoader,
-	DoubleRingLoader,
 	DualBallLoader,
 	LoadingSpinner,
-	WedgesLoader,
 } from "./index.jsx";
 const loadingComponents = [
 	ChunkLoader,
 	CubeLoader,
-	DoubleRingLoader,
 	DualBallLoader,
 	LoadingSpinner,
-	WedgesLoader,
 ];
 const RandomLoader = () => {
 	const randomIndex = Math.floor(Math.random() * loadingComponents.length);
