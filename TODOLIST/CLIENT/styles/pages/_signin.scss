@@ -3,8 +3,8 @@
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 30px;
-	background: #f0f0f0; /* Light background color */
-	border: 1px solid #d1d1d1; /* Light border color */
+	background: #f0f0f0;
+	border: 1px solid #d1d1d1;
 	border-radius: 20px;
 	text-align: center;
 	transition: border-color 0.3s, transform 0.3s;
@@ -12,8 +12,10 @@
 		inset -5px -5px 10px rgba(0, 0, 0, 0.1);
 
 	h2 {
-		font-size: 2.8rem;
-		color: #007bff; /* Blue title color */
+		font-family: var(--font-elianto);
+		font-size: var(--font-5);
+		letter-spacing: 3px;
+		color: #007bff;
 		margin-bottom: 20px;
 		text-transform: uppercase;
 	}
