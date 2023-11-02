@@ -1,6 +1,6 @@
 const signInUser = async (formData) => {
 	try {
-		const apiUrl = "http://localhost:8000/api/v1/users/signin";
+		const apiUrl = "http://localhost:8000/api/v1/users/login";
 		const requestOptions = {
 			method: "POST",
 			headers: {
