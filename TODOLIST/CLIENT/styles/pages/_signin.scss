@@ -1,9 +1,9 @@
 .signin-container {
 	width: 100%;
 	max-width: 400px;
-	margin: 0 auto;
+	margin: 5% auto;
 	padding: 30px;
-	background: #f0f0f0;
+	background: var(--white-1);
 	border: 1px solid #d1d1d1;
 	border-radius: 20px;
 	text-align: center;
@@ -16,17 +16,16 @@
 		font-size: var(--font-5);
 		letter-spacing: 3px;
 		color: var(--blue-1);
-		margin-bottom: 20px;
+		margin: 0 0 7% 0;
 		text-transform: uppercase;
 	}
 
 	.form-group {
-		margin-bottom: 20px;
-
+		margin: 0 0 7% 0;
 		input {
 			width: 100%;
 			padding: 16px;
-			border: 2px solid #d1d1d1; /* Light border for inputs */
+			border: 2px solid #d1d1d1;
 			border-radius: 15px;
 			font-size: 1.4rem;
 			background-color: #f0f0f0; /* Light input background */

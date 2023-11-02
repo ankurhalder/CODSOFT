@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
+import { LandingLayout } from "../layout";
 import { signUpUser } from "../functions";
 function SignUp() {
 	const [formData, setFormData] = useState({
@@ -68,71 +69,75 @@ function SignUp() {
 	};
 
 	return (
-		<div className="signup-container">
-			<h2>Sign Up</h2>
-			<form onSubmit={handleSubmit}>
-				<div className="form-group">
-					<input
-						type="text"
-						placeholder="First Name"
-						name="firstName"
-						value={formData.firstName}
-						onChange={handleChange}
-						required
-					/>
+		<Fragment>
+			<LandingLayout>
+				<div className="signup-container">
+					<h2>Sign Up</h2>
+					<form onSubmit={handleSubmit}>
+						<div className="form-group">
+							<input
+								type="text"
+								placeholder="First Name"
+								name="firstName"
+								value={formData.firstName}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						<div className="form-group">
+							<input
+								type="text"
+								placeholder="Last Name"
+								name="lastName"
+								value={formData.lastName}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						<div className="form-group">
+							<input
+								type="email"
+								placeholder="Email"
+								name="email"
+								value={formData.email}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						<div className="form-group">
+							<input
+								type="password"
+								placeholder="Password"
+								name="password"
+								value={formData.password}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						<div className="form-group">
+							<input
+								type="password"
+								placeholder="Confirm Password"
+								name="confirmPassword"
+								value={formData.confirmPassword}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						{passwordError && <p className="error-message">{passwordError}</p>}
+
+						{emailError && <p className="error-message">{emailError}</p>}
+
+						<button type="submit">Sign Up</button>
+					</form>
 				</div>
-
-				<div className="form-group">
-					<input
-						type="text"
-						placeholder="Last Name"
-						name="lastName"
-						value={formData.lastName}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				<div className="form-group">
-					<input
-						type="email"
-						placeholder="Email"
-						name="email"
-						value={formData.email}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				<div className="form-group">
-					<input
-						type="password"
-						placeholder="Password"
-						name="password"
-						value={formData.password}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				<div className="form-group">
-					<input
-						type="password"
-						placeholder="Confirm Password"
-						name="confirmPassword"
-						value={formData.confirmPassword}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				{passwordError && <p className="error-message">{passwordError}</p>}
-
-				{emailError && <p className="error-message">{emailError}</p>}
-
-				<button type="submit">Sign Up</button>
-			</form>
-		</div>
+			</LandingLayout>
+		</Fragment>
 	);
 }
 

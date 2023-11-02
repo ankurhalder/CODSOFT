@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
+import { LandingLayout } from "../layout";
 import { signInUser } from "../functions";
 
 function SignIn() {
@@ -61,38 +62,42 @@ function SignIn() {
 	};
 
 	return (
-		<div className="signin-container">
-			<h2>Sign In</h2>
-			<form onSubmit={handleSubmit}>
-				<div className="form-group">
-					<input
-						type="email"
-						placeholder="Email"
-						name="email"
-						value={formData.email}
-						onChange={handleChange}
-						required
-					/>
+		<Fragment>
+			<LandingLayout>
+				<div className="signin-container">
+					<h2>Sign In</h2>
+					<form onSubmit={handleSubmit}>
+						<div className="form-group">
+							<input
+								type="email"
+								placeholder="Email"
+								name="email"
+								value={formData.email}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						<div className="form-group">
+							<input
+								type="password"
+								placeholder="Password"
+								name="password"
+								value={formData.password}
+								onChange={handleChange}
+								required
+							/>
+						</div>
+
+						{passwordError && <p className="error-message">{passwordError}</p>}
+
+						{emailError && <p className="error-message">{emailError}</p>}
+
+						<button type="submit">Sign In</button>
+					</form>
 				</div>
-
-				<div className="form-group">
-					<input
-						type="password"
-						placeholder="Password"
-						name="password"
-						value={formData.password}
-						onChange={handleChange}
-						required
-					/>
-				</div>
-
-				{passwordError && <p className="error-message">{passwordError}</p>}
-
-				{emailError && <p className="error-message">{emailError}</p>}
-
-				<button type="submit">Sign In</button>
-			</form>
-		</div>
+			</LandingLayout>
+		</Fragment>
 	);
 }
 
