@@ -10,22 +10,17 @@ const signUpUser = async (formData) => {
 		};
 
 		const response = await fetch(apiUrl, requestOptions);
-
+		console.log("response:", response);
 		if (!response.ok) {
-			// Handle server-side errors here, e.g., show an error message
 			throw new Error("Failed to sign up. Please try again.");
 		}
 
-		// Parse the response if needed
 		const data = await response.json();
-
-		// You can return any response data you need
+		console.log("data:", data);
 		return data;
 	} catch (error) {
-		// Handle network errors, exceptions, or unexpected issues
 		console.error("Error signing up:", error);
 		throw error;
 	}
 };
-
 export default signUpUser;

@@ -46,7 +46,6 @@ function SignUp() {
 			setPasswordError("");
 		}
 
-		// Email validation
 		if (!validateEmail(formData.email)) {
 			setEmailError("Invalid email format");
 			return;
@@ -55,16 +54,10 @@ function SignUp() {
 		}
 
 		try {
-			// Call the signUpUser function to send the form data
 			const response = await signUpUser(formData);
-
-			// Handle the response as needed
 			console.log("Sign up successful:", response);
-
-			// You can perform any additional actions after a successful sign-up here
+			alert("Sign up successful");
 		} catch (error) {
-			// Handle errors from the signUpUser function
-			// You can display an error message or take appropriate action
 			console.error("Sign up error:", error);
 		}
 	};
