@@ -13,7 +13,7 @@ dotenv.config({ path: "./config.env" });
 const app = require("./app");
 
 const DB =
-	"mongodb+srv://ankurhalderdatabase:<PASSWORD>@creavue.lgqd7im.mongodb.net/?retryWrites=true&w=majority".replace(
+	"mongodb+srv://ankurhalder12345:<PASSWORD>@mytoodle.jc8pifd.mongodb.net/?retryWrites=true&w=majority".replace(
 		"<PASSWORD>",
 		process.env.DATABASE_PASSWORD
 	);
