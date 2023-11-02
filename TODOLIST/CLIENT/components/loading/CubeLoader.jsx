@@ -1,4 +1,3 @@
-import React from "react";
 const CubeLoader = () => {
 	return (
 		<div className="custom-cube-loader">

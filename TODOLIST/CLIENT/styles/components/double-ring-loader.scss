@@ -1,0 +1,112 @@
+@keyframes custom-double-ring-loader-rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.custom-double-ring-loader {
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	overflow: hidden;
+	background: none;
+
+	.ring-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		transform: translateZ(0) scale(1);
+		backface-visibility: hidden;
+		transform-origin: 0 0;
+
+		div {
+			position: absolute;
+			width: 144px;
+			height: 144px;
+			top: 28px;
+			left: 28px;
+			border-radius: 50%;
+			border: 16px solid #000;
+			border-color: #222222 transparent #222222 transparent;
+			animation: custom-double-ring-loader-rotate 1s linear infinite;
+
+			&:nth-child(2),
+			&:nth-child(4) {
+				width: 108px;
+				height: 108px;
+				top: 46px;
+				left: 46px;
+				animation: custom-double-ring-loader-rotate 1s linear infinite reverse;
+			}
+
+			&:nth-child(2) {
+				border-color: transparent #00d8ff transparent #00d8ff;
+			}
+
+			&:nth-child(3) {
+				border-color: transparent;
+
+				div {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					transform: rotate(45deg);
+
+					&:before,
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						width: 16px;
+						height: 16px;
+						top: -16px;
+						left: 48px;
+						background: #222222;
+						border-radius: 50%;
+						box-shadow: 0 128px 0 0 #222222;
+					}
+
+					&:after {
+						left: -16px;
+						top: 48px;
+						box-shadow: 128px 0 0 0 #222222;
+					}
+				}
+			}
+
+			&:nth-child(4) {
+				border-color: transparent;
+
+				div {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					transform: rotate(45deg);
+
+					&:before,
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						width: 16px;
+						height: 16px;
+						top: -16px;
+						left: 30px;
+						background: #00d8ff;
+						border-radius: 50%;
+						box-shadow: 0 92px 0 0 #00d8ff;
+					}
+
+					&:after {
+						left: -16px;
+						top: 30px;
+						box-shadow: 92px 0 0 0 #00d8ff;
+					}
+				}
+			}
+		}
+	}
+}

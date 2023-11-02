@@ -1,4 +1,3 @@
-import React from "react";
 const ChunkLoader = () => {
 	return (
 		<div className="custom-chunk-loader">
