@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { signInUser } from "../functions";
 
 function SignIn() {
 	const [formData, setFormData] = useState({
@@ -28,10 +29,9 @@ function SignIn() {
 		return emailRegex.test(email);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		// Password validation
 		if (!validatePassword(formData.password)) {
 			setPasswordError(
 				"Password must have at least 8 characters, 1 uppercase, 1 lowercase, 1 special character, and 1 number"
@@ -41,7 +41,6 @@ function SignIn() {
 			setPasswordError("");
 		}
 
-		// Email validation
 		if (!validateEmail(formData.email)) {
 			setEmailError("Invalid email format");
 			return;
@@ -49,7 +48,13 @@ function SignIn() {
 			setEmailError("");
 		}
 
-		// You can proceed with your sign-in logic here
+		try {
+			const response = await signInUser(formData);
+
+			console.log("Sign in successful:", response);
+		} catch (error) {
+			console.error("Sign in error:", error);
+		}
 	};
 
 	return (
