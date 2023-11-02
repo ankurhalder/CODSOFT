@@ -1,7 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { LandingLayout } from "../layout";
 import { signInUser } from "../functions";
-
+import RandomLoader from "../components/RandomLoader";
 function SignIn() {
 	const [formData, setFormData] = useState({
 		email: "",
@@ -10,7 +10,7 @@ function SignIn() {
 
 	const [passwordError, setPasswordError] = useState("");
 	const [emailError, setEmailError] = useState("");
-
+	const [loading, setIsLoading] = useState(false);
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData({
@@ -32,11 +32,12 @@ function SignIn() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
+		setIsLoading(true);
 		if (!validatePassword(formData.password)) {
 			setPasswordError(
 				"Password must have at least 8 characters, 1 uppercase, 1 lowercase, 1 special character, and 1 number"
 			);
+			setIsLoading(false);
 			return;
 		} else {
 			setPasswordError("");
@@ -45,6 +46,7 @@ function SignIn() {
 
 		if (!validateEmail(formData.email)) {
 			setEmailError("Invalid email format");
+			setIsLoading(false);
 			return;
 		} else {
 			setEmailError("");
@@ -56,14 +58,17 @@ function SignIn() {
 			const response = await signInUser(formData);
 
 			console.log("Sign in successful:", response);
+			setIsLoading(false);
 		} catch (error) {
 			console.error("Sign in error:", error);
+			setIsLoading(false);
 		}
 	};
 
 	return (
 		<Fragment>
 			<LandingLayout>
+				{loading && <RandomLoader />}
 				<div className="signin-container">
 					<h2>Sign In</h2>
 					<form onSubmit={handleSubmit}>
@@ -90,9 +95,7 @@ function SignIn() {
 						</div>
 
 						{passwordError && <p className="error-message">{passwordError}</p>}
-
 						{emailError && <p className="error-message">{emailError}</p>}
-
 						<button type="submit">Sign In</button>
 					</form>
 				</div>
