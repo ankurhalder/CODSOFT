@@ -8,8 +8,8 @@
 	border-radius: 20px;
 	text-align: center;
 	transition: border-color 0.3s, transform 0.3s;
-	box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
-		inset -5px -5px 10px rgba(0, 0, 0, 0.1);
+	box-shadow: inset -5px -5px 10px var(--white-shadow-medium),
+		inset -5px -5px 10px var(--black-shadow-light);
 
 	h2 {
 		font-family: var(--font-elianto);
@@ -29,13 +29,13 @@
 			border-radius: 15px;
 			font-size: 1.4rem;
 			background-color: var(--white-1);
-			color: #333;
+			color: var(--light-black-2);
 			transition: border-color 0.3s, transform 0.3s;
 			box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
 				inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 
 			&:focus {
-				border-color: #007bff;
+				border-color: var(--blue-1);
 				transform: scale(1.02);
 				outline: none;
 			}
@@ -43,7 +43,7 @@
 	}
 
 	.error-message {
-		color: #ff6666;
+		color: var(--red-4);
 		font-size: 1.3rem;
 		margin-top: 12px;
 	}
@@ -52,7 +52,7 @@
 		width: 100%;
 		padding: 16px;
 		background: var(--white-1);
-		color: #007bff;
+		color: var(--blue-1);
 		border: none;
 		border-radius: 15px;
 		font-size: 1.6rem;
