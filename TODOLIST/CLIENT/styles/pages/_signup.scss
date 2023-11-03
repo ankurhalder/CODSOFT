@@ -27,7 +27,9 @@
 			padding: 16px;
 			border: 2px solid var(--white-2);
 			border-radius: 15px;
-			font-size: 1.4rem;
+			font-family: var(--font-tektur);
+			font-size: var(--font-11);
+			letter-spacing: 2px;
 			background-color: var(--white-1);
 			color: var(--light-black-2);
 			transition: border-color 0.3s, transform 0.3s;
