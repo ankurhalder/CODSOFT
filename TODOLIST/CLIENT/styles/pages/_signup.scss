@@ -31,8 +31,8 @@
 			background-color: var(--white-1);
 			color: var(--light-black-2);
 			transition: border-color 0.3s, transform 0.3s;
-			box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
-				inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+			box-shadow: inset -5px -5px 10px var(--white-shadow-medium),
+				inset 5px 5px 10px var(--black-shadow-light);
 
 			&:focus {
 				border-color: var(--blue-1);
