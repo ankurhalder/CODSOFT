@@ -1,8 +1,15 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { LandingLayout } from "../layout";
 import { signInUser } from "../functions";
 import RandomLoader from "../components/RandomLoader";
 function SignIn() {
+	useEffect(() => {
+		const token = localStorage.getItem("authToken");
+		if (token) {
+			window.location.href = "/dashboard";
+		}
+	}, []);
+
 	const [formData, setFormData] = useState({
 		email: "",
 		password: "",
@@ -58,6 +65,7 @@ function SignIn() {
 			const response = await signInUser(formData);
 			console.log("Sign in successful:", response);
 			setIsLoading(false);
+			window.location.href = "/dashboard";
 		} catch (error) {
 			console.error("Sign in error:", error);
 			setIsLoading(false);

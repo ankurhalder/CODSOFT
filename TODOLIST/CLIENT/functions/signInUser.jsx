@@ -18,19 +18,16 @@ const signInUser = async (formData) => {
 
 		const data = await response.json();
 		// console.log("data:", data);
-		const authToken = localStorage.setItem("authToken", data.token);
-		const email = localStorage.setItem("email", data.data.user.email);
-		const firstName = localStorage.setItem(
-			"firstName",
-			data.data.user.firstName
-		);
-		const lastName = localStorage.setItem("lastName", data.data.user.lastName);
-		const role = localStorage.setItem("role", data.data.user.role);
-		console.log("authToken:", authToken);
-		console.log("email:", email);
-		console.log("firstName:", firstName);
-		console.log("lastName:", lastName);
-		console.log("role:", role);
+		localStorage.setItem("authToken", data.token);
+		localStorage.setItem("email", data.data.user.email);
+		localStorage.setItem("firstName", data.data.user.firstName);
+		localStorage.setItem("lastName", data.data.user.lastName);
+		localStorage.setItem("role", data.data.user.role);
+		console.log("authToken:", localStorage.getItem("authToken"));
+		console.log("email:", localStorage.getItem("email"));
+		console.log("firstName:", localStorage.getItem("firstName"));
+		console.log("lastName:", localStorage.getItem("lastName"));
+		console.log("role:", localStorage.getItem("role"));
 		return data;
 	} catch (error) {
 		console.error("Error signing in:", error);
