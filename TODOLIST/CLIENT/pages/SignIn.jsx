@@ -56,7 +56,6 @@ function SignIn() {
 		try {
 			console.log("formData:", formData);
 			const response = await signInUser(formData);
-
 			console.log("Sign in successful:", response);
 			setIsLoading(false);
 		} catch (error) {

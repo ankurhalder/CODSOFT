@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import { LandingLayout } from "../layout";
 import { signUpUser } from "../functions";
+import RandomLoader from "../components/RandomLoader";
 function SignUp() {
 	const [formData, setFormData] = useState({
 		firstName: "",
@@ -12,7 +13,7 @@ function SignUp() {
 
 	const [passwordError, setPasswordError] = useState("");
 	const [emailError, setEmailError] = useState("");
-
+	const [loading, setIsLoading] = useState(false);
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData({
@@ -34,14 +35,16 @@ function SignUp() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
+		setIsLoading(true);
 		if (formData.password !== formData.confirmPassword) {
 			setPasswordError("Passwords do not match");
+			setIsLoading(false);
 			return;
 		} else if (!validatePassword(formData.password)) {
 			setPasswordError(
 				"Password must have at least 8 characters, 1 uppercase, 1 lowercase, 1 special character, and 1 number"
 			);
+			setIsLoading(false);
 			return;
 		} else {
 			console.log("Password is valid");
@@ -50,6 +53,7 @@ function SignUp() {
 
 		if (!validateEmail(formData.email)) {
 			setEmailError("Invalid email format");
+			setIsLoading(false);
 			return;
 		} else {
 			console.log("Email is valid");
@@ -62,15 +66,18 @@ function SignUp() {
 			console.log("Sign up successful:", response);
 			alert("Sign up successful - Please login in");
 			window.location.href = "/";
+			setIsLoading(false);
 		} catch (error) {
 			console.error("Sign up error:", error);
 			alert("There was an error signing up. Please Contact Support.");
+			setIsLoading(false);
 		}
 	};
 
 	return (
 		<Fragment>
 			<LandingLayout>
+				{loading && <RandomLoader />}
 				<div className="signup-container">
 					<h2>Sign Up</h2>
 					<form onSubmit={handleSubmit}>
