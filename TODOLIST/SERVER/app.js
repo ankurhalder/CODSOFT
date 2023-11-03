@@ -6,7 +6,7 @@ const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controller/errorController");
 const userRouter = require("./routes/userRoutes");
 const profileImageRouter = require("./routes/profileImageRoutes");
-
+const todoRouter = require("./routes/todoRoutes");
 const app = express();
 
 app.use(
@@ -37,6 +37,7 @@ app.use((req, res, next) => {
 });
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/profileImage", profileImageRouter);
+app.use("/api/v1/todos", todoRouter);
 app.all("*", (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });

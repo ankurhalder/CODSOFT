@@ -1,4 +1,3 @@
-// todoController.js
 const Todo = require("../models/todoModel");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
