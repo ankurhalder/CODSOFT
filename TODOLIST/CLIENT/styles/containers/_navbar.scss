@@ -12,10 +12,10 @@
 	}
 
 	&__logo {
-		display: flex;
-		align-items: center;
-		font-size: 28px;
-		font-weight: 700;
+		@include flex-container(row, nowrap, flex-start, center);
+		font-family: var(--font-elianto);
+		font-size: var(--font-9);
+		letter-spacing: 2px;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 		transition: transform 0.3s;
 
