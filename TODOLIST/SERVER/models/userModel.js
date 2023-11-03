@@ -23,6 +23,12 @@ const userSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "ProfileImage",
 	},
+	todos: [
+		{
+			type: mongoose.Schema.Types.ObjectId,
+			ref: "Todo",
+		},
+	],
 	// !
 	role: {
 		type: String,
