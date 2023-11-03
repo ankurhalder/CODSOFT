@@ -79,7 +79,7 @@
 			font-family: var(--font-tektur);
 			font-size: var(--font-12);
 			border-radius: 5px;
-			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			box-shadow: 0 2px 5px var(--black-shadow-light);
 			font-weight: 600;
 			letter-spacing: 2px;
 			&:hover {
@@ -94,17 +94,17 @@
 			}
 		}
 		.navbar__signup {
-			background-color: #2ecc71;
+			background-color: var(--green);
 
 			&:hover {
-				background-color: #27ae60;
+				background-color: var(--green-1);
 			}
 		}
 		.navbar__signin {
-			background-color: #f1c40f;
+			background-color: var(--yellow-1);
 
 			&:hover {
-				background-color: #f39c12;
+				background-color: var(--yellow-2);
 			}
 		}
 	}
