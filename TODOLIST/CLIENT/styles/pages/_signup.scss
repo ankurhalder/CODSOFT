@@ -28,7 +28,7 @@
 			border: 2px solid var(--white-2);
 			border-radius: 15px;
 			font-size: 1.4rem;
-			background-color: #f0f0f0;
+			background-color: var(--white-1);
 			color: #333;
 			transition: border-color 0.3s, transform 0.3s;
 			box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.5),
@@ -51,7 +51,7 @@
 	button {
 		width: 100%;
 		padding: 16px;
-		background: #f0f0f0;
+		background: var(--white-1);
 		color: #007bff;
 		border: none;
 		border-radius: 15px;
