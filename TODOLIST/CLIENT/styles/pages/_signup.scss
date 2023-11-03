@@ -12,9 +12,11 @@
 		inset -5px -5px 10px rgba(0, 0, 0, 0.1);
 
 	h2 {
-		font-size: 2.8rem;
-		color: #007bff;
-		margin-bottom: 20px;
+		font-family: var(--font-elianto);
+		font-size: var(--font-6);
+		letter-spacing: 3px;
+		color: var(--blue-1);
+		margin: 0 0 5% 0;
 		text-transform: uppercase;
 	}
 
