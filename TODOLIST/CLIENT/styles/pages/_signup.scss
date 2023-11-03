@@ -56,10 +56,13 @@
 		width: 100%;
 		padding: 16px;
 		background: var(--white-1);
-		color: var(--blue-1);
+		font-family: var(--font-tektur);
+		font-size: var(--font-10);
+		color: var(--black);
+		letter-spacing: 2px;
+		font-weight: 500;
 		border: none;
 		border-radius: 15px;
-		font-size: 1.6rem;
 		cursor: pointer;
 		transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 		text-transform: uppercase;
