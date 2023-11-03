@@ -3,7 +3,7 @@
 	background: linear-gradient(to right, var(--blue-1), var(--blue-2));
 	color: var(--white);
 	padding: 15px 20px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 5px var(--black-shadow-light);
 	border-radius: 5px;
 	transition: background 0.3s, transform 0.3s;
 	&:hover {
@@ -16,7 +16,7 @@
 		font-family: var(--font-elianto);
 		font-size: var(--font-9);
 		letter-spacing: 2px;
-		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+		text-shadow: 2px 2px 4px var(--black-shadow-light-1);
 		transition: transform 0.5s;
 
 		img {
