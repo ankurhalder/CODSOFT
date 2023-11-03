@@ -3,8 +3,8 @@
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 30px;
-	background: #f0f0f0;
-	border: 1px solid #d1d1d1;
+	background: var(--white-1);
+	border: 1px solid var(--white-2);
 	border-radius: 20px;
 	text-align: center;
 	transition: border-color 0.3s, transform 0.3s;
