@@ -72,7 +72,7 @@
 
 		button {
 			background-color: #fff;
-			color: #007bff;
+			color: black;
 			border: none;
 			padding: 12px 25px;
 			border-radius: 25px;
@@ -86,21 +86,25 @@
 				transform: scale(1.05);
 			}
 		}
-
-		&__signout {
+		.navabr__signout {
 			background-color: #e74c3c;
 
 			&:hover {
-				background-color: #c73c2c;
+				background-color: #c0392b;
 			}
 		}
-
-		&__signin,
-		&__signup {
+		.navbar__signup {
 			background-color: #2ecc71;
 
 			&:hover {
 				background-color: #27ae60;
+			}
+		}
+		.navbar__signin {
+			background-color: #f1c40f;
+
+			&:hover {
+				background-color: #f39c12;
 			}
 		}
 
