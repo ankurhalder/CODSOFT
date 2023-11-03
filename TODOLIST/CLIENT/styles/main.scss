@@ -12,3 +12,17 @@
 	letter-spacing: 3px;
 	margin: 2% 0 1% 0;
 }
+.nopage {
+	@include flex-container(row, nowrap, center, center);
+	font-family: var(--font-elianto);
+	font-size: var(--font-5);
+	letter-spacing: 3px;
+	margin: 2% 0 1% 0;
+}
+.page-not-found {
+	@include flex-container(row, nowrap, center, center);
+	font-family: var(--font-elianto);
+	font-size: var(--font-5);
+	letter-spacing: 3px;
+	margin: 2% 0 1% 0;
+}
