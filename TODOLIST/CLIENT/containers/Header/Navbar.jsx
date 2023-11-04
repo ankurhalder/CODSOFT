@@ -10,18 +10,6 @@ function Navbar() {
 				<img src="/mytoodle.png" alt="mytoodle" />
 				<label htmlFor="mytoddle">MyToodle</label>
 			</div>
-			<div className="navbar__menu">
-				{authToken && (
-					<ul className="menu__items">
-						<li className="item">
-							<Link to="/">Sample</Link>
-						</li>
-						<li className="item">
-							<Link to="/dashboard">Dashboard</Link>
-						</li>
-					</ul>
-				)}
-			</div>
 			<div className="navbar__buttons">
 				{authToken ? (
 					<button onClick={logout} className="navbar__signout">
