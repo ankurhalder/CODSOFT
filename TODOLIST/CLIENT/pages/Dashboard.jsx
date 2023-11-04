@@ -6,6 +6,7 @@ import {
 	updateTodo,
 	deleteTodo,
 } from "../functions/todoServices";
+
 function Dashboard() {
 	const [todos, setTodos] = useState([]);
 	const [newTodo, setNewTodo] = useState("");
@@ -13,17 +14,20 @@ function Dashboard() {
 	const [newTodoDescription, setNewTodoDescription] = useState("");
 	const [newTodoPriority, setNewTodoPriority] = useState("medium");
 	const [newTodoNotes, setNewTodoNotes] = useState([]);
+
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
 		if (!token) {
 			window.location.href = "/";
 		}
 	}, []);
+
 	useEffect(() => {
 		fetchTodos()
 			.then((data) => setTodos(data.data.todos))
 			.catch((error) => console.error("Error fetching todos:", error));
 	}, []);
+
 	const handleNoteChange = (e, index) => {
 		const updatedNotes = [...newTodoNotes];
 		updatedNotes[index] = e.target.value;
@@ -39,6 +43,7 @@ function Dashboard() {
 		updatedNotes.splice(index, 1);
 		setNewTodoNotes(updatedNotes);
 	};
+
 	const handleCreateTodo = async (e) => {
 		e.preventDefault();
 
@@ -108,9 +113,11 @@ function Dashboard() {
 			console.error("Error deleting todo:", error);
 		}
 	};
+
 	const email = localStorage.getItem("email");
 	const firstName = localStorage.getItem("firstName");
 	const lastName = localStorage.getItem("lastName");
+
 	return (
 		<Fragment>
 			<UserLayout>
@@ -205,4 +212,5 @@ function Dashboard() {
 		</Fragment>
 	);
 }
+
 export default Dashboard;
