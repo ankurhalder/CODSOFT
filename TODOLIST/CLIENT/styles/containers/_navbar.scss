@@ -41,6 +41,7 @@
 		@media (max-width: $breakpoint-tablet) {
 		}
 		@media (max-width: $breakpoint-phone) {
+			font-size: var(--font-8);
 		}
 		img {
 			width: 100%;
@@ -100,6 +101,7 @@
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-10);
 			}
 			&:hover {
 				transform: scale(1.1);
