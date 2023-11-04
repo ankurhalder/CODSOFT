@@ -17,10 +17,8 @@ function Dashboard() {
 	const [newTodo, setNewTodo] = useState("");
 	const [editingTodoId, setEditingTodoId] = useState(null);
 	const [newTodoDescription, setNewTodoDescription] = useState("");
-	const [newTodoPriority, setNewTodoPriority] = useState("medium");
 	const [editedTitle, setEditedTitle] = useState("");
 	const [editedDescription, setEditedDescription] = useState("");
-	const [editedPriority, setEditedPriority] = useState("");
 
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
@@ -41,7 +39,6 @@ function Dashboard() {
 		const newTodoData = {
 			title: newTodo,
 			description: newTodoDescription,
-			priority: newTodoPriority,
 		};
 
 		try {
@@ -52,7 +49,6 @@ function Dashboard() {
 				setTodos([...todos, newTodo]);
 				setNewTodo("");
 				setNewTodoDescription("");
-				setNewTodoPriority("medium");
 			} else {
 				console.error("Failed to create todo.");
 			}
@@ -69,10 +65,6 @@ function Dashboard() {
 		setEditedDescription(e.target.value);
 	};
 
-	const handleEditPriorityChange = (e) => {
-		setEditedPriority(e.target.value);
-	};
-
 	const handleUpdateTodo = async (todoId) => {
 		const todoToUpdate = todos.find((todo) => todo._id === todoId);
 
@@ -85,7 +77,6 @@ function Dashboard() {
 			const response = await updateTodo(todoId, {
 				title: editedTitle,
 				description: editedDescription,
-				priority: editedPriority,
 			});
 
 			if (response.data) {
@@ -146,14 +137,6 @@ function Dashboard() {
 								value={newTodoDescription}
 								onChange={(e) => setNewTodoDescription(e.target.value)}
 							/>
-							<select
-								value={newTodoPriority}
-								onChange={(e) => setNewTodoPriority(e.target.value)}
-							>
-								<option value="low">Low</option>
-								<option value="medium">Medium</option>
-								<option value="high">High</option>
-							</select>
 							<button type="submit">Add</button>
 						</form>
 
@@ -166,20 +149,14 @@ function Dashboard() {
 												type="text"
 												value={editedTitle}
 												onChange={handleEditTitleChange}
+												placeholder="Title"
 											/>
 											<input
 												type="text"
 												value={editedDescription}
 												onChange={handleEditDescriptionChange}
+												placeholder="Description"
 											/>
-											<select
-												value={editedPriority}
-												onChange={handleEditPriorityChange}
-											>
-												<option value="low">Low</option>
-												<option value="medium">Medium</option>
-												<option value="high">High</option>
-											</select>
 											<button onClick={() => handleUpdateTodo(todo._id)}>
 												Save
 											</button>
@@ -191,7 +168,6 @@ function Dashboard() {
 										<div>
 											<span>Title: {todo.title}</span>
 											<span>Description: {todo.description}</span>
-											<span>Priority: {todo.priority}</span>
 											<span>Author: {todo.author}</span>
 											<span>Created At: {formatDate(todo.createdAt)}</span>
 											<button onClick={() => setEditingTodoId(todo._id)}>
