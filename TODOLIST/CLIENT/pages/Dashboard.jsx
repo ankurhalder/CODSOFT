@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect, Fragment, useRef } from "react";
 import { UserLayout } from "../layout";
 import {
 	createTodo,
@@ -6,6 +6,7 @@ import {
 	updateTodo,
 	deleteTodo,
 } from "../functions/todoServices";
+import { updateUserImage, getUserProfileImage } from "../functions/userImage";
 
 function formatDate(dateStr) {
 	const options = { year: "numeric", month: "long", day: "numeric" };
@@ -19,7 +20,9 @@ function Dashboard() {
 	const [newTodoDescription, setNewTodoDescription] = useState("");
 	const [editedTitle, setEditedTitle] = useState("");
 	const [editedDescription, setEditedDescription] = useState("");
-
+	const [userImage, setUserImage] = useState("/navbar/user.png");
+	const fileInputRef = useRef(null);
+	const isAuthenticated = localStorage.getItem("authToken");
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
 		if (!token) {
@@ -114,10 +117,75 @@ function Dashboard() {
 	const firstName = localStorage.getItem("firstName");
 	const lastName = localStorage.getItem("lastName");
 
+	// @ image
+	useEffect(() => {
+		if (isAuthenticated) {
+			getUserProfileImage()
+				.then((profileImage) => {
+					if (profileImage) {
+						setUserImage(profileImage);
+					}
+				})
+				.catch((error) => {
+					console.error("Error loading user image:", error);
+				});
+		}
+	}, [isAuthenticated]);
+	const handleImageChange = async (e) => {
+		const fileInput = e.target; // Get the file input element
+		const selectedFile = e.target.files[0];
+
+		if (selectedFile) {
+			if (!selectedFile.type.startsWith("image/")) {
+				alert("Please select an image file.");
+				fileInput.value = ""; // Clear the file input field
+				return; // Exit the function to prevent further processing
+			}
+
+			const imageURL = URL.createObjectURL(selectedFile);
+			setUserImage(imageURL);
+
+			if (isAuthenticated) {
+				try {
+					const updatedImage = await updateUserImage(selectedFile);
+					if (updatedImage) {
+						setUserImage(updatedImage);
+						console.log("User image updated successfully!");
+
+						const profileImage = await getUserProfileImage();
+						if (profileImage) {
+							setUserImage(profileImage);
+						}
+					}
+				} catch (error) {
+					console.error("Error updating user image:", error);
+				}
+			}
+		}
+	};
+
+	const openFileInput = () => {
+		fileInputRef.current.click();
+	};
 	return (
 		<Fragment>
 			<UserLayout>
 				<div className="dashboard">
+					<div className="user-image" onClick={openFileInput}>
+						<img src={userImage} alt="User" className="user-picture" />
+						{isAuthenticated && (
+							<label htmlFor="profileImage" className="update-button">
+								Update
+								<input
+									type="file"
+									name="profileImage"
+									style={{ display: "none" }}
+									onChange={handleImageChange}
+									ref={fileInputRef}
+								/>
+							</label>
+						)}
+					</div>
 					<div className="user-greeting">
 						<h1 className="heading">welcome, {firstName + " " + lastName}</h1>
 						<span className="user-email">email: {email}</span>
