@@ -7,6 +7,11 @@ import {
 	deleteTodo,
 } from "../functions/todoServices";
 
+function formatDate(dateStr) {
+	const options = { year: "numeric", month: "long", day: "numeric" };
+	return new Date(dateStr).toLocaleDateString(undefined, options);
+}
+
 function Dashboard() {
 	const [todos, setTodos] = useState([]);
 	const [newTodo, setNewTodo] = useState("");
@@ -44,7 +49,6 @@ function Dashboard() {
 				setTodos([...todos, newTodo]);
 				setNewTodo("");
 				setNewTodoDescription("");
-				setNewTodoPriority("medium");
 			} else {
 				console.error("Failed to create todo.");
 			}
@@ -140,40 +144,19 @@ function Dashboard() {
 						<ul>
 							{todos.map((todo) => (
 								<li key={todo._id}>
-									{editingTodoId === todo._id ? (
-										<div>
-											<input
-												type="text"
-												value={todo.title}
-												onChange={(e) => {
-													const updatedTodos = [...todos];
-													const index = updatedTodos.findIndex(
-														(item) => item._id === todo._id
-													);
-													updatedTodos[index].title = e.target.value;
-													setTodos(updatedTodos);
-												}}
-											/>
-											<button onClick={() => handleUpdateTodo(todo._id)}>
-												Save
-											</button>
-											<button onClick={() => setEditingTodoId(null)}>
-												Cancel
-											</button>
-										</div>
-									) : (
-										<div>
-											<span>Title: {todo.title}</span>
-											<span>Description: {todo.description}</span>
-											<span>Priority: {todo.priority}</span>
-											<button onClick={() => setEditingTodoId(todo._id)}>
-												Edit
-											</button>
-											<button onClick={() => handleDeleteTodo(todo._id)}>
-												Delete
-											</button>
-										</div>
-									)}
+									<div>
+										<span>Title: {todo.title}</span>
+										<span>Description: {todo.description}</span>
+										<span>Priority: {todo.priority}</span>
+										<span>Author: {todo.author}</span>
+										<span>Created At: {formatDate(todo.createdAt)}</span>
+										<button onClick={() => setEditingTodoId(todo._id)}>
+											Edit
+										</button>
+										<button onClick={() => handleDeleteTodo(todo._id)}>
+											Delete
+										</button>
+									</div>
 								</li>
 							))}
 						</ul>
