@@ -17,7 +17,6 @@ function Dashboard() {
 		}
 	}, []);
 	useEffect(() => {
-		// Fetch todos when the component mounts
 		fetchTodos()
 			.then((data) => setTodos(data.data.todos))
 			.catch((error) => console.error("Error fetching todos:", error));
@@ -27,8 +26,6 @@ function Dashboard() {
 		e.preventDefault();
 		try {
 			const response = await createTodo({ title: newTodo });
-
-			// Check for the presence of 'data' in the response
 			if (response.data) {
 				const newTodo = response.data.todo;
 				setTodos([...todos, newTodo]);
@@ -51,10 +48,8 @@ function Dashboard() {
 
 		try {
 			const response = await updateTodo(todoId, {
-				title: todoToUpdate.title, // You can update other fields too
+				title: todoToUpdate.title,
 			});
-
-			// Check for the presence of 'data' in the response
 			if (response.data) {
 				const updatedTodo = response.data.todo;
 				const updatedTodos = todos.map((todo) =>
@@ -75,7 +70,6 @@ function Dashboard() {
 			const response = await deleteTodo(todoId);
 
 			if (response) {
-				// Remove the deleted todo from the list
 				const updatedTodos = todos.filter((todo) => todo._id !== todoId);
 				setTodos(updatedTodos);
 			} else {
@@ -85,8 +79,6 @@ function Dashboard() {
 			console.error("Error deleting todo:", error);
 		}
 	};
-
-	// console.log("authToken:", localStorage.getItem("authToken"));
 	const email = localStorage.getItem("email");
 	const firstName = localStorage.getItem("firstName");
 	const lastName = localStorage.getItem("lastName");
