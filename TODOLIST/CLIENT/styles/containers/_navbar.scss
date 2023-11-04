@@ -19,6 +19,7 @@
 	@media (max-width: $breakpoint-tablet) {
 	}
 	@media (max-width: $breakpoint-phone) {
+		padding: 10px 15px;
 	}
 	&__logo {
 		@include flex-container(row, nowrap, flex-start, center);
@@ -53,6 +54,9 @@
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
+				max-width: 40px;
+				max-height: 40px;
+				margin: 0 5% 0 0;
 			}
 		}
 
