@@ -28,6 +28,7 @@ const createTodo = async (newTodo) => {
 
 const fetchTodos = async () => {
 	const token = getAuthToken();
+	console.log("token", token);
 	try {
 		console.log("Fetch Todos function called");
 		const response = await fetch("https://mytoodle.onrender.com/api/v1/todos", {
