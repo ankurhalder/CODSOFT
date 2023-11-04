@@ -98,7 +98,7 @@ function Dashboard() {
 		try {
 			const response = await deleteTodo(todoId);
 
-			if (response) {
+			if (response === true) {
 				const updatedTodos = todos.filter((todo) => todo._id !== todoId);
 				setTodos(updatedTodos);
 				setEditingTodoId(null);

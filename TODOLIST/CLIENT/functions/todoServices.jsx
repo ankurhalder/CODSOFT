@@ -98,10 +98,10 @@ const deleteTodo = async (todoId) => {
 			}
 		);
 		console.log(response);
-		if (!response.ok) {
-			throw new Error("Failed to delete todo.");
+		if (response.ok === true) {
+			alert("Todo deleted successfully");
+			return true;
 		}
-		alert("Todo deleted successfully");
 	} catch (error) {
 		console.log("Error:", error);
 		throw error;
