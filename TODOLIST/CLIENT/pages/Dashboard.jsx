@@ -20,6 +20,7 @@ function Dashboard() {
 	const [newTodoPriority, setNewTodoPriority] = useState("medium");
 	const [editedTitle, setEditedTitle] = useState("");
 	const [editedDescription, setEditedDescription] = useState("");
+	const [editedPriority, setEditedPriority] = useState("");
 
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
@@ -51,6 +52,7 @@ function Dashboard() {
 				setTodos([...todos, newTodo]);
 				setNewTodo("");
 				setNewTodoDescription("");
+				setNewTodoPriority("medium");
 			} else {
 				console.error("Failed to create todo.");
 			}
@@ -67,6 +69,10 @@ function Dashboard() {
 		setEditedDescription(e.target.value);
 	};
 
+	const handleEditPriorityChange = (e) => {
+		setEditedPriority(e.target.value);
+	};
+
 	const handleUpdateTodo = async (todoId) => {
 		const todoToUpdate = todos.find((todo) => todo._id === todoId);
 
@@ -79,7 +85,7 @@ function Dashboard() {
 			const response = await updateTodo(todoId, {
 				title: editedTitle,
 				description: editedDescription,
-				priority: todoToUpdate.priority,
+				priority: editedPriority,
 			});
 
 			if (response.data) {
@@ -166,6 +172,14 @@ function Dashboard() {
 												value={editedDescription}
 												onChange={handleEditDescriptionChange}
 											/>
+											<select
+												value={editedPriority}
+												onChange={handleEditPriorityChange}
+											>
+												<option value="low">Low</option>
+												<option value="medium">Medium</option>
+												<option value="high">High</option>
+											</select>
 											<button onClick={() => handleUpdateTodo(todo._id)}>
 												Save
 											</button>
