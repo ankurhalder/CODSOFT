@@ -82,11 +82,11 @@ function Dashboard() {
 	const email = localStorage.getItem("email");
 	const firstName = localStorage.getItem("firstName");
 	const lastName = localStorage.getItem("lastName");
-	const role = localStorage.getItem("role");
-	console.log("email:", email);
-	console.log("firstName:", firstName);
-	console.log("lastName:", lastName);
-	console.log("role:", role);
+	// const role = localStorage.getItem("role");
+	// console.log("email:", email);
+	// console.log("firstName:", firstName);
+	// console.log("lastName:", lastName);
+	// console.log("role:", role);
 	return (
 		<Fragment>
 			<UserLayout>
