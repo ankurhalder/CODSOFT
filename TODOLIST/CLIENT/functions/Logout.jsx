@@ -17,9 +17,11 @@ async function logout() {
 		if (response.status === 204) {
 			localStorage.clear();
 			alert("You are logged out");
+			window.location.href = "/";
 		} else if (response.status === 401) {
 			localStorage.clear();
 			alert("You are not logged in");
+			window.location.href = "/";
 		} else {
 			alert("An error occurred during logout.");
 		}
