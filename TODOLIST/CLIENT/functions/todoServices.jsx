@@ -20,7 +20,7 @@ const createTodo = async (newTodo) => {
 		}
 
 		const data = await response.json();
-
+		console.log("data", data);
 		return data;
 	} catch (error) {
 		console.log("Error:", error);
@@ -75,7 +75,7 @@ const updateTodo = async (todoId, updatedTodo) => {
 		}
 
 		const data = await response.json();
-
+		console.log("data", data);
 		return data;
 	} catch (error) {
 		console.log("Error:", error);
@@ -97,10 +97,11 @@ const deleteTodo = async (todoId) => {
 				},
 			}
 		);
-
+		console.log(response);
 		if (!response.ok) {
 			throw new Error("Failed to delete todo.");
 		}
+		alert("Todo deleted successfully");
 	} catch (error) {
 		console.log("Error:", error);
 		throw error;

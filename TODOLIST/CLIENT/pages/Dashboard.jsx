@@ -13,7 +13,6 @@ function Dashboard() {
 	const [editingTodoId, setEditingTodoId] = useState(null);
 	const [newTodoDescription, setNewTodoDescription] = useState("");
 	const [newTodoPriority, setNewTodoPriority] = useState("medium");
-	const [newTodoNotes, setNewTodoNotes] = useState([]);
 
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
@@ -28,22 +27,6 @@ function Dashboard() {
 			.catch((error) => console.error("Error fetching todos:", error));
 	}, []);
 
-	const handleNoteChange = (e, index) => {
-		const updatedNotes = [...newTodoNotes];
-		updatedNotes[index] = e.target.value;
-		setNewTodoNotes(updatedNotes);
-	};
-
-	const handleAddNote = () => {
-		setNewTodoNotes([...newTodoNotes, ""]);
-	};
-
-	const handleRemoveNote = (index) => {
-		const updatedNotes = [...newTodoNotes];
-		updatedNotes.splice(index, 1);
-		setNewTodoNotes(updatedNotes);
-	};
-
 	const handleCreateTodo = async (e) => {
 		e.preventDefault();
 
@@ -51,7 +34,6 @@ function Dashboard() {
 			title: newTodo,
 			description: newTodoDescription,
 			priority: newTodoPriority,
-			notes: newTodoNotes,
 		};
 
 		try {
@@ -63,7 +45,6 @@ function Dashboard() {
 				setNewTodo("");
 				setNewTodoDescription("");
 				setNewTodoPriority("medium");
-				setNewTodoNotes([]);
 			} else {
 				console.error("Failed to create todo.");
 			}
@@ -85,7 +66,6 @@ function Dashboard() {
 				title: todoToUpdate.title,
 				description: todoToUpdate.description,
 				priority: todoToUpdate.priority,
-				notes: todoToUpdate.notes,
 			});
 
 			if (response.data) {
@@ -154,24 +134,6 @@ function Dashboard() {
 								<option value="medium">Medium</option>
 								<option value="high">High</option>
 							</select>
-							<ul>
-								{newTodoNotes.map((note, index) => (
-									<li key={index}>
-										<input
-											type="text"
-											placeholder="Note"
-											value={note}
-											onChange={(e) => handleNoteChange(e, index)}
-										/>
-										<button onClick={() => handleRemoveNote(index)}>
-											Remove
-										</button>
-									</li>
-								))}
-							</ul>
-							<button type="button" onClick={handleAddNote}>
-								Add Note
-							</button>
 							<button type="submit">Add</button>
 						</form>
 
@@ -201,7 +163,9 @@ function Dashboard() {
 										</div>
 									) : (
 										<div>
-											<span>{todo.title}</span>
+											<span>Title: {todo.title}</span>
+											<span>Description: {todo.description}</span>
+											<span>Priority: {todo.priority}</span>
 											<button onClick={() => setEditingTodoId(todo._id)}>
 												Edit
 											</button>
