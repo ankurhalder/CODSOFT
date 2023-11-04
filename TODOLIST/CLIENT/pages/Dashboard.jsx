@@ -18,6 +18,8 @@ function Dashboard() {
 	const [editingTodoId, setEditingTodoId] = useState(null);
 	const [newTodoDescription, setNewTodoDescription] = useState("");
 	const [newTodoPriority, setNewTodoPriority] = useState("medium");
+	const [editedTitle, setEditedTitle] = useState("");
+	const [editedDescription, setEditedDescription] = useState("");
 
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
@@ -57,6 +59,14 @@ function Dashboard() {
 		}
 	};
 
+	const handleEditTitleChange = (e) => {
+		setEditedTitle(e.target.value);
+	};
+
+	const handleEditDescriptionChange = (e) => {
+		setEditedDescription(e.target.value);
+	};
+
 	const handleUpdateTodo = async (todoId) => {
 		const todoToUpdate = todos.find((todo) => todo._id === todoId);
 
@@ -67,8 +77,8 @@ function Dashboard() {
 
 		try {
 			const response = await updateTodo(todoId, {
-				title: todoToUpdate.title,
-				description: todoToUpdate.description,
+				title: editedTitle,
+				description: editedDescription,
 				priority: todoToUpdate.priority,
 			});
 
@@ -144,19 +154,40 @@ function Dashboard() {
 						<ul>
 							{todos.map((todo) => (
 								<li key={todo._id}>
-									<div>
-										<span>Title: {todo.title}</span>
-										<span>Description: {todo.description}</span>
-										<span>Priority: {todo.priority}</span>
-										<span>Author: {todo.author}</span>
-										<span>Created At: {formatDate(todo.createdAt)}</span>
-										<button onClick={() => setEditingTodoId(todo._id)}>
-											Edit
-										</button>
-										<button onClick={() => handleDeleteTodo(todo._id)}>
-											Delete
-										</button>
-									</div>
+									{editingTodoId === todo._id ? (
+										<div>
+											<input
+												type="text"
+												value={editedTitle}
+												onChange={handleEditTitleChange}
+											/>
+											<input
+												type="text"
+												value={editedDescription}
+												onChange={handleEditDescriptionChange}
+											/>
+											<button onClick={() => handleUpdateTodo(todo._id)}>
+												Save
+											</button>
+											<button onClick={() => setEditingTodoId(null)}>
+												Cancel
+											</button>
+										</div>
+									) : (
+										<div>
+											<span>Title: {todo.title}</span>
+											<span>Description: {todo.description}</span>
+											<span>Priority: {todo.priority}</span>
+											<span>Author: {todo.author}</span>
+											<span>Created At: {formatDate(todo.createdAt)}</span>
+											<button onClick={() => setEditingTodoId(todo._id)}>
+												Edit
+											</button>
+											<button onClick={() => handleDeleteTodo(todo._id)}>
+												Delete
+											</button>
+										</div>
+									)}
 								</li>
 							))}
 						</ul>
