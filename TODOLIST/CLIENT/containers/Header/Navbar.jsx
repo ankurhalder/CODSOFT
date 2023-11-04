@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { logout } from "../../functions";
 function Navbar() {
 	const authToken = localStorage.getItem("authToken");
 
@@ -24,7 +24,9 @@ function Navbar() {
 			</div>
 			<div className="navbar__buttons">
 				{authToken ? (
-					<button className="navbar__signout">Sign Out</button>
+					<button onClick={logout} className="navbar__signout">
+						Sign Out
+					</button>
 				) : (
 					<>
 						<Link to="/">

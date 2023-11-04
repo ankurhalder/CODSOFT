@@ -1,43 +1,32 @@
-const logoutUser = async () => {
+async function logout() {
+	const authToken = localStorage.getItem("authToken");
+	console.log("authToken:", authToken);
 	try {
-		console.log("Logout function called");
-		const authToken = localStorage.getItem("authToken");
-
-		if (authToken) {
-			const apiUrl = "https://mytoodle.onrender.com/api/v1/users/logout";
-			const requestOptions = {
+		console.log("logout function called");
+		const response = await fetch(
+			"https://mytoodle.onrender.com/api/v1/users/logout",
+			{
 				method: "POST",
 				headers: {
-					"Content-Type": "application/json",
 					Authorization: `Bearer ${authToken}`,
 				},
-			};
-
-			const response = await fetch(apiUrl, requestOptions);
-
-			if (!response.ok) {
-				throw new Error("Failed to log out. Please try again.");
 			}
+		);
+		console.log("response:", response);
 
-			const data = await response.json();
-
-			console.log("Logout successful:", data);
-
-			localStorage.removeItem("authToken");
-			localStorage.removeItem("email");
-			localStorage.removeItem("firstName");
-			localStorage.removeItem("lastName");
-			localStorage.removeItem("role");
-
-			window.location.href = "/";
-			return data;
+		if (response.status === 204) {
+			localStorage.clear();
+			alert("You are logged out");
+		} else if (response.status === 401) {
+			localStorage.clear();
+			alert("You are not logged in");
 		} else {
-			console.error("No authentication token found. User is not logged in.");
+			alert("An error occurred during logout.");
 		}
 	} catch (error) {
-		console.error("Error logging out:", error);
-		throw error;
+		console.error("An error occurred:", error);
+		alert("An error occurred during logout.");
 	}
-};
+}
 
-export default logoutUser;
+export default logout;

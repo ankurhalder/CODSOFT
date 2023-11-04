@@ -86,11 +86,11 @@
 				transform: scale(1.1);
 			}
 		}
-		.navabr__signout {
-			background-color: #e74c3c;
+		.navbar__signout {
+			background-color: var(--red);
 
 			&:hover {
-				background-color: #c0392b;
+				background-color: var(--red-5);
 			}
 		}
 		.navbar__signup {
