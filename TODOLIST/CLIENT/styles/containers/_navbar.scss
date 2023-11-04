@@ -6,10 +6,7 @@
 	box-shadow: 0 2px 5px var(--black-shadow-light);
 	border-radius: 5px;
 	transition: background 0.3s, transform 0.3s;
-	&:hover {
-		background: linear-gradient(to right, var(--blue-2), var(--blue-1));
-		transform: translateY(-1.5px);
-	}
+	overflow: hidden;
 	@media (max-width: $breakpoint-desktop-wide) {
 	}
 	@media (max-width: $breakpoint-desktop) {
@@ -19,8 +16,13 @@
 	@media (max-width: $breakpoint-tablet) {
 	}
 	@media (max-width: $breakpoint-phone) {
-		padding: 10px 15px;
+		@include flex-container(column, nowrap, space-between, center);
 	}
+	&:hover {
+		background: linear-gradient(to right, var(--blue-2), var(--blue-1));
+		transform: translateY(-1.5px);
+	}
+
 	&__logo {
 		@include flex-container(row, nowrap, flex-start, center);
 		font-family: var(--font-elianto);
@@ -28,36 +30,14 @@
 		letter-spacing: 2px;
 		text-shadow: 2px 2px 4px var(--black-shadow-light-1);
 		transition: transform 0.5s;
-		@media (max-width: $breakpoint-desktop-wide) {
-		}
-		@media (max-width: $breakpoint-desktop) {
-		}
-		@media (max-width: $breakpoint-large-tablet) {
-		}
-		@media (max-width: $breakpoint-tablet) {
-		}
-		@media (max-width: $breakpoint-phone) {
-		}
+
 		img {
 			width: 100%;
 			height: 100%;
 			max-width: 50px;
 			max-height: 50px;
-			margin: 0 10% 0 0;
+			margin-right: 10%;
 			transition: transform 1s;
-			@media (max-width: $breakpoint-desktop-wide) {
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-				max-width: 40px;
-				max-height: 40px;
-				margin: 0 5% 0 0;
-			}
 		}
 
 		&:hover {
@@ -73,19 +53,11 @@
 		@include flex-container(row, nowrap, flex-end, center);
 		gap: 20px;
 		transition: transform 0.3s;
-		@media (max-width: $breakpoint-desktop-wide) {
-		}
-		@media (max-width: $breakpoint-desktop) {
-		}
-		@media (max-width: $breakpoint-large-tablet) {
-		}
-		@media (max-width: $breakpoint-tablet) {
-		}
-		@media (max-width: $breakpoint-phone) {
-		}
+
 		a {
 			text-decoration: none;
 		}
+
 		button {
 			color: var(--black);
 			border: none;
@@ -98,21 +70,13 @@
 			box-shadow: 0 2px 5px var(--black-shadow-light);
 			font-weight: 600;
 			letter-spacing: 2px;
+
 			&:hover {
 				transform: scale(1.1);
 				color: var(--white);
 			}
-			@media (max-width: $breakpoint-desktop-wide) {
-			}
-			@media (max-width: $breakpoint-desktop) {
-			}
-			@media (max-width: $breakpoint-large-tablet) {
-			}
-			@media (max-width: $breakpoint-tablet) {
-			}
-			@media (max-width: $breakpoint-phone) {
-			}
 		}
+
 		.navbar__signout {
 			background-color: var(--red);
 
@@ -120,6 +84,7 @@
 				background-color: var(--red-5);
 			}
 		}
+
 		.navbar__signup {
 			background-color: var(--green);
 
@@ -127,6 +92,7 @@
 				background-color: var(--green-1);
 			}
 		}
+
 		.navbar__signin {
 			background-color: var(--yellow-1);
 
