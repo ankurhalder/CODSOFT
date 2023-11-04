@@ -1,8 +1,14 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import { LandingLayout } from "../layout";
 import { signUpUser } from "../functions";
 import RandomLoader from "../components/RandomLoader";
 function SignUp() {
+	useEffect(() => {
+		const token = localStorage.getItem("authToken");
+		if (token) {
+			window.location.href = "/dashboard";
+		}
+	}, []);
 	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
