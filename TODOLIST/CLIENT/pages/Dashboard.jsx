@@ -51,7 +51,7 @@ function Dashboard() {
 			title: newTodo,
 			description: newTodoDescription,
 			priority: newTodoPriority,
-			notes: newTodoNotes.map((note) => ({ text: note })),
+			notes: newTodoNotes,
 		};
 
 		try {
@@ -63,7 +63,7 @@ function Dashboard() {
 				setNewTodo("");
 				setNewTodoDescription("");
 				setNewTodoPriority("medium");
-				setNewTodoNotes([""]);
+				setNewTodoNotes([]);
 			} else {
 				console.error("Failed to create todo.");
 			}
@@ -83,7 +83,11 @@ function Dashboard() {
 		try {
 			const response = await updateTodo(todoId, {
 				title: todoToUpdate.title,
+				description: todoToUpdate.description,
+				priority: todoToUpdate.priority,
+				notes: todoToUpdate.notes,
 			});
+
 			if (response.data) {
 				const updatedTodo = response.data.todo;
 				const updatedTodos = todos.map((todo) =>
@@ -165,6 +169,9 @@ function Dashboard() {
 									</li>
 								))}
 							</ul>
+							<button type="button" onClick={handleAddNote}>
+								Add Note
+							</button>
 							<button type="submit">Add</button>
 						</form>
 
