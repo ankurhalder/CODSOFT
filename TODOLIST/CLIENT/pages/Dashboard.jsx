@@ -19,8 +19,11 @@ function Dashboard() {
 	return (
 		<Fragment>
 			<UserLayout>
-				<div>
-					<h1>welcome </h1>
+				<div className="dashboard">
+					<div className="user-greeting">
+						<h1 className="heading">welcome, {firstName + " " + lastName}</h1>
+						<span className="user-email">email: {email}</span>
+					</div>
 				</div>
 			</UserLayout>
 		</Fragment>

@@ -22,6 +22,15 @@ const todoSchema = new mongoose.Schema({
 	author: {
 		type: String,
 	},
+	list: {
+		type: String,
+		default: "General",
+	},
+	notes: [
+		{
+			type: String,
+		},
+	],
 });
 
 todoSchema.pre("save", async function (next) {
