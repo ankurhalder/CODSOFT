@@ -101,6 +101,7 @@ function Dashboard() {
 			if (response) {
 				const updatedTodos = todos.filter((todo) => todo._id !== todoId);
 				setTodos(updatedTodos);
+				setEditingTodoId(null);
 			} else {
 				console.error("Failed to delete todo.");
 			}
