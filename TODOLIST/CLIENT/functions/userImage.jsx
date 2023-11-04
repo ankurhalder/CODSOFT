@@ -1,7 +1,7 @@
 const updateUserImage = async (file) => {
 	try {
 		console.log("updateUserImage function called");
-		const authToken = localStorage.getItem("token");
+		const authToken = localStorage.getItem("authToken");
 
 		if (!authToken) {
 			throw new Error("Authentication token is missing.");
@@ -43,7 +43,7 @@ const updateUserImage = async (file) => {
 
 const getUserProfileImage = async () => {
 	try {
-		const authToken = localStorage.getItem("token");
+		const authToken = localStorage.getItem("authToken");
 
 		if (!authToken) {
 			throw new Error("Authentication token is missing.");
