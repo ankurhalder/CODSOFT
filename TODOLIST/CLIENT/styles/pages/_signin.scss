@@ -10,6 +10,16 @@
 	transition: border-color 0.3s, transform 0.3s;
 	box-shadow: inset -5px -5px 10px var(--white-shadow-medium),
 		inset -5px -5px 10px var(--black-shadow-light);
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 	h2 {
 		font-family: var(--font-elianto);
 		font-size: var(--font-6);
@@ -17,10 +27,30 @@
 		color: var(--blue-1);
 		margin: 0 0 7% 0;
 		text-transform: uppercase;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	.form-group {
 		margin: 0 0 7% 0;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		input {
 			width: 100%;
 			padding: 16px;
@@ -34,7 +64,16 @@
 			transition: border-color 0.3s, transform 0.3s;
 			box-shadow: inset -5px -5px 10px var(--white-shadow-medium),
 				inset 5px 5px 10px var(--black-shadow-light);
-
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 			&:focus {
 				border-color: var(--blue-1);
 				transform: scale(1.02);
@@ -49,6 +88,16 @@
 		font-size: var(--font-11);
 		letter-spacing: 2px;
 		margin: 2% 0 5% 0;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	button {
@@ -67,7 +116,16 @@
 		text-transform: uppercase;
 		box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.7),
 			5px 5px 10px rgba(0, 0, 0, 0.2);
-
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		&:hover {
 			background: var(--white-2);
 			transform: scale(1.02);
