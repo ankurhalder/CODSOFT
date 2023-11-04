@@ -18,8 +18,10 @@ const createTodo = async (newTodo) => {
 		if (!response.ok) {
 			throw new Error("Failed to create todo.");
 		}
-		console.log("data", response.json());
-		return response.json();
+
+		const data = await response.json();
+
+		return data;
 	} catch (error) {
 		console.log("Error:", error);
 		throw error;
@@ -42,8 +44,10 @@ const fetchTodos = async () => {
 		if (!response.ok) {
 			throw new Error("Failed to fetch todos.");
 		}
-		console.log("data", response.json());
-		return response.json();
+
+		const data = await response.json();
+
+		return data;
 	} catch (error) {
 		console.log("Error:", error);
 		throw error;
@@ -69,8 +73,10 @@ const updateTodo = async (todoId, updatedTodo) => {
 		if (!response.ok) {
 			throw new Error("Failed to update todo.");
 		}
-		console.log("data", response.json());
-		return response.json();
+
+		const data = await response.json();
+
+		return data;
 	} catch (error) {
 		console.log("Error:", error);
 		throw error;
@@ -95,7 +101,6 @@ const deleteTodo = async (todoId) => {
 		if (!response.ok) {
 			throw new Error("Failed to delete todo.");
 		}
-		console.log("data", response.json());
 	} catch (error) {
 		console.log("Error:", error);
 		throw error;
