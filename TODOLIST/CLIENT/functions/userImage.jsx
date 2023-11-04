@@ -11,7 +11,7 @@ const updateUserImage = async (file) => {
 		formData.append("profileImage", file);
 
 		const response = await fetch(
-			"http://localhost:8000/api/v1/profileImage/uploadProfileImage",
+			"https://mytoodle.onrender.com/api/v1/profileImage/uploadProfileImage",
 			{
 				method: "PATCH",
 				headers: {
@@ -50,7 +50,7 @@ const getUserProfileImage = async () => {
 		}
 
 		const response = await fetch(
-			"https://mylore.onrender.com/api/v1/profileImage/getUserProfileImage",
+			"https://mytoodle.onrender.com/api/v1/profileImage/getUserProfileImage",
 			{
 				method: "GET",
 				headers: {
