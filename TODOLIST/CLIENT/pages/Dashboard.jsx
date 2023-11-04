@@ -20,7 +20,7 @@ function Dashboard() {
 	const [newTodoDescription, setNewTodoDescription] = useState("");
 	const [editedTitle, setEditedTitle] = useState("");
 	const [editedDescription, setEditedDescription] = useState("");
-	const [userImage, setUserImage] = useState("/navbar/user.png");
+	const [userImage, setUserImage] = useState("/user.png");
 	const fileInputRef = useRef(null);
 	const isAuthenticated = localStorage.getItem("authToken");
 	useEffect(() => {
