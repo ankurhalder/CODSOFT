@@ -10,6 +10,9 @@ function Dashboard() {
 	const [todos, setTodos] = useState([]);
 	const [newTodo, setNewTodo] = useState("");
 	const [editingTodoId, setEditingTodoId] = useState(null);
+	const [newTodoDescription, setNewTodoDescription] = useState("");
+	const [newTodoPriority, setNewTodoPriority] = useState("medium");
+	const [newTodoNotes, setNewTodoNotes] = useState([]);
 	useEffect(() => {
 		const token = localStorage.getItem("authToken");
 		if (!token) {
@@ -21,15 +24,41 @@ function Dashboard() {
 			.then((data) => setTodos(data.data.todos))
 			.catch((error) => console.error("Error fetching todos:", error));
 	}, []);
+	const handleNoteChange = (e, index) => {
+		const updatedNotes = [...newTodoNotes];
+		updatedNotes[index] = e.target.value;
+		setNewTodoNotes(updatedNotes);
+	};
 
+	const handleAddNote = () => {
+		setNewTodoNotes([...newTodoNotes, ""]);
+	};
+
+	const handleRemoveNote = (index) => {
+		const updatedNotes = [...newTodoNotes];
+		updatedNotes.splice(index, 1);
+		setNewTodoNotes(updatedNotes);
+	};
 	const handleCreateTodo = async (e) => {
 		e.preventDefault();
+
+		const newTodoData = {
+			title: newTodo,
+			description: newTodoDescription,
+			priority: newTodoPriority,
+			notes: newTodoNotes.map((note) => ({ text: note })),
+		};
+
 		try {
-			const response = await createTodo({ title: newTodo });
+			const response = await createTodo(newTodoData);
+
 			if (response.data) {
 				const newTodo = response.data.todo;
 				setTodos([...todos, newTodo]);
 				setNewTodo("");
+				setNewTodoDescription("");
+				setNewTodoPriority("medium");
+				setNewTodoNotes([""]);
 			} else {
 				console.error("Failed to create todo.");
 			}
@@ -82,11 +111,6 @@ function Dashboard() {
 	const email = localStorage.getItem("email");
 	const firstName = localStorage.getItem("firstName");
 	const lastName = localStorage.getItem("lastName");
-	// const role = localStorage.getItem("role");
-	// console.log("email:", email);
-	// console.log("firstName:", firstName);
-	// console.log("lastName:", lastName);
-	// console.log("role:", role);
 	return (
 		<Fragment>
 			<UserLayout>
@@ -105,8 +129,38 @@ function Dashboard() {
 								onChange={(e) => setNewTodo(e.target.value)}
 								required
 							/>
+							<input
+								type="text"
+								placeholder="Description"
+								value={newTodoDescription}
+								onChange={(e) => setNewTodoDescription(e.target.value)}
+							/>
+							<select
+								value={newTodoPriority}
+								onChange={(e) => setNewTodoPriority(e.target.value)}
+							>
+								<option value="low">Low</option>
+								<option value="medium">Medium</option>
+								<option value="high">High</option>
+							</select>
+							<ul>
+								{newTodoNotes.map((note, index) => (
+									<li key={index}>
+										<input
+											type="text"
+											placeholder="Note"
+											value={note}
+											onChange={(e) => handleNoteChange(e, index)}
+										/>
+										<button onClick={() => handleRemoveNote(index)}>
+											Remove
+										</button>
+									</li>
+								))}
+							</ul>
 							<button type="submit">Add</button>
 						</form>
+
 						<ul>
 							{todos.map((todo) => (
 								<li key={todo._id}>
