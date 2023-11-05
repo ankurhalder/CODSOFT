@@ -147,12 +147,18 @@
 			.cancel-button,
 			.edit-button,
 			.delete-button {
+				font-family: var(--font-tektur);
+				font-size: var(--font-13);
+				letter-spacing: 1px;
+				font-weight: 600;
+				text-transform: uppercase;
+				margin: 1% 1% 1% 1%;
+
 				background-color: var(--blue-1);
 				color: var(--white);
 				border: none;
 				border-radius: 4px;
 				padding: 10px 20px;
-				font-size: 16px;
 				cursor: pointer;
 				transition: background-color 0.3s;
 
