@@ -4,6 +4,16 @@
 	text-align: center;
 	background-color: var(--white-5);
 	color: var(--black);
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 	.user-image {
 		position: relative;
 		.user-picture {
@@ -15,6 +25,16 @@
 			object-fit: cover;
 			border: 4px solid var(--white);
 			box-shadow: 0px 0px 10px var(--black-shadow);
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		.update-button {
@@ -33,7 +53,16 @@
 			cursor: pointer;
 			transition: background-color 0.3s;
 			transition: 0.3s ease-in-out;
-
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 			&:hover {
 				background-color: var(--blue-3);
 				color: var(--white);
@@ -48,6 +77,16 @@
 
 	.user-greeting {
 		padding: 5px;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		.heading {
 			font-family: var(--font-oswald);
 			font-size: var(--font-8);
@@ -55,6 +94,16 @@
 			letter-spacing: 2px;
 			text-transform: uppercase;
 			color: var(--blue-1);
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		.user-email {
@@ -62,6 +111,16 @@
 			letter-spacing: 1px;
 			font-size: var(--font-11);
 			color: var(--black);
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 	}
 
@@ -71,6 +130,16 @@
 		letter-spacing: 1px;
 		margin: 2% 0 0 0;
 		color: var(--blue-1);
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	.new-todo-input,
@@ -84,6 +153,16 @@
 		font-size: var(--font-12);
 		letter-spacing: 1px;
 		font-weight: 400;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	.add-button {
@@ -100,7 +179,16 @@
 		padding: 12px 24px;
 		cursor: pointer;
 		transition: background-color 0.3s;
-
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		&:hover {
 			background-color: var(--blue-3);
 		}
@@ -113,6 +201,16 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 
 		.todo-item {
 			max-width: 300px;
@@ -125,6 +223,16 @@
 			transition: transform 0.3s, box-shadow 0.3s;
 			word-wrap: break-word;
 			word-break: break-all;
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 			&:hover {
 				transform: translateY(-5px);
 				box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
@@ -141,6 +249,16 @@
 				font-size: var(--font-13);
 				letter-spacing: 1px;
 				font-weight: 400;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			.save-button,
@@ -153,7 +271,6 @@
 				font-weight: 600;
 				text-transform: uppercase;
 				margin: 1% 1% 1% 1%;
-
 				background-color: var(--blue-1);
 				color: var(--white);
 				border: none;
@@ -161,7 +278,16 @@
 				padding: 10px 20px;
 				cursor: pointer;
 				transition: background-color 0.3s;
-
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 				&:hover {
 					background-color: var(--blue-3);
 				}
@@ -174,6 +300,16 @@
 				display: block;
 				margin: 10px 0;
 				color: var(--black);
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 			.todo-title {
 				font-family: var(--font-tektur);
@@ -182,6 +318,16 @@
 				font-weight: 600;
 				color: var(--blue-2);
 				text-decoration: underline;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 			.todo-description,
 			.todo-author {
@@ -189,6 +335,16 @@
 				font-size: var(--font-12);
 				letter-spacing: 1px;
 				font-weight: 400;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 			.todo-created-at {
 				font-family: var(--font-roboto);
@@ -196,6 +352,16 @@
 				letter-spacing: 1px;
 				font-weight: 400;
 				color: var(--red-2);
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 		}
 	}
