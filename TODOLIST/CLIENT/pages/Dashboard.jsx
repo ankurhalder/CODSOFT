@@ -198,17 +198,18 @@ function Dashboard() {
 							<input
 								type="text"
 								className="new-todo-input"
-								placeholder="New Todo"
+								placeholder="Title"
 								value={newTodo}
 								onChange={(e) => setNewTodo(e.target.value)}
 								required
 							/>
-							<input
-								type="text"
+							<textarea
 								className="description-input"
 								placeholder="Description"
 								value={newTodoDescription}
 								onChange={(e) => setNewTodoDescription(e.target.value)}
+								rows={5}
+								cols={50}
 							/>
 							<button type="submit" className="add-button">
 								Add
