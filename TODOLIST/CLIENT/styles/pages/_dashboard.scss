@@ -1,11 +1,8 @@
 .dashboard {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex-container(column, nowrap, center, center);
 	padding: 20px;
 	text-align: center;
 	background-color: #f7f7f7;
-	font-family: Arial, sans-serif;
 	color: #333;
 
 	.user-image {
