@@ -173,7 +173,29 @@
 			.todo-created-at {
 				display: block;
 				margin: 10px 0;
-				color: #333;
+				color: var(--black);
+			}
+			.todo-title {
+				font-family: var(--font-tektur);
+				font-size: var(--font-12);
+				letter-spacing: 1px;
+				font-weight: 600;
+				color: var(--blue-2);
+				text-decoration: underline;
+			}
+			.todo-description,
+			.todo-author {
+				font-family: var(--font-roboto);
+				font-size: var(--font-12);
+				letter-spacing: 1px;
+				font-weight: 400;
+			}
+			.todo-created-at {
+				font-family: var(--font-roboto);
+				font-size: var(--font-12);
+				letter-spacing: 1px;
+				font-weight: 400;
+				color: var(--red-2);
 			}
 		}
 	}
