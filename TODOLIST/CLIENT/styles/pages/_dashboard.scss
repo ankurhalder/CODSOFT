@@ -55,7 +55,6 @@
 			letter-spacing: 2px;
 			text-transform: uppercase;
 			color: var(--blue-1);
-			// margin: 0 0 1% 0;
 		}
 
 		.user-email {
@@ -67,9 +66,10 @@
 	}
 
 	.todo-list-title {
-		font-size: 28px;
-		font-weight: bold;
-		margin-top: 20px;
+		font-family: var(--font-tektur);
+		font-size: var(--font-9);
+		letter-spacing: 1px;
+		margin: 2% 0 0 0;
 		color: var(--blue-1);
 	}
 
