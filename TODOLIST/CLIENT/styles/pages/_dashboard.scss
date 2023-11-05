@@ -123,7 +123,8 @@
 			background-color: var(--white);
 			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 			transition: transform 0.3s, box-shadow 0.3s;
-
+			word-wrap: break-word;
+			word-break: break-all;
 			&:hover {
 				transform: translateY(-5px);
 				box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
@@ -133,10 +134,13 @@
 			.edit-description-input {
 				width: 100%;
 				padding: 10px;
-				margin: 10px 0;
+				margin: 5% 0 5% 0;
 				border: 2px solid var(--white-7);
 				border-radius: 4px;
-				font-size: 18px;
+				font-family: var(--font-orbitron);
+				font-size: var(--font-13);
+				letter-spacing: 1px;
+				font-weight: 400;
 			}
 
 			.save-button,
