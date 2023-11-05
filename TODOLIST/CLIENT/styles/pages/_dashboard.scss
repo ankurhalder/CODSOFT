@@ -78,7 +78,7 @@
 		width: 100%;
 		padding: 12px;
 		margin: 2% 0 0 0;
-		border: 2px solid #ccc;
+		border: 2px solid var(--white-7);
 		border-radius: 4px;
 		font-family: var(--font-roboto);
 		font-size: var(--font-12);
@@ -115,7 +115,9 @@
 		margin: 0;
 
 		.todo-item {
-			border: 2px solid #ccc;
+			max-width: 300px;
+			text-align: center;
+			border: 2px solid var(--white-7);
 			border-radius: 8px;
 			padding: 20px;
 			background-color: var(--white);
@@ -124,7 +126,7 @@
 
 			&:hover {
 				transform: translateY(-5px);
-				box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+				box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
 			}
 
 			.edit-title-input,
@@ -132,7 +134,7 @@
 				width: 100%;
 				padding: 10px;
 				margin: 10px 0;
-				border: 2px solid #ccc;
+				border: 2px solid var(--white-7);
 				border-radius: 4px;
 				font-size: 18px;
 			}
