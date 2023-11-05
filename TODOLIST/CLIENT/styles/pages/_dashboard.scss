@@ -30,6 +30,8 @@
 			@media (max-width: $breakpoint-desktop) {
 			}
 			@media (max-width: $breakpoint-large-tablet) {
+				max-width: 100px;
+				max-height: 100px;
 			}
 			@media (max-width: $breakpoint-tablet) {
 			}
@@ -204,12 +206,15 @@
 		@media (max-width: $breakpoint-desktop-wide) {
 		}
 		@media (max-width: $breakpoint-desktop) {
+			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (max-width: $breakpoint-large-tablet) {
 		}
 		@media (max-width: $breakpoint-tablet) {
+			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (max-width: $breakpoint-phone) {
+			grid-template-columns: repeat(1, 1fr);
 		}
 
 		.todo-item {
@@ -232,6 +237,7 @@
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
+				margin: 0 auto;
 			}
 			&:hover {
 				transform: translateY(-5px);
