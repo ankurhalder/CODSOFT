@@ -7,7 +7,7 @@ import {
 	deleteTodo,
 } from "../functions/todoServices";
 import { updateUserImage, getUserProfileImage } from "../functions/userImage";
-
+import RandomLoader from "../components/RandomLoader";
 function formatDate(dateStr) {
 	const options = {
 		year: "numeric",
@@ -28,6 +28,7 @@ function Dashboard() {
 	const [editedTitle, setEditedTitle] = useState("");
 	const [editedDescription, setEditedDescription] = useState("");
 	const [userImage, setUserImage] = useState("/user.png");
+	const [loading, setIsLoading] = useState(false);
 	const fileInputRef = useRef(null);
 	const isAuthenticated = localStorage.getItem("authToken");
 	useEffect(() => {
@@ -38,14 +39,16 @@ function Dashboard() {
 	}, []);
 
 	useEffect(() => {
+		setIsLoading(true);
 		fetchTodos()
 			.then((data) => setTodos(data.data.todos))
+			.then(() => setIsLoading(false))
 			.catch((error) => console.error("Error fetching todos:", error));
 	}, []);
 
 	const handleCreateTodo = async (e) => {
 		e.preventDefault();
-
+		setIsLoading(true);
 		const newTodoData = {
 			title: newTodo,
 			description: newTodoDescription,
@@ -59,11 +62,17 @@ function Dashboard() {
 				setTodos([...todos, newTodo]);
 				setNewTodo("");
 				setNewTodoDescription("");
+				alert("Todo created successfully!");
+				setIsLoading(false);
 			} else {
 				console.error("Failed to create todo.");
+				alert("Failed to create todo.");
+				setIsLoading(false);
 			}
 		} catch (error) {
 			console.error("Error creating todo:", error);
+			alert("Error creating todo.");
+			setIsLoading(false);
 		}
 	};
 
@@ -76,10 +85,12 @@ function Dashboard() {
 	};
 
 	const handleUpdateTodo = async (todoId) => {
+		setIsLoading(true);
 		const todoToUpdate = todos.find((todo) => todo._id === todoId);
-
 		if (!todoToUpdate) {
 			console.error("Todo not found for update.");
+			alert("Todo not found for update.");
+			setIsLoading(false);
 			return;
 		}
 
@@ -96,27 +107,40 @@ function Dashboard() {
 				);
 				setTodos(updatedTodos);
 				setEditingTodoId(null);
+				setIsLoading(false);
+				alert("Todo updated successfully!");
 			} else {
 				console.error("Failed to update todo.");
+				alert("Failed to update todo.");
+				setIsLoading(false);
 			}
 		} catch (error) {
 			console.error("Error updating todo:", error);
+			alert("Error updating todo.");
+			setIsLoading(false);
 		}
 	};
 
 	const handleDeleteTodo = async (todoId) => {
 		try {
+			setIsLoading(true);
 			const response = await deleteTodo(todoId);
 
 			if (response === true) {
 				const updatedTodos = todos.filter((todo) => todo._id !== todoId);
 				setTodos(updatedTodos);
 				setEditingTodoId(null);
+				alert("Todo deleted successfully!");
+				setIsLoading(false);
 			} else {
 				console.error("Failed to delete todo.");
+				alert("Failed to delete todo.");
+				setIsLoading(false);
 			}
 		} catch (error) {
 			console.error("Error deleting todo:", error);
+			alert("Error deleting todo.");
+			setIsLoading(false);
 		}
 	};
 
@@ -127,25 +151,30 @@ function Dashboard() {
 	// @ image
 	useEffect(() => {
 		if (isAuthenticated) {
+			setIsLoading(true);
 			getUserProfileImage()
 				.then((profileImage) => {
 					if (profileImage) {
 						setUserImage(profileImage);
 					}
 				})
+				.then(() => setIsLoading(false))
 				.catch((error) => {
 					console.error("Error loading user image:", error);
+					alert("Error loading user image.");
+					setIsLoading(false);
 				});
 		}
 	}, [isAuthenticated]);
 	const handleImageChange = async (e) => {
 		const fileInput = e.target;
 		const selectedFile = e.target.files[0];
-
+		setIsLoading(true);
 		if (selectedFile) {
 			if (!selectedFile.type.startsWith("image/")) {
 				alert("Please select an image file.");
 				fileInput.value = "";
+				setIsLoading(false);
 				return;
 			}
 
@@ -158,7 +187,8 @@ function Dashboard() {
 					if (updatedImage) {
 						setUserImage(updatedImage);
 						console.log("User image updated successfully!");
-
+						alert("User image updated successfully!");
+						setIsLoading(false);
 						const profileImage = await getUserProfileImage();
 						if (profileImage) {
 							setUserImage(profileImage);
@@ -166,6 +196,8 @@ function Dashboard() {
 					}
 				} catch (error) {
 					console.error("Error updating user image:", error);
+					alert("Error updating user image.");
+					setIsLoading(false);
 				}
 			}
 		}
@@ -177,6 +209,7 @@ function Dashboard() {
 	return (
 		<Fragment>
 			<UserLayout>
+				{loading && <RandomLoader />}
 				<div className="dashboard">
 					<div className="user-image">
 						<img src={userImage} alt="User" className="user-picture" />
