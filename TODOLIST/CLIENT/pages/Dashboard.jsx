@@ -193,10 +193,11 @@ function Dashboard() {
 						<span className="user-email">email: {email}</span>
 					</div>
 					<div>
-						<h2>Todo List</h2>
+						<h2 className="todo-list-title">Todo List</h2>
 						<form onSubmit={handleCreateTodo}>
 							<input
 								type="text"
+								className="new-todo-input"
 								placeholder="New Todo"
 								value={newTodo}
 								onChange={(e) => setNewTodo(e.target.value)}
@@ -204,16 +205,19 @@ function Dashboard() {
 							/>
 							<input
 								type="text"
+								className="description-input"
 								placeholder="Description"
 								value={newTodoDescription}
 								onChange={(e) => setNewTodoDescription(e.target.value)}
 							/>
-							<button type="submit">Add</button>
+							<button type="submit" className="add-button">
+								Add
+							</button>
 						</form>
 
-						<ul>
+						<ul className="todo-list">
 							{todos.map((todo) => (
-								<li key={todo._id}>
+								<li key={todo._id} className="todo-item">
 									{editingTodoId === todo._id ? (
 										<div>
 											<input
@@ -221,30 +225,48 @@ function Dashboard() {
 												value={editedTitle}
 												onChange={handleEditTitleChange}
 												placeholder="Title"
+												className="edit-title-input"
 											/>
 											<input
 												type="text"
 												value={editedDescription}
 												onChange={handleEditDescriptionChange}
 												placeholder="Description"
+												className="edit-description-input"
 											/>
-											<button onClick={() => handleUpdateTodo(todo._id)}>
+											<button
+												onClick={() => handleUpdateTodo(todo._id)}
+												className="save-button"
+											>
 												Save
 											</button>
-											<button onClick={() => setEditingTodoId(null)}>
+											<button
+												onClick={() => setEditingTodoId(null)}
+												className="cancel-button"
+											>
 												Cancel
 											</button>
 										</div>
 									) : (
 										<div>
-											<span>Title: {todo.title}</span>
-											<span>Description: {todo.description}</span>
-											<span>Author: {todo.author}</span>
-											<span>Created At: {formatDate(todo.createdAt)}</span>
-											<button onClick={() => setEditingTodoId(todo._id)}>
+											<span className="todo-title">Title: {todo.title}</span>
+											<span className="todo-description">
+												Description: {todo.description}
+											</span>
+											<span className="todo-author">Author: {todo.author}</span>
+											<span className="todo-created-at">
+												Created At: {formatDate(todo.createdAt)}
+											</span>
+											<button
+												onClick={() => setEditingTodoId(todo._id)}
+												className="edit-button"
+											>
 												Edit
 											</button>
-											<button onClick={() => handleDeleteTodo(todo._id)}>
+											<button
+												onClick={() => handleDeleteTodo(todo._id)}
+												className="delete-button"
+											>
 												Delete
 											</button>
 										</div>
