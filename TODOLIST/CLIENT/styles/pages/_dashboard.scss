@@ -14,13 +14,19 @@
 			width: 150px;
 			height: 150px;
 			object-fit: cover;
-			border: 2px solid #3498db;
+			border: 5px solid #3498db;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			transition: transform 0.2s;
+
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 
 		.update-button {
 			position: absolute;
-			bottom: 0;
-			right: 0;
+			bottom: 5px;
+			right: 5px;
 			background: #3498db;
 			color: #fff;
 			border: none;
@@ -41,19 +47,21 @@
 
 	.user-greeting {
 		.heading {
-			font-size: 24px;
+			font-size: 28px;
 			margin-bottom: 10px;
+			color: #333;
 		}
 
 		.user-email {
 			font-size: 16px;
-			color: #555;
+			color: #777;
 		}
 	}
 
 	h2 {
-		font-size: 24px;
+		font-size: 28px;
 		margin-top: 20px;
+		color: #333;
 	}
 
 	form {
@@ -62,15 +70,22 @@
 
 		input[type="text"] {
 			margin: 5px 0;
-			padding: 5px;
+			padding: 10px;
 			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			transition: border-color 0.3s;
+
+			&:focus {
+				border-color: #3498db;
+			}
 		}
 
 		button {
 			background: #3498db;
 			color: #fff;
 			border: none;
-			padding: 10px;
+			padding: 12px;
 			margin-top: 10px;
 			border-radius: 5px;
 			cursor: pointer;
@@ -92,30 +107,41 @@
 			margin: 10px 0;
 			display: flex;
 			justify-content: space-between;
+			border-radius: 5px;
+			transition: transform 0.2s, box-shadow 0.3s;
+
+			&:hover {
+				transform: scale(1.02);
+				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
 
 			span {
 				font-size: 16px;
+				color: #444;
 			}
 
 			button {
-				background: #dc3545;
-				color: #fff;
-				border: none;
-				padding: 5px 10px;
+				padding: 8px 15px;
 				border-radius: 5px;
 				cursor: pointer;
 				transition: background 0.3s;
+			}
+
+			button.edit-button {
+				background: #ffc107;
+				color: #333;
+
+				&:hover {
+					background: #d39e00;
+				}
+			}
+
+			button.delete-button {
+				background: #dc3545;
+				color: #fff;
 
 				&:hover {
 					background: #c82333;
-				}
-
-				&.edit-button {
-					background: #ffc107;
-
-					&:hover {
-						background: #d39e00;
-					}
 				}
 			}
 		}
