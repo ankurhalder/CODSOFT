@@ -132,14 +132,14 @@ function Dashboard() {
 		}
 	}, [isAuthenticated]);
 	const handleImageChange = async (e) => {
-		const fileInput = e.target; // Get the file input element
+		const fileInput = e.target;
 		const selectedFile = e.target.files[0];
 
 		if (selectedFile) {
 			if (!selectedFile.type.startsWith("image/")) {
 				alert("Please select an image file.");
-				fileInput.value = ""; // Clear the file input field
-				return; // Exit the function to prevent further processing
+				fileInput.value = "";
+				return;
 			}
 
 			const imageURL = URL.createObjectURL(selectedFile);
