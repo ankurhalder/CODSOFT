@@ -171,20 +171,22 @@ function Dashboard() {
 		<Fragment>
 			<UserLayout>
 				<div className="dashboard">
-					<div className="user-image" onClick={openFileInput}>
+					<div className="user-image">
 						<img src={userImage} alt="User" className="user-picture" />
-						{isAuthenticated && (
-							<label htmlFor="profileImage" className="update-button">
-								Update
-								<input
-									type="file"
-									name="profileImage"
-									style={{ display: "none" }}
-									onChange={handleImageChange}
-									ref={fileInputRef}
-								/>
-							</label>
-						)}
+						<label
+							htmlFor="profileImage"
+							className="update-button"
+							onClick={openFileInput}
+						>
+							Update
+							<input
+								type="file"
+								name="profileImage"
+								style={{ display: "none" }}
+								onChange={handleImageChange}
+								ref={fileInputRef}
+							/>
+						</label>
 					</div>
 					<div className="user-greeting">
 						<h1 className="heading">welcome, {firstName + " " + lastName}</h1>
