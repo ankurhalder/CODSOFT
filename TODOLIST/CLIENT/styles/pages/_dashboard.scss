@@ -77,15 +77,17 @@
 }
 
 .todo-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
 	list-style: none;
 	padding: 0;
+	margin: 0;
 }
-
 .todo-item {
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	padding: 20px;
-	margin: 10px 0;
 	background-color: #fff;
 	transition: all 0.2s ease;
 
