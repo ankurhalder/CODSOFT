@@ -89,10 +89,15 @@
 	.add-button {
 		background-color: var(--blue-1);
 		color: var(--white);
+		font-family: var(--font-tektur);
+		font-size: var(--font-12);
+		letter-spacing: 1px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 1% 0 1% 0;
 		border: none;
 		border-radius: 4px;
 		padding: 12px 24px;
-		font-size: 20px;
 		cursor: pointer;
 		transition: background-color 0.3s;
 
