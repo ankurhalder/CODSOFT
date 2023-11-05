@@ -4,8 +4,9 @@
 	align-items: center;
 	padding: 20px;
 	text-align: center;
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 	font-family: Arial, sans-serif;
+	color: #333;
 
 	.user-image {
 		position: relative;
@@ -24,20 +25,20 @@
 			bottom: 10px;
 			right: 10px;
 			padding: 8px 16px;
-			background: #007bff;
+			background-color: #007bff;
 			color: #fff;
 			border: none;
 			border-radius: 4px;
 			cursor: pointer;
-			transition: background 0.3s;
+			transition: background-color 0.3s;
 
 			&:hover {
-				background: #0056b3;
+				background-color: #0056b3;
 			}
-		}
 
-		.update-button input[type="file"] {
-			display: none;
+			input[type="file"] {
+				display: none;
+			}
 		}
 	}
 
@@ -49,11 +50,12 @@
 			font-size: 32px;
 			font-weight: bold;
 			color: #007bff;
+			margin-bottom: 5px;
 		}
 
 		.user-email {
 			color: #555;
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 
@@ -67,25 +69,25 @@
 	.new-todo-input,
 	.description-input {
 		width: 100%;
-		padding: 10px;
+		padding: 12px;
 		margin: 10px 0;
-		border: 1px solid #ccc;
+		border: 2px solid #ccc;
 		border-radius: 4px;
 		font-size: 18px;
 	}
 
 	.add-button {
-		background: #007bff;
+		background-color: #007bff;
 		color: #fff;
 		border: none;
 		border-radius: 4px;
 		padding: 12px 24px;
 		font-size: 20px;
 		cursor: pointer;
-		transition: background 0.3s;
+		transition: background-color 0.3s;
 
 		&:hover {
-			background: #0056b3;
+			background-color: #0056b3;
 		}
 	}
 
@@ -102,21 +104,21 @@
 		border: 2px solid #ccc;
 		border-radius: 8px;
 		padding: 20px;
-		background: #fff;
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-		transition: all 0.3s;
+		background-color: #fff;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		transition: transform 0.3s, box-shadow 0.3s;
 
 		&:hover {
 			transform: translateY(-5px);
-			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+			box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 		}
 
 		.edit-title-input,
 		.edit-description-input {
 			width: 100%;
-			padding: 8px;
-			margin: 8px 0;
-			border: 1px solid #ccc;
+			padding: 10px;
+			margin: 10px 0;
+			border: 2px solid #ccc;
 			border-radius: 4px;
 			font-size: 18px;
 		}
@@ -125,17 +127,17 @@
 		.cancel-button,
 		.edit-button,
 		.delete-button {
-			background: #007bff;
+			background-color: #007bff;
 			color: #fff;
 			border: none;
 			border-radius: 4px;
-			padding: 8px 16px;
+			padding: 10px 20px;
 			font-size: 16px;
 			cursor: pointer;
-			transition: background 0.3s;
+			transition: background-color 0.3s;
 
 			&:hover {
-				background: #0056b3;
+				background-color: #0056b3;
 			}
 		}
 
@@ -144,7 +146,7 @@
 		.todo-author,
 		.todo-created-at {
 			display: block;
-			margin: 8px 0;
+			margin: 10px 0;
 			color: #333;
 		}
 	}
