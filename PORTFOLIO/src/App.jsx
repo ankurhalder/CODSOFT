@@ -15,8 +15,8 @@ function App() {
 		<Fragment>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/" element={DashBoard} />
-					<Route path="*" element={NoPage} />
+					<Route path="/" element={<DashBoard></DashBoard>} />
+					<Route path="*" element={<NoPage></NoPage>} />
 				</Routes>
 			</BrowserRouter>
 		</Fragment>
