@@ -1,33 +1,23 @@
-// Navbar
 nav {
-	background-color: #20232a;
-	color: #61dafb;
-	padding: 10px 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	background-color: #333;
+	color: #fff;
+	padding: 15px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #68d391;
 
 	.logo {
-		display: flex;
-		align-items: center;
-
 		img {
-			width: 100px;
-			height: 100px;
+			width: 120px;
+			height: auto;
 			border-radius: 50%;
-			object-fit: cover;
 			transition: transform 0.2s;
 
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(1.05);
 			}
-		}
-
-		h1 {
-			font-size: 24px;
-			margin-left: 10px;
-			font-weight: 600;
-			color: #61dafb;
 		}
 	}
 
@@ -35,19 +25,15 @@ nav {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: grid;
-		grid-template-columns: repeat(
-			6,
-			auto
-		); // Adjust the number of columns as needed
-		gap: 20px;
+		display: flex;
 
 		li {
+			margin: 0 20px;
 			position: relative;
 
 			a {
 				text-decoration: none;
-				color: #61dafb;
+				color: #fff;
 				font-weight: 500;
 				transition: color 0.2s;
 
@@ -58,7 +44,7 @@ nav {
 				&:hover::before {
 					content: "";
 					position: absolute;
-					bottom: -2px;
+					bottom: -3px;
 					left: 0;
 					width: 100%;
 					height: 2px;
