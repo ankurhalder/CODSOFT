@@ -11,9 +11,9 @@ nav {
 	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
 	&:hover {
-		background-color: #1e1e1e; /* Darker background on hover */
-		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Bigger shadow on hover */
-		transform: translateY(-3px); /* Slight upward lift on hover */
+		background-color: #1e1e1e;
+		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+		transform: translateY(-3px);
 	}
 
 	.logo {
@@ -24,16 +24,16 @@ nav {
 			object-fit: cover;
 			transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
 				filter 0.3s ease-in-out;
-			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
-			border: 5px solid #68d391; /* Add a border */
+			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5);
+			border: 5px solid #68d391;
 			filter: grayscale(100%);
 			transform-origin: center;
 			animation: rotate 6s linear infinite, pulse 2s ease-in-out infinite;
 
 			&:hover {
 				transform: scale(1.05) rotate(360deg);
-				box-shadow: 0 0 30px rgba(104, 211, 145, 0.8); /* Bigger shadow on hover */
-				filter: brightness(1.2); /* Enhance brightness on hover */
+				box-shadow: 0 0 30px rgba(104, 211, 145, 0.8);
+				filter: brightness(1.2);
 				animation: spin 0.5s ease-in-out infinite;
 			}
 		}
@@ -110,11 +110,11 @@ nav {
 		height: 6px;
 		background: linear-gradient(90deg, #68d391, transparent);
 		transform: scaleX(0);
-		transition: transform 0.3s; /* Expand the gradient on hover */
+		transition: transform 0.3s;
 	}
 
 	&:hover::before {
-		transform: scaleX(1); /* Expand the gradient on hover */
+		transform: scaleX(1);
 	}
 }
 
