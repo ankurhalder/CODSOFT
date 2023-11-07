@@ -25,11 +25,10 @@ nav {
 			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
 			border: 5px solid #68d391; /* Add a border */
 			filter: grayscale(100%);
+			transform-origin: center;
 
 			&:hover {
-				transform: scale(1.2);
-				border: 5px solid #68d391; /* Border color on hover */
-				box-shadow: 0 0 30px rgba(104, 211, 145, 0.8); /* Bigger shadow on hover */
+				animation: spin 0.5s infinite linear, shadowGrow 0.3s both;
 				filter: none; /* Remove grayscale effect on hover */
 			}
 		}
@@ -122,5 +121,23 @@ nav {
 	100% {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+	100% {
+		transform: scale(1.05) rotate(360deg);
+	}
+}
+
+@keyframes shadowGrow {
+	0% {
+		box-shadow: 0 0 20px rgba(104, 211, 145, 0.5);
+	}
+	100% {
+		box-shadow: 0 0 30px rgba(104, 211, 145, 0.8);
 	}
 }
