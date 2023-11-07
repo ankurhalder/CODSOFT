@@ -51,6 +51,7 @@ nav {
 				transition: color 0.2s;
 				text-transform: uppercase; /* Uppercase the text */
 				letter-spacing: 1px; /* Add letter spacing for a stylish look */
+				position: relative;
 
 				&:before {
 					content: "";
