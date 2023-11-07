@@ -6,6 +6,10 @@ function Navbar({ isMenuOpen, setMenuOpen }) {
 		setMenuOpen(!isMenuOpen);
 	};
 
+	const closeMenu = () => {
+		setMenuOpen(false);
+	};
+
 	return (
 		<nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
 			<div className="menu-toggle" onClick={toggleMenu}>
@@ -18,22 +22,34 @@ function Navbar({ isMenuOpen, setMenuOpen }) {
 			</div>
 			<ul className="menu">
 				<li>
-					<Link to="/">Home</Link>
+					<Link to="/" onClick={closeMenu}>
+						Home
+					</Link>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<Link to="/about" onClick={closeMenu}>
+						About
+					</Link>
 				</li>
 				<li>
-					<Link to="/contact">Contact</Link>
+					<Link to="/contact" onClick={closeMenu}>
+						Contact
+					</Link>
 				</li>
 				<li>
-					<Link to="/projects">Projects</Link>
+					<Link to="/projects" onClick={closeMenu}>
+						Projects
+					</Link>
 				</li>
 				<li>
-					<Link to="/resume">Resume</Link>
+					<Link to="/resume" onClick={closeMenu}>
+						Resume
+					</Link>
 				</li>
 				<li>
-					<Link to="/skills">Skills</Link>
+					<Link to="/skills" onClick={closeMenu}>
+						Skills
+					</Link>
 				</li>
 			</ul>
 		</nav>
