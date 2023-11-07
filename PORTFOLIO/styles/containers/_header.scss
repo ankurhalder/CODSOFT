@@ -1,34 +1,36 @@
 nav {
 	background-color: #2a2a2a;
 	color: #ffffff;
-	padding: 15px 20px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	padding: 20px 30px;
+	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 3px solid #68d391;
+	border-bottom: 4px solid #68d391;
 	position: relative;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s, box-shadow 0.3s;
 
 	&:hover {
-		background-color: #1e1e1e;
+		background-color: #1e1e1e; /* Darker background on hover */
+		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Bigger shadow on hover */
 	}
 
 	.logo {
 		img {
-			width: 120px;
-			height: 120px;
+			width: 150px;
+			height: 150px;
 			border-radius: 50%;
 			object-fit: cover;
-			transition: transform 0.2s;
-			box-shadow: 0 0 10px rgba(104, 211, 145, 0.5);
-			border: 3px solid #68d391;
+			transition: transform 0.3s, box-shadow 0.3s;
+			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
+			border: 5px solid #68d391; /* Add a border */
 			filter: grayscale(100%);
 
 			&:hover {
-				transform: scale(1.1);
-				border: 3px solid #68d391;
-				filter: none;
+				transform: scale(1.2);
+				border: 5px solid #68d391; /* Border color on hover */
+				box-shadow: 0 0 30px rgba(104, 211, 145, 0.8); /* Bigger shadow on hover */
+				filter: none; /* Remove grayscale effect on hover */
 			}
 		}
 	}
@@ -38,7 +40,7 @@ nav {
 		margin: 0;
 		padding: 0;
 		display: flex;
-		gap: 20px;
+		gap: 30px;
 
 		li {
 			position: relative;
@@ -46,20 +48,20 @@ nav {
 			a {
 				text-decoration: none;
 				color: #ffffff;
-				font-weight: 600;
-				font-size: 18px;
+				font-weight: 700;
+				font-size: 20px;
 				transition: color 0.2s;
 				text-transform: uppercase;
-				letter-spacing: 1px;
+				letter-spacing: 2px; /* Add letter spacing for a stylish look */
 				position: relative;
 
 				&:before {
 					content: "";
 					position: absolute;
-					bottom: -3px;
+					bottom: -4px;
 					left: 0;
 					width: 100%;
-					height: 3px;
+					height: 4px;
 					background-color: transparent;
 					transform: scaleX(0);
 					transform-origin: center;
@@ -69,10 +71,10 @@ nav {
 				&:after {
 					content: "";
 					position: absolute;
-					bottom: -3px;
+					bottom: -4px;
 					left: 0;
 					width: 100%;
-					height: 3px;
+					height: 4px;
 					background-color: transparent;
 					transform: scaleX(0);
 					transform-origin: center;
@@ -100,13 +102,13 @@ nav {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 5px;
+		height: 6px;
 		background: linear-gradient(90deg, #68d391, transparent);
 		transform: scaleX(0);
-		transition: transform 0.3s;
+		transition: transform 0.3s; /* Expand the gradient on hover */
 	}
 
 	&:hover::before {
-		transform: scaleX(1);
+		transform: scaleX(1); /* Expand the gradient on hover */
 	}
 }
