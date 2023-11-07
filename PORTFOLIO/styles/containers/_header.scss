@@ -21,7 +21,7 @@ nav {
 			height: 150px;
 			border-radius: 50%;
 			object-fit: cover;
-			transition: transform 0.3s, box-shadow 0.3s;
+			transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
 			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
 			border: 5px solid #68d391; /* Add a border */
 			filter: grayscale(100%);
@@ -43,7 +43,7 @@ nav {
 
 		li {
 			position: relative;
-			animation: fadeIn 0.5s ease-out both;
+			animation: fadeIn 0.5s ease-out both, translateUp 0.3s;
 
 			a {
 				text-decoration: none;
@@ -139,5 +139,14 @@ nav {
 	}
 	100% {
 		box-shadow: 0 0 30px rgba(104, 211, 145, 0.8);
+	}
+}
+
+@keyframes translateUp {
+	0% {
+		transform: translateY(20px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
