@@ -1,6 +1,10 @@
 // Navbar
 nav {
-	background: linear-gradient(to right, #f06, #6f0); // A gradient background
+	background: linear-gradient(
+		to right,
+		#007bff,
+		#00a5ff
+	); // A gradient background
 	color: white;
 	display: flex;
 	justify-content: space-between;
@@ -34,7 +38,7 @@ nav {
 
 				&:hover {
 					color: #ffd700;
-					transform: scale(1.1); // Slight scale-up effect on hover
+					transform: scale(1.05); // Slight scale-up effect on hover
 				}
 			}
 		}
