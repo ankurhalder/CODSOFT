@@ -8,6 +8,11 @@ nav {
 	align-items: center;
 	border-bottom: 3px solid #68d391;
 	position: relative;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: #1e1e1e; /* Darker background on hover */
+	}
 
 	.logo {
 		img {
@@ -40,6 +45,7 @@ nav {
 				font-size: 18px;
 				transition: color 0.2s;
 				position: relative;
+				z-index: 1;
 
 				&:before {
 					content: "";
