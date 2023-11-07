@@ -1,7 +1,6 @@
 .navbar {
 	background-color: var(--black-2);
 	color: var(--white);
-	padding: 5px 10px;
 	box-shadow: 0 6px 10px var(--black-shadow-light-2);
 	@include flex-container(row, nowrap, space-between, center);
 	border-bottom: 4px solid var(--green-6);
@@ -109,6 +108,9 @@
 						background-color: var(--green-6);
 					}
 				}
+			}
+			&:last-child {
+				margin-right: 20px;
 			}
 		}
 	}
