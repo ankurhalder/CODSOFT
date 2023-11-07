@@ -1,9 +1,11 @@
 // Navbar
 nav {
-	background-color: #252525; // Dark background color
-	color: #ffffff; // Text color
+	background-color: #20232a; // Dark background color
+	color: #61dafb; // Text color
 	padding: 10px 20px; // Padding for the navbar
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle box shadow
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); // Subtle box shadow
+	display: flex;
+	justify-content: space-between;
 
 	// Logo
 	.logo {
@@ -23,7 +25,6 @@ nav {
 		margin: 0;
 		padding: 0;
 		display: flex;
-		align-items: center;
 
 		li {
 			margin: 0 20px;
@@ -31,7 +32,7 @@ nav {
 
 			a {
 				text-decoration: none;
-				color: #ffffff;
+				color: #61dafb; // Text color
 				font-weight: 500;
 				transition: color 0.2s;
 
