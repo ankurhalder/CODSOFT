@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer({ closeMenu }) {
 	return (
 		<footer className="footer">
-			<div className="footer-links">
+			<div className="footer__links">
 				<ul>
 					<li>
 						<Link to="/" onClick={closeMenu}>
@@ -38,12 +38,12 @@ export default function Footer({ closeMenu }) {
 					</li>
 				</ul>
 			</div>
-			<div className="footer-social">
+			{/* <div className="footer-social">
 				<span>Connect Me With :</span>
 				<ul>
 					<li>
 						<a
-							href="https://linkedin.com"
+							href="https://www.linkedin.com/in/ankur-halder-a19553188/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -52,7 +52,7 @@ export default function Footer({ closeMenu }) {
 					</li>
 					<li>
 						<a
-							href="https://facebook.com"
+							href="https://www.facebook.com/ankur.roxx.9"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -61,7 +61,7 @@ export default function Footer({ closeMenu }) {
 					</li>
 					<li>
 						<a
-							href="https://www.instagram.com/"
+							href="https://www.instagram.com/halder_ankur/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -69,8 +69,15 @@ export default function Footer({ closeMenu }) {
 						</a>
 					</li>
 				</ul>
+			</div> */}
+			<div className="footer__email">
+				<span>Email Me At :</span>
+				<a href="mailto: ankur.halder12345@gmail.com">
+					{" "}
+					ankur.halder12345@gmail.com
+				</a>
 			</div>
-			<div className="footer-bottom">
+			<div className="footer__bottom">
 				&copy; {new Date().getFullYear()} Ankur halder. All rights reserved.
 			</div>
 		</footer>
