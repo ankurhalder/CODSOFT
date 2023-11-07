@@ -22,9 +22,11 @@ nav {
 			object-fit: cover;
 			transition: transform 0.2s;
 			box-shadow: 0 0 10px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
+			border: 3px solid #68d391; /* Add a border */
 
 			&:hover {
 				transform: scale(1.1);
+				border: 3px solid #68d391; /* Border color on hover */
 			}
 		}
 	}
@@ -47,6 +49,7 @@ nav {
 				transition: color 0.2s;
 				position: relative;
 				z-index: 1;
+				text-transform: uppercase; /* Uppercase the text */
 
 				&:before {
 					content: "";
