@@ -25,10 +25,11 @@ nav {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(6, auto);
+		grid-gap: 20px;
 
 		li {
-			margin: 0 20px;
 			position: relative;
 
 			a {
@@ -40,17 +41,17 @@ nav {
 				&:hover {
 					color: #68d391;
 				}
-			}
 
-			// Add an underline on hover for the navigation links
-			&:hover::before {
-				content: "";
-				position: absolute;
-				bottom: -3px;
-				left: 0;
-				width: 100%;
-				height: 2px;
-				background-color: #68d391;
+				// Add an underline on hover for the navigation links
+				&:hover::before {
+					content: "";
+					position: absolute;
+					bottom: -3px;
+					left: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #68d391;
+				}
 			}
 		}
 	}
