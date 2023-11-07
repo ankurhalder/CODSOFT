@@ -1,18 +1,9 @@
 // Navbar
 nav {
-	background: linear-gradient(
-		to right,
-		#34c7f0,
-		#3472f0
-	); // Gradient background
-	color: white;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	background: #333; // Dark background color
+	color: #fff; // White text color
 	padding: 10px 20px;
-	border-radius: 10px; // Rounded corners
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); // Subtle box shadow
-	transition: background 0.3s; // Smooth transition for background color
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // Subtle box shadow
 
 	// Logo
 	.logo {
@@ -33,23 +24,14 @@ nav {
 
 			a {
 				text-decoration: none;
-				color: white;
+				color: #fff;
 				font-weight: 600;
-				transition: color 0.3s;
+				transition: color 0.2s;
 
 				&:hover {
-					color: #ffd700;
-					transform: scale(1.05); // Slight scale-up effect on hover
+					color: #68d391; // Green color on hover
 				}
 			}
 		}
-	}
-
-	&:hover {
-		background: linear-gradient(
-			to right,
-			#3472f0,
-			#34c7f0
-		); // Reverse gradient on hover
 	}
 }
