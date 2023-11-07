@@ -1,19 +1,19 @@
 // Navbar
 nav {
-	background-color: #1e2a38; // Dark background color
+	background-color: #252525; // Dark background color
 	color: #ffffff; // Text color
-	padding: 15px 20px; // Padding for the navbar
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Subtle box shadow
+	padding: 10px 20px; // Padding for the navbar
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Subtle box shadow
 
 	// Logo
 	.logo {
 		img {
-			width: 120px;
+			width: 100px; // Logo width
 			height: auto;
 			transition: transform 0.2s;
 
 			&:hover {
-				transform: scale(1.05);
+				transform: scale(1.1); // Enlarge the logo on hover
 			}
 		}
 	}
@@ -43,7 +43,7 @@ nav {
 				&:hover::before {
 					content: "";
 					position: absolute;
-					bottom: -3px;
+					bottom: -2px;
 					left: 0;
 					width: 100%;
 					height: 2px;
@@ -57,7 +57,7 @@ nav {
 // Responsive Navbar
 @media (max-width: 768px) {
 	nav {
-		padding: 15px;
+		padding: 10px;
 	}
 
 	ul {
