@@ -5,8 +5,9 @@
 	width: 100%;
 	background-color: #2a2a2a;
 	color: #fff;
-	padding: 40px 0;
+	padding: 20px 0; /* Reduced padding */
 	text-align: center;
+	font-size: 14px; /* Reduced font size */
 
 	.footer-content {
 		display: flex;
@@ -22,13 +23,13 @@
 				text-align: left;
 
 				li {
-					margin: 10px 0;
+					margin: 5px 0; /* Reduced margin */
 
 					a {
 						text-decoration: none;
 						color: #fff;
 						font-weight: 600;
-						font-size: 18px;
+						font-size: 16px; /* Reduced font size */
 						transition: color 0.3s;
 
 						&:hover {
