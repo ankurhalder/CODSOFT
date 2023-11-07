@@ -39,6 +39,7 @@ export default function Footer({ closeMenu }) {
 				</ul>
 			</div>
 			<div className="footer-social">
+				<span>Connect Me With :</span>
 				<ul>
 					<li>
 						<a
