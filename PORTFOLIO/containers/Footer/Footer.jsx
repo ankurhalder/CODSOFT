@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer({ closeMenu }) {
+export default function Footer({ closeMenu }) {
 	return (
 		<footer className="footer">
 			<div className="footer-content">
@@ -56,5 +56,3 @@ function Footer({ closeMenu }) {
 		</footer>
 	);
 }
-
-export default Footer;
