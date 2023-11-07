@@ -1,6 +1,12 @@
 import { Fragment } from "react";
+import { Navbar } from "../containers";
 function Layout({ children }) {
-	return <Fragment>{children}</Fragment>;
+	return (
+		<Fragment>
+			<Navbar></Navbar>
+			{children}
+		</Fragment>
+	);
 }
 
 export default Layout;
