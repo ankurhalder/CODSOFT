@@ -21,6 +21,7 @@ nav {
 			border-radius: 50%;
 			object-fit: cover;
 			transition: transform 0.2s;
+			box-shadow: 0 0 10px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
 
 			&:hover {
 				transform: scale(1.1);
