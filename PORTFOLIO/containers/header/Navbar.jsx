@@ -5,7 +5,7 @@ function Navbar() {
 	return (
 		<nav>
 			<div className="logo">
-				<img src="/path-to-your-logo.png" alt="Your Logo" />
+				<img src="/Ankur_Halder" alt="Ankur Halder" />
 			</div>
 			<ul>
 				<li>
