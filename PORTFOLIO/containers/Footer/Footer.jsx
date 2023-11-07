@@ -42,13 +42,13 @@ export default function Footer({ closeMenu }) {
 				<div className="footer-social">
 					<ul>
 						<li>
+							<a href="https://linkedin.com">LinkedIn</a>
+						</li>
+						<li>
 							<a href="https://facebook.com">Facebook</a>
 						</li>
 						<li>
-							<a href="https://twitter.com">Twitter</a>
-						</li>
-						<li>
-							<a href="https://linkedin.com">LinkedIn</a>
+							<a href="https://www.instagram.com/">Instagram</a>
 						</li>
 					</ul>
 				</div>
