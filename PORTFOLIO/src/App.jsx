@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
@@ -27,5 +26,4 @@ function App() {
 		</Fragment>
 	);
 }
-
 export default App;
