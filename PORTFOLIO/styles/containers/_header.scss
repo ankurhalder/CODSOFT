@@ -44,6 +44,7 @@ nav {
 
 		li {
 			position: relative;
+			animation: fadeIn 0.5s ease-out both;
 
 			a {
 				text-decoration: none;
@@ -52,7 +53,7 @@ nav {
 				font-size: 20px;
 				transition: color 0.2s;
 				text-transform: uppercase;
-				letter-spacing: 2px; /* Add letter spacing for a stylish look */
+				letter-spacing: 2px;
 				position: relative;
 
 				&:before {
@@ -110,5 +111,16 @@ nav {
 
 	&:hover::before {
 		transform: scaleX(1); /* Expand the gradient on hover */
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
