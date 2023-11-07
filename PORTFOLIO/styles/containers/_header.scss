@@ -11,7 +11,7 @@ nav {
 	transition: background-color 0.3s;
 
 	&:hover {
-		background-color: #1e1e1e; /* Darker background on hover */
+		background-color: #1e1e1e;
 	}
 
 	.logo {
@@ -21,14 +21,14 @@ nav {
 			border-radius: 50%;
 			object-fit: cover;
 			transition: transform 0.2s;
-			box-shadow: 0 0 10px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
-			border: 3px solid #68d391; /* Add a border */
-			filter: grayscale(100%); /* Grayscale image by default */
+			box-shadow: 0 0 10px rgba(104, 211, 145, 0.5);
+			border: 3px solid #68d391;
+			filter: grayscale(100%);
 
 			&:hover {
 				transform: scale(1.1);
-				border: 3px solid #68d391; /* Border color on hover */
-				filter: none; /* Remove grayscale effect on hover */
+				border: 3px solid #68d391;
+				filter: none;
 			}
 		}
 	}
@@ -51,8 +51,8 @@ nav {
 				transition: color 0.2s;
 				position: relative;
 				z-index: 1;
-				text-transform: uppercase; /* Uppercase the text */
-				letter-spacing: 1px; /* Add letter spacing for a stylish look */
+				text-transform: uppercase;
+				letter-spacing: 1px;
 
 				&:before {
 					content: "";
@@ -104,10 +104,10 @@ nav {
 		height: 5px;
 		background: linear-gradient(90deg, #68d391, transparent);
 		transform: scaleX(0);
-		transition: transform 0.3s; /* Expand the gradient on hover */
+		transition: transform 0.3s;
 	}
 
 	&:hover::before {
-		transform: scaleX(1); /* Expand the gradient on hover */
+		transform: scaleX(1);
 	}
 }
