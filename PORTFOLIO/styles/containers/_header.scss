@@ -1,8 +1,8 @@
 nav {
-	background-color: #2a2a2a;
-	color: #ffffff;
+	background-color: #333;
+	color: #fff;
 	padding: 15px 20px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -13,10 +13,11 @@ nav {
 			width: 120px;
 			height: auto;
 			border-radius: 50%;
+			object-fit: cover;
 			transition: transform 0.2s;
 
 			&:hover {
-				transform: scale(1.05);
+				transform: scale(1.1);
 			}
 		}
 	}
@@ -33,22 +34,31 @@ nav {
 
 			a {
 				text-decoration: none;
-				color: #ffffff;
+				color: #fff;
 				font-weight: 600;
+				font-size: 16px;
 				transition: color 0.2s;
+				position: relative;
 
-				&:hover {
-					color: #68d391;
-				}
-
-				&:hover::before {
+				&:before {
 					content: "";
 					position: absolute;
-					bottom: -3px;
+					bottom: 0;
 					left: 0;
 					width: 100%;
 					height: 2px;
-					background-color: #68d391;
+					background-color: transparent;
+					transform: scaleX(0);
+					transform-origin: center;
+					transition: transform 0.2s;
+				}
+
+				&:hover {
+					color: #68d391;
+					&:before {
+						transform: scaleX(1);
+						background-color: #68d391;
+					}
 				}
 			}
 		}
