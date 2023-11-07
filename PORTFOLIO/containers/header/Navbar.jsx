@@ -1,32 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+	const [showMenu, setShowMenu] = useState(false);
+
+	const toggleMenu = () => {
+		setShowMenu(!showMenu);
+	};
+
 	return (
 		<nav>
 			<div className="logo">
 				<img src="/Ankur_Halder.jpg" alt="Ankur Halder" />
 			</div>
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
-				</li>
-				<li>
-					<Link to="/about">About</Link>
-				</li>
-				<li>
-					<Link to="/contact">Contact</Link>
-				</li>
-				<li>
-					<Link to="/projects">Projects</Link>
-				</li>
-				<li>
-					<Link to="/resume">Resume</Link>
-				</li>
-				<li>
-					<Link to="/skills">Skills</Link>
-				</li>
-			</ul>
+			<div className={`menu ${showMenu ? "active" : ""}`}>
+				<ul>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="/about">About</Link>
+					</li>
+					<li>
+						<Link to="/contact">Contact</Link>
+					</li>
+					<li>
+						<Link to="/projects">Projects</Link>
+					</li>
+					<li>
+						<Link to="/resume">Resume</Link>
+					</li>
+					<li>
+						<Link to="/skills">Skills</Link>
+					</li>
+				</ul>
+			</div>
+			<div className="menu-toggle" onClick={toggleMenu}>
+				<div className={`bar ${showMenu ? "active" : ""}`}></div>
+				<div className={`bar ${showMenu ? "active" : ""}`}></div>
+				<div className={`bar ${showMenu ? "active" : ""}`}></div>
+			</div>
 		</nav>
 	);
 }
