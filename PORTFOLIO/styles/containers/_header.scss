@@ -63,12 +63,13 @@
 			animation: fadeIn 0.5s ease-out both, translateUp 0.3s;
 			a {
 				text-decoration: none;
-				color: var(--white) fff;
-				font-weight: 700;
-				font-size: 20px;
+				color: var(--white);
+				font-family: var(--font-tektur);
+				font-size: var(--font-11);
+				font-weight: 400;
+				letter-spacing: 3px;
 				transition: color 0.3s;
 				text-transform: uppercase;
-				letter-spacing: 2px;
 				position: relative;
 
 				&:before {
@@ -151,7 +152,7 @@
 			top: 100px;
 			left: 0;
 			right: 0;
-			background-color: #2a2a2a;
+			background-color: var(--black-2);
 			padding: 10px 0;
 			border: 4px solid var(--green-6);
 			border-top: 0;
@@ -190,15 +191,6 @@
 	}
 	50% {
 		transform: scale(1.1);
-	}
-}
-
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
 	}
 }
 
