@@ -165,3 +165,77 @@ nav {
 		transform: translateY(0);
 	}
 }
+
+@media (max-width: #{$breakpoint-desktop}) {
+	nav {
+		flex-direction: column;
+		padding: 10px;
+		text-align: center;
+
+		.logo {
+			img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+
+		ul {
+			li {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+@media (max-width: #{$breakpoint-large-tablet}) {
+	nav {
+		padding: 15px;
+		.logo {
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		}
+		ul {
+			gap: 20px;
+		}
+	}
+}
+
+@media (max-width: #{$breakpoint-tablet}) {
+	nav {
+		.logo {
+			img {
+				width: 90px;
+				height: 90px;
+			}
+		}
+		ul {
+			gap: 15px;
+			li {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: #{$breakpoint-phone}) {
+	nav {
+		.logo {
+			img {
+				width: 70px;
+				height: 70px;
+			}
+		}
+		ul {
+			gap: 10px;
+			li {
+				a {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
