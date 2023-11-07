@@ -1,13 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar({ isMenuOpen, setMenuOpen }) {
+function Navbar({ isMenuOpen, setMenuOpen, closeMenu }) {
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen);
-	};
-
-	const closeMenu = () => {
-		setMenuOpen(false);
 	};
 
 	return (
