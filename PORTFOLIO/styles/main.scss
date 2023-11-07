@@ -5,3 +5,16 @@
 @import "containers/manifest";
 @import "components/manifest";
 @import "pages/manifest";
+.navbar-open {
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+		display: none;
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
+}

@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
-	const [isMenuOpen, setMenuOpen] = useState(false);
-
+function Navbar({ isMenuOpen, setMenuOpen }) {
 	const toggleMenu = () => {
 		setMenuOpen(!isMenuOpen);
 	};

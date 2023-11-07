@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
 	DashBoard,
@@ -11,10 +11,11 @@ import {
 } from "../page";
 import { Layout } from "../layout";
 function App() {
+	const [isMenuOpen, setMenuOpen] = useState(false);
 	return (
 		<Fragment>
 			<BrowserRouter>
-				<Layout>
+				<Layout isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen}>
 					<Routes>
 						<Route path="/" element={<DashBoard></DashBoard>} />
 						<Route path="*" element={<NoPage></NoPage>} />
