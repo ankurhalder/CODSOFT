@@ -1,5 +1,5 @@
 // Navbar
-nav {
+.navbar {
 	background-color: #20232a; // Dark background color
 	color: #61dafb; // Text color
 	padding: 10px 20px; // Padding for the navbar
@@ -27,28 +27,32 @@ nav {
 		display: flex;
 
 		li {
-			margin: 0 20px;
-			position: relative;
+			&-item {
+				margin: 0 20px;
+				position: relative;
 
-			a {
-				text-decoration: none;
-				color: #61dafb; // Text color
-				font-weight: 500;
-				transition: color 0.2s;
+				a {
+					&-link {
+						text-decoration: none;
+						color: #61dafb; // Text color
+						font-weight: 500;
+						transition: color 0.2s;
 
-				&:hover {
-					color: #68d391; // Change the color on hover
-				}
+						&:hover {
+							color: #68d391; // Change the color on hover
+						}
 
-				// Add an underline on hover for the navigation links
-				&:hover::before {
-					content: "";
-					position: absolute;
-					bottom: -2px;
-					left: 0;
-					width: 100%;
-					height: 2px;
-					background-color: #68d391;
+						// Add an underline on hover for the navigation links
+						&:hover::before {
+							content: "";
+							position: absolute;
+							bottom: -2px;
+							left: 0;
+							width: 100%;
+							height: 2px;
+							background-color: #68d391;
+						}
+					}
 				}
 			}
 		}
@@ -57,7 +61,7 @@ nav {
 
 // Responsive Navbar
 @media (max-width: 768px) {
-	nav {
+	.navbar {
 		padding: 10px;
 	}
 
@@ -66,7 +70,9 @@ nav {
 		text-align: center;
 
 		li {
-			margin: 10px 0;
+			&-item {
+				margin: 10px 0;
+			}
 		}
 	}
 }

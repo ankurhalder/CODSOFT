@@ -3,28 +3,44 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
 	return (
-		<nav>
+		<nav className="navbar">
 			<div className="logo">
-				<img src="/Ankur_Halder.jpg" alt="Ankur Halder" />
+				<img
+					className="logo-image"
+					src="/Ankur_Halder.jpg"
+					alt="Ankur Halder"
+				/>
 			</div>
-			<ul>
-				<li>
-					<Link to="/">Home</Link>
+			<ul className="nav-links">
+				<li className="nav-item">
+					<Link to="/" className="nav-link">
+						Home
+					</Link>
 				</li>
-				<li>
-					<Link to="/about">About</Link>
+				<li className="nav-item">
+					<Link to="/about" className="nav-link">
+						About
+					</Link>
 				</li>
-				<li>
-					<Link to="/contact">Contact</Link>
+				<li className="nav-item">
+					<Link to="/contact" className="nav-link">
+						Contact
+					</Link>
 				</li>
-				<li>
-					<Link to="/projects">Projects</Link>
+				<li className="nav-item">
+					<Link to="/projects" className="nav-link">
+						Projects
+					</Link>
 				</li>
-				<li>
-					<Link to="/resume">Resume</Link>
+				<li className="nav-item">
+					<Link to="/resume" className="nav-link">
+						Resume
+					</Link>
 				</li>
-				<li>
-					<Link to="/skills">Skills</Link>
+				<li className="nav-item">
+					<Link to="/skills" className="nav-link">
+						Skills
+					</Link>
 				</li>
 			</ul>
 		</nav>
