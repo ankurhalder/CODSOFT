@@ -8,11 +8,12 @@ nav {
 	align-items: center;
 	border-bottom: 4px solid #68d391;
 	position: relative;
-	transition: background-color 0.3s, box-shadow 0.3s;
+	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 
 	&:hover {
 		background-color: #1e1e1e; /* Darker background on hover */
 		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Bigger shadow on hover */
+		transform: translateY(-3px); /* Slight upward lift on hover */
 	}
 
 	.logo {
@@ -21,15 +22,19 @@ nav {
 			height: 150px;
 			border-radius: 50%;
 			object-fit: cover;
-			transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+			transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out,
+				filter 0.3s ease-in-out;
 			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5); /* Soft shadow on hover */
 			border: 5px solid #68d391; /* Add a border */
 			filter: grayscale(100%);
 			transform-origin: center;
+			animation: rotate 6s linear infinite, pulse 2s ease-in-out infinite;
 
 			&:hover {
-				animation: spin 0.5s infinite linear, shadowGrow 0.3s both;
-				filter: none; /* Remove grayscale effect on hover */
+				transform: scale(1.05) rotate(360deg);
+				box-shadow: 0 0 30px rgba(104, 211, 145, 0.8); /* Bigger shadow on hover */
+				filter: brightness(1.2); /* Enhance brightness on hover */
+				animation: spin 0.5s ease-in-out infinite;
 			}
 		}
 	}
@@ -50,7 +55,7 @@ nav {
 				color: #ffffff;
 				font-weight: 700;
 				font-size: 20px;
-				transition: color 0.2s;
+				transition: color 0.3s;
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				position: relative;
@@ -65,7 +70,7 @@ nav {
 					background-color: transparent;
 					transform: scaleX(0);
 					transform-origin: center;
-					transition: transform 0.2s;
+					transition: transform 0.3s;
 				}
 
 				&:after {
@@ -78,7 +83,7 @@ nav {
 					background-color: transparent;
 					transform: scaleX(0);
 					transform-origin: center;
-					transition: transform 0.2s;
+					transition: transform 0.3s;
 				}
 
 				&:hover {
@@ -124,21 +129,31 @@ nav {
 	}
 }
 
-@keyframes spin {
+@keyframes rotate {
 	0% {
-		transform: scale(1) rotate(0deg);
+		transform: rotate(0deg);
 	}
 	100% {
-		transform: scale(1.05) rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 
-@keyframes shadowGrow {
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes spin {
 	0% {
-		box-shadow: 0 0 20px rgba(104, 211, 145, 0.5);
+		transform: rotate(0deg);
 	}
 	100% {
-		box-shadow: 0 0 30px rgba(104, 211, 145, 0.8);
+		transform: rotate(360deg);
 	}
 }
 
