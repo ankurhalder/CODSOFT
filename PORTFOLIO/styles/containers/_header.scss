@@ -1,11 +1,9 @@
 .navbar {
-	background-color: #2a2a2a;
-	color: #ffffff;
-	padding: 20px 30px;
-	box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	background-color: var(--black-2);
+	color: var(--white);
+	padding: 5px 10px;
+	box-shadow: 0 6px 10px var(--black-shadow-light-2);
+	@include flex-container(row, nowrap, space-between, center);
 	border-bottom: 4px solid var(--green-6);
 	position: relative;
 	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
