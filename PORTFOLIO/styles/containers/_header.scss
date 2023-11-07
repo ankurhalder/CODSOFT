@@ -1,16 +1,17 @@
 // Navbar
 nav {
-	background-color: #333;
+	background-color: #4a90e2; // A blue background color
 	color: white;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 20px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); // Add a subtle shadow
 
 	// Logo
 	.logo {
 		img {
-			width: 100px; // Adjust the width as needed
+			width: 100px;
 			height: auto;
 		}
 	}
@@ -27,11 +28,11 @@ nav {
 			a {
 				text-decoration: none;
 				color: white;
-				font-weight: 500;
+				font-weight: 600; // Slightly bolder font
 				transition: color 0.2s;
 
 				&:hover {
-					color: #68d391; // Change the color on hover
+					color: #ffd700; // Change to a gold color on hover
 				}
 			}
 		}
