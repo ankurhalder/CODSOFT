@@ -1,12 +1,9 @@
 // Navbar
 nav {
-	background-color: #2a2a2a;
-	color: #ffffff;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #1e2a38; // Dark background color
+	color: #ffffff; // Text color
+	padding: 15px 20px; // Padding for the navbar
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Subtle box shadow
 
 	// Logo
 	.logo {
@@ -25,11 +22,11 @@ nav {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: grid;
-		grid-template-columns: repeat(6, auto);
-		grid-gap: 20px;
+		display: flex;
+		align-items: center;
 
 		li {
+			margin: 0 20px;
 			position: relative;
 
 			a {
@@ -39,7 +36,7 @@ nav {
 				transition: color 0.2s;
 
 				&:hover {
-					color: #68d391;
+					color: #68d391; // Change the color on hover
 				}
 
 				// Add an underline on hover for the navigation links
@@ -53,6 +50,22 @@ nav {
 					background-color: #68d391;
 				}
 			}
+		}
+	}
+}
+
+// Responsive Navbar
+@media (max-width: 768px) {
+	nav {
+		padding: 15px;
+	}
+
+	ul {
+		flex-direction: column;
+		text-align: center;
+
+		li {
+			margin: 10px 0;
 		}
 	}
 }
