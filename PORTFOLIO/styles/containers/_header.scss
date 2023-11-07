@@ -7,7 +7,6 @@
 	border-bottom: 4px solid var(--green-6);
 	position: relative;
 	transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-
 	&:hover {
 		background-color: var(--black-1);
 		box-shadow: 0 8px 12px var(--black-shadow-light-3);
@@ -45,7 +44,7 @@
 			box-shadow: 0 0 20px rgba(104, 211, 145, 0.5);
 			border: 5px solid var(--green-6);
 			transform-origin: center;
-			animation: pulse 2s ease-in-out infinite;
+			animation: pulse 3s ease-in-out infinite;
 			&:hover {
 				transform: scale(1.05);
 				box-shadow: 0 0 30px rgba(104, 211, 145, 0.8);
@@ -55,16 +54,13 @@
 	}
 
 	.menu {
-		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: flex;
-		gap: 30px;
-
+		@include flex-container(row, nowrap, space-between, center);
+		gap: 50px;
 		li {
 			position: relative;
 			animation: fadeIn 0.5s ease-out both, translateUp 0.3s;
-
 			a {
 				text-decoration: none;
 				color: #ffffff;
