@@ -1,12 +1,13 @@
 // Navbar
 nav {
-	background-color: #4a90e2; // A blue background color
+	background: linear-gradient(to right, #f06, #6f0); // A gradient background
 	color: white;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 20px;
-	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); // Add a subtle shadow
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 10px; // Rounded corners
 
 	// Logo
 	.logo {
@@ -28,11 +29,12 @@ nav {
 			a {
 				text-decoration: none;
 				color: white;
-				font-weight: 600; // Slightly bolder font
-				transition: color 0.2s;
+				font-weight: 600;
+				transition: color 0.3s, transform 0.3s;
 
 				&:hover {
-					color: #ffd700; // Change to a gold color on hover
+					color: #ffd700;
+					transform: scale(1.1); // Slight scale-up effect on hover
 				}
 			}
 		}
