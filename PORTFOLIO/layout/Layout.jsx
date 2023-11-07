@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Navbar } from "../containers";
+import { Navbar, Footer } from "../containers";
 function Layout({ children, isMenuOpen, setMenuOpen }) {
 	const closeMenu = () => {
 		setMenuOpen(false);
@@ -12,6 +12,7 @@ function Layout({ children, isMenuOpen, setMenuOpen }) {
 				closeMenu={closeMenu}
 			></Navbar>
 			<div className={`${isMenuOpen ? "navbar-open" : ""}`}>{children}</div>
+			<Footer closeMenu={closeMenu}></Footer>
 		</Fragment>
 	);
 }
