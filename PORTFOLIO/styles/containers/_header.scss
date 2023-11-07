@@ -271,6 +271,7 @@
 			width: 100%;
 			height: 95vh;
 			z-index: 100;
+			gap: 80px;
 			background-color: var(--black-2);
 			padding: 10px 0;
 			border: 4px solid var(--green-6);
@@ -287,7 +288,11 @@
 			}
 			li {
 				a {
-					font-size: 18px;
+					font-family: var(--font-tektur);
+					font-size: var(--font-5);
+					font-weight: 400;
+					letter-spacing: 3px;
+					text-decoration: underline;
 					@media (max-width: $breakpoint-desktop-wide) {
 					}
 					@media (max-width: $breakpoint-desktop) {
