@@ -14,7 +14,9 @@ nav {
 
 		img {
 			width: 100px; // Logo width
-			height: auto;
+			height: 100px; // Set the height to match the width to make it circular
+			border-radius: 50%; // Make the image circular
+			object-fit: cover; // Prevent the image from stretching
 			transition: transform 0.2s;
 
 			&:hover {
