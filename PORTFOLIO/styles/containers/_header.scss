@@ -1,4 +1,4 @@
-nav {
+.navbar {
 	background-color: #2a2a2a;
 	color: #ffffff;
 	padding: 20px 30px;
@@ -14,6 +14,24 @@ nav {
 		background-color: #1e1e1e;
 		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 		transform: translateY(-3px);
+	}
+
+	.menu-toggle {
+		display: none;
+		cursor: pointer;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 1;
+
+		.bar {
+			width: 100%;
+			height: 4px;
+			background-color: #fff;
+			border-radius: 4px;
+		}
 	}
 
 	.logo {
@@ -39,7 +57,7 @@ nav {
 		}
 	}
 
-	ul {
+	.menu {
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -116,6 +134,49 @@ nav {
 	&:hover::before {
 		transform: scaleX(1);
 	}
+
+	&.open {
+		.menu-toggle {
+			.bar {
+				&:first-child {
+					transform: rotate(45deg) translate(5px, 5px);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+				}
+				&:last-child {
+					transform: rotate(-45deg) translate(5px, -5px);
+				}
+			}
+		}
+
+		.menu {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			top: 100px;
+			left: 0;
+			right: 0;
+			background-color: #2a2a2a;
+			padding: 10px 0;
+			border: 4px solid #68d391;
+			border-top: 0;
+			overflow: hidden;
+			max-height: 0;
+			transition: max-height 0.3s;
+
+			&.open {
+				max-height: 500px;
+			}
+
+			li {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
 }
 
 @keyframes fadeIn {
@@ -163,79 +224,5 @@ nav {
 	}
 	100% {
 		transform: translateY(0);
-	}
-}
-
-@media (max-width: #{$breakpoint-desktop}) {
-	nav {
-		flex-direction: column;
-		padding: 10px;
-		text-align: center;
-
-		.logo {
-			img {
-				width: 100px;
-				height: 100px;
-			}
-		}
-
-		ul {
-			li {
-				margin: 10px 0;
-			}
-		}
-	}
-}
-
-@media (max-width: #{$breakpoint-large-tablet}) {
-	nav {
-		padding: 15px;
-		.logo {
-			img {
-				width: 120px;
-				height: 120px;
-			}
-		}
-		ul {
-			gap: 20px;
-		}
-	}
-}
-
-@media (max-width: #{$breakpoint-tablet}) {
-	nav {
-		.logo {
-			img {
-				width: 90px;
-				height: 90px;
-			}
-		}
-		ul {
-			gap: 15px;
-			li {
-				a {
-					font-size: 18px;
-				}
-			}
-		}
-	}
-}
-
-@media (max-width: #{$breakpoint-phone}) {
-	nav {
-		.logo {
-			img {
-				width: 70px;
-				height: 70px;
-			}
-		}
-		ul {
-			gap: 10px;
-			li {
-				a {
-					font-size: 16px;
-				}
-			}
-		}
 	}
 }
