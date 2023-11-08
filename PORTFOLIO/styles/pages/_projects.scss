@@ -4,18 +4,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #f5f5f5;
+	background: #f9f9f9;
 	padding: 20px;
 	min-height: 100vh;
-	font-family: Arial, sans-serif;
+	font-family: "Arial", sans-serif;
 }
 
 h1 {
-	font-size: 32px;
+	font-size: 36px;
 	color: #333;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	text-align: center;
 }
 
@@ -23,22 +23,21 @@ h1 {
 	border: 1px solid #ddd;
 	padding: 20px;
 	margin: 20px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	background: linear-gradient(135deg, #ff5722, #ff9800);
 	border-radius: 10px;
 	width: 80%;
 	max-width: 600px;
-	transition: transform 0.2s ease;
+	transition: transform 0.3s ease-in-out;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
-	color: #333;
+	color: #fff;
 
 	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+		transform: translateY(-10px);
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
 	}
 
 	@media (max-width: 768px) {
@@ -46,21 +45,21 @@ h1 {
 	}
 
 	h2 {
-		font-size: 24px;
-		margin: 10px 0;
+		font-size: 28px;
+		margin: 15px 0;
 		text-transform: uppercase;
 		font-weight: bold;
-		color: #333;
-		letter-spacing: 1px;
+		color: #fff;
+		letter-spacing: 2px;
 	}
 
 	img {
 		max-width: 100%;
 		height: auto;
-		margin-top: 10px;
+		margin-top: 15px;
 		border-radius: 10px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition: transform 0.2s ease-in-out;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s ease-in-out;
 
 		&:hover {
 			transform: scale(1.05);
@@ -68,20 +67,20 @@ h1 {
 	}
 
 	p {
-		font-size: 16px;
-		margin: 10px 0;
+		font-size: 18px;
+		margin: 15px 0;
 		line-height: 1.6;
-		color: #555;
+		color: #fff;
 	}
 
 	a {
-		color: #007bff;
+		color: #fff;
 		text-decoration: none;
 		font-weight: bold;
 		transition: color 0.3s ease-in-out;
 
 		&:hover {
-			color: #0056b3;
+			color: #ff5722;
 			text-decoration: underline;
 		}
 	}
