@@ -1,6 +1,6 @@
 .footer {
-	background-color: #333; // Background color for the footer
-	color: #fff; // Text color
+	background-color: #333;
+	color: #fff;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -21,8 +21,11 @@
 				a {
 					text-decoration: none;
 					color: #fff;
+					font-size: 1.2rem; // Increase font size
+					transition: color 0.3s; // Smooth color transition
 
 					&:hover {
+						color: #ff7f50; // Change color on hover
 						text-decoration: underline;
 					}
 				}
@@ -36,8 +39,11 @@
 			color: #fff;
 			text-decoration: none;
 			font-weight: bold;
+			font-size: 1.2rem;
+			transition: color 0.3s;
 
 			&:hover {
+				color: #ff7f50;
 				text-decoration: underline;
 			}
 		}
@@ -46,5 +52,11 @@
 	&__bottom {
 		margin-top: 1rem;
 		font-size: 0.8rem;
+		opacity: 0.7; // Reduce opacity for copyright text
+		transition: opacity 0.3s;
+
+		&:hover {
+			opacity: 1; // Increase opacity on hover
+		}
 	}
 }
