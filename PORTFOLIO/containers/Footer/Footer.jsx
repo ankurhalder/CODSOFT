@@ -38,38 +38,6 @@ export default function Footer({ closeMenu }) {
 					</li>
 				</ul>
 			</div>
-			{/* <div className="footer-social">
-				<span>Connect Me With :</span>
-				<ul>
-					<li>
-						<a
-							href="https://www.linkedin.com/in/ankur-halder-a19553188/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src="/footer/linkedin.png" alt="LinkedIn" />
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.facebook.com/ankur.roxx.9"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src="/footer/facebook.png" alt="Facebook" />
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.instagram.com/halder_ankur/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<img src="/footer/instagram.png" alt="Instagram" />
-						</a>
-					</li>
-				</ul>
-			</div> */}
 			<div className="footer__email">
 				<span>Email Me At :</span>
 				<a href="mailto: ankur.halder12345@gmail.com">
