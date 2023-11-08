@@ -1,9 +1,10 @@
 import React from "react";
 
-const Project = ({ title, date, link, description }) => {
+const Project = ({ title, date, link, description, image }) => {
 	return (
 		<div className="project">
 			<h2>{title}</h2>
+			<img src={image} alt={title} />
 			<p>Date: {date}</p>
 			<p>
 				Link:{" "}
