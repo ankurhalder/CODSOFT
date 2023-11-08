@@ -6,7 +6,7 @@
 	);
 	color: var(--white);
 	@include flex-container(column, nowrap, flex-end, center);
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	width: 100%;
 	border-radius: 10px;
