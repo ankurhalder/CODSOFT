@@ -16,6 +16,15 @@
 	border-radius: 10px;
 	transition: transform 0.3s;
 	cursor: pointer;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+	border-top: 1px solid var(--orange-5);
+	font-size: 1.2rem;
+	padding: 3rem 0;
+
+	transform-origin: center;
+
+	border: 1px solid var(--orange-5);
 	&__links {
 		-webkit-background-clip: text;
 		background-clip: text;
@@ -94,17 +103,9 @@
 		}
 	}
 
-	&:hover {
-		transform: scale(1.02);
-	}
-
 	background-size: 2rem 2rem;
 
 	transition: background 0.3s;
-
-	&:hover {
-		background: linear-gradient(to bottom, #333, #555);
-	}
 
 	&::before {
 		content: "★";
@@ -115,19 +116,4 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
-
-	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-
-	border-top: 1px solid var(--orange-5);
-	font-size: 1.2rem;
-	padding: 3rem 0;
-
-	transform-origin: center;
-	transition: transform 0.3s;
-
-	&:hover {
-		transform: scale(1.02);
-	}
-
-	border: 1px solid var(--orange-5);
 }
