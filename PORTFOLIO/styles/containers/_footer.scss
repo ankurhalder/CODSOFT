@@ -92,8 +92,7 @@
 	margin-top: 2rem;
 	border-radius: 10px;
 	transition: transform 0.3s;
-	cursor: pointer; // Add a pointer cursor on hover
-
+	cursor: pointer;
 	&:hover {
 		transform: scale(1.02);
 	}
@@ -109,4 +108,15 @@
 		transparent
 	);
 	background-size: 2rem 2rem;
+
+	// Add a slight opacity transition on hover for the background
+	transition: background 0.3s;
+
+	&:hover {
+		background: linear-gradient(
+			to bottom,
+			#333,
+			#555
+		); // Change the background gradient on hover
+	}
 }
