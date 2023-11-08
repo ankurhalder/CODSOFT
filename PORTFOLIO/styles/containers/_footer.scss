@@ -194,11 +194,10 @@
 
 	border: 1px solid #ff7f50;
 
-	// Add a background gradient to the footer links for an extra touch
 	&__links {
 		background-image: linear-gradient(135deg, #ff7f50 0%, #ff4500 100%);
-		background-clip: text;
 		-webkit-background-clip: text;
+		background-clip: text;
 		color: transparent;
 		border-radius: 10px;
 		padding: 1rem;
