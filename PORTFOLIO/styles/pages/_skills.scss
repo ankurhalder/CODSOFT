@@ -34,26 +34,35 @@
 				font-size: var(--font-9);
 				color: var(--black);
 				font-weight: 500;
-				margin-bottom: 1%;
+				margin-bottom: 3%;
 				letter-spacing: 1px;
 				text-decoration: underline;
 				text-transform: uppercase;
 			}
 
 			p {
-				font-size: 18px;
-				color: #555;
-				margin-bottom: 15px;
+				font-family: var(--font-roboto);
+				font-size: var(--font-12);
+				color: var(--black);
+				font-weight: 400;
+				margin-bottom: 2%;
+				letter-spacing: 1px;
+				text-transform: uppercase;
 			}
 
 			em {
-				font-size: 16px;
-				color: #888;
+				font-family: var(--font-roboto);
+				font-size: var(--font-13);
+				color: var(--orange-6);
+				font-weight: 400;
+				margin-bottom: 2%;
+				letter-spacing: 1px;
+				text-transform: uppercase;
 			}
 
 			&:before {
 				content: "";
-				background-image: url("/background/blue.jpg"); /* Replace with your actual background image URL */
+				background-image: url("/background/blue.jpg");
 				background-size: cover;
 				background-attachment: fixed;
 				position: absolute;
