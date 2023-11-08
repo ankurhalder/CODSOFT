@@ -7,17 +7,13 @@
 	color: var(--white);
 	padding: 2rem;
 	@include flex-container(column, nowrap, center, center);
-	position: relative;
 	border-radius: 10px;
 	border: 1px solid var(--orange-5);
 	background-size: 2rem 2rem;
 	&__links {
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		border-radius: 10px;
+		border-radius: 50px;
 		padding: 1rem;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+		box-shadow: 0 5px 15px var(--black-shadow);
 		ul {
 			list-style: none;
 			padding: 0;
