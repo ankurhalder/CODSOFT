@@ -6,7 +6,7 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	font-family: "Arial", sans-serif; // Change the font family
+	font-family: "Arial", sans-serif;
 
 	&__links {
 		ul {
@@ -34,7 +34,7 @@
 						position: absolute;
 						bottom: -5px;
 						left: 0;
-						transform: scaleX(0); // Initially, hide the underline
+						transform: scaleX(0);
 						transform-origin: center;
 						transition: transform 0.3s;
 					}
@@ -42,7 +42,7 @@
 					&:hover {
 						color: #ff7f50;
 						&:before {
-							transform: scaleX(1); // Show the underline on hover
+							transform: scaleX(1);
 						}
 					}
 				}
@@ -84,4 +84,7 @@
 		background-color: #ff7f50;
 		margin-top: 2rem;
 	}
+
+	// Add a subtle shadow to the footer
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
