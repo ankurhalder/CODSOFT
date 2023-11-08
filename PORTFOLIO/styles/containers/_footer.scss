@@ -87,4 +87,15 @@
 
 	// Add a subtle shadow to the footer
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+	// Add padding and border to the footer for better separation
+	padding: 2rem 0;
+	border-top: 1px solid #ff7f50;
+	border-bottom: 1px solid #ff7f50;
+
+	// Add a background gradient
+	background: linear-gradient(to bottom, #333, #444);
+
+	// Add some margin to the top
+	margin-top: 2rem;
 }
