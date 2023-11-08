@@ -7,7 +7,7 @@
 	color: var(--white);
 	padding: 2rem;
 	@include flex-container(column, nowrap, center, center);
-	border-radius: 10px;
+	border-radius: 25px;
 	border: 1px solid var(--orange-5);
 	background-size: 2rem 2rem;
 	&__links {
@@ -15,14 +15,10 @@
 		padding: 1rem;
 		box-shadow: 0 5px 15px var(--black-shadow);
 		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
 			@include flex-container(row, nowrap, center, center);
 			li {
-				margin: 0 1rem;
+				margin: 0 1rem 0 1rem;
 				a {
-					text-decoration: none;
 					font-family: var(--font-tektur);
 					color: var(--white);
 					font-size: var(--font-11);
