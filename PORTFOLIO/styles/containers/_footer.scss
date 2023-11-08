@@ -25,6 +25,20 @@
 	transform-origin: center;
 
 	border: 1px solid var(--orange-5);
+
+	// todo
+	background-size: 2rem 2rem;
+	transition: background 0.3s;
+
+	&::before {
+		content: "★";
+		font-size: 2rem;
+		color: var(--orange-5);
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
 	&__links {
 		-webkit-background-clip: text;
 		background-clip: text;
@@ -101,19 +115,5 @@
 		&:hover {
 			opacity: 1;
 		}
-	}
-
-	background-size: 2rem 2rem;
-
-	transition: background 0.3s;
-
-	&::before {
-		content: "★";
-		font-size: 2rem;
-		color: var(--orange-5);
-		position: absolute;
-		top: -20px;
-		left: 50%;
-		transform: translateX(-50%);
 	}
 }
