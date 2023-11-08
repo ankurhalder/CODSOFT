@@ -5,15 +5,18 @@
 		var(--light-black-3)
 	);
 	color: var(--white);
-	padding: 2rem;
-	@include flex-container(column, nowrap, center, center);
-	border-radius: 25px;
+	@include flex-container(column, nowrap, flex-end, center);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-radius: 10px;
 	border: 1px solid var(--orange-5);
 	background-size: 2rem 2rem;
 	&__links {
 		border-radius: 50px;
-		padding: 1rem;
+		padding: 0.5rem;
 		box-shadow: 0 5px 15px var(--black-shadow);
+		margin: 0.5% 0 0 0;
 		ul {
 			@include flex-container(row, nowrap, center, center);
 			li {
@@ -55,7 +58,7 @@
 	}
 
 	&__bottom {
-		margin: 0.5% 0 0 0;
+		margin: 0.5% 0 0.1% 0;
 		opacity: 0.8;
 		font-family: var(--font-tektur);
 		font-size: var(--font-13);
