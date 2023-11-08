@@ -1,5 +1,5 @@
 .footer {
-	background-color: #333;
+	background: linear-gradient(to bottom, #333, #444); // Background gradient
 	color: #fff;
 	padding: 2rem;
 	display: flex;
@@ -93,9 +93,16 @@
 	border-top: 1px solid #ff7f50;
 	border-bottom: 1px solid #ff7f50;
 
-	// Add a background gradient
-	background: linear-gradient(to bottom, #333, #444);
-
 	// Add some margin to the top
 	margin-top: 2rem;
+
+	// Add a slight border-radius for a softer look
+	border-radius: 10px;
+
+	// Add a slight scale transform on hover
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: scale(1.02);
+	}
 }
