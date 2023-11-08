@@ -57,6 +57,10 @@
 	&__bottom {
 		margin: 0.5% 0 0 0;
 		opacity: 0.8;
+		font-family: var(--font-tektur);
+		font-size: var(--font-13);
+		letter-spacing: 2px;
+		text-transform: uppercase;
 		transition: transform 0.5s ease-in-out;
 		&:hover {
 			opacity: 1;
