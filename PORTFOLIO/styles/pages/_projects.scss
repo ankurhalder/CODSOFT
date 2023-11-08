@@ -3,6 +3,16 @@
 	background: var(--white-1);
 	padding: 20px;
 	min-height: 100vh;
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 	h1 {
 		font-family: var(--font-elianto);
 		font-size: var(--font-7);
@@ -41,7 +51,16 @@
 		overflow: hidden;
 		cursor: pointer;
 		transform-style: preserve-3d;
-
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		&:hover {
 			transform: translateY(-10px) rotateX(10deg);
 			box-shadow: 0 12px 24px var(--black-shadow);
@@ -79,7 +98,16 @@
 			border-radius: 50%;
 			box-shadow: 0 8px 16px var(--black-shadow-light-1);
 			transition: transform 0.3s ease-in-out;
-
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 			&:hover {
 				transform: scale(1.05);
 				box-shadow: 0 8px 16px var(--black-shadow);
@@ -113,6 +141,16 @@
 			font-weight: bold;
 			transition: color 0.3s ease-in-out;
 			font-family: var(--font-tektur);
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 			&:hover {
 				color: var(--white);
 				transform: scale(1.05);
