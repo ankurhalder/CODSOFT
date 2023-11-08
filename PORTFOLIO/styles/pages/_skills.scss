@@ -11,6 +11,7 @@
 	@media (max-width: $breakpoint-tablet) {
 	}
 	@media (max-width: $breakpoint-phone) {
+		padding: 30px 80px;
 	}
 	h2 {
 		font-family: var(--font-elianto);
@@ -110,6 +111,7 @@
 					font-size: var(--font-11);
 				}
 				@media (max-width: $breakpoint-phone) {
+					font-size: var(--font-10);
 				}
 			}
 
