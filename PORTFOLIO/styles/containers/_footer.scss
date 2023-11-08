@@ -20,12 +20,11 @@
 				margin: 0 1rem 0 1rem;
 				a {
 					font-family: var(--font-tektur);
-					color: var(--white);
 					font-size: var(--font-11);
-					transition: color 0.3s;
-					position: relative;
-					border-bottom: 2px solid transparent;
-
+					color: var(--white);
+					letter-spacing: 2px;
+					font-weight: 400;
+					transition: color 0.5s;
 					&:hover {
 						color: var(--orange-5);
 						border-bottom: 2px solid var(--orange-5);
