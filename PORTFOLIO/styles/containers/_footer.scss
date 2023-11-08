@@ -20,6 +20,7 @@
 	@media (max-width: $breakpoint-large-tablet) {
 	}
 	@media (max-width: $breakpoint-tablet) {
+		border-radius: 5px;
 	}
 	@media (max-width: $breakpoint-phone) {
 	}
@@ -36,6 +37,7 @@
 		@media (max-width: $breakpoint-large-tablet) {
 		}
 		@media (max-width: $breakpoint-tablet) {
+			padding: 0.2rem;
 		}
 		@media (max-width: $breakpoint-phone) {
 		}
@@ -50,12 +52,14 @@
 				@media (max-width: $breakpoint-large-tablet) {
 				}
 				@media (max-width: $breakpoint-tablet) {
+					margin: 0 0.5rem 0 0.5rem;
 				}
 				@media (max-width: $breakpoint-phone) {
+					margin: 0 0.2rem 0 0.2rem;
 				}
 				a {
 					font-family: var(--font-tektur);
-					font-size: var(--font-13);
+					font-size: var(--font-14);
 					color: var(--white);
 					letter-spacing: 2px;
 					font-weight: 400;
@@ -69,6 +73,7 @@
 					@media (max-width: $breakpoint-tablet) {
 					}
 					@media (max-width: $breakpoint-phone) {
+						font-size: var(--font-14);
 					}
 					&:hover {
 						color: var(--orange-5);
@@ -97,7 +102,7 @@
 		}
 		span {
 			font-family: var(--font-tektur);
-			font-size: var(--font-13);
+			font-size: var(--font-14);
 			letter-spacing: 2px;
 			text-transform: uppercase;
 			@media (max-width: $breakpoint-desktop-wide) {
@@ -109,13 +114,14 @@
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-14);
 			}
 		}
 		a {
 			color: var(--orange-5);
 			transition: color 1s ease-in-out;
 			font-family: var(--font-elianto);
-			font-size: var(--font-12);
+			font-size: var(--font-13);
 			letter-spacing: 2px;
 			@media (max-width: $breakpoint-desktop-wide) {
 			}
@@ -126,6 +132,7 @@
 			@media (max-width: $breakpoint-tablet) {
 			}
 			@media (max-width: $breakpoint-phone) {
+				font-size: var(--font-13);
 			}
 			&:hover {
 				color: var(--orange-6);
@@ -137,7 +144,7 @@
 		margin: 0.5% 0 0.1% 0;
 		opacity: 0.8;
 		font-family: var(--font-tektur);
-		font-size: var(--font-14);
+		font-size: var(--font-15);
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		transition: transform 0.5s ease-in-out;
