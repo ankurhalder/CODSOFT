@@ -1,0 +1,50 @@
+.footer {
+	background-color: #333; // Background color for the footer
+	color: #fff; // Text color
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__links {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			li {
+				margin: 0 1rem;
+				a {
+					text-decoration: none;
+					color: #fff;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	&__email {
+		margin-top: 1rem;
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-weight: bold;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__bottom {
+		margin-top: 1rem;
+		font-size: 0.8rem;
+	}
+}
