@@ -1,7 +1,10 @@
+/* MySkills.scss */
+
 .skills-container {
 	background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
 	padding: 30px 0;
 	text-align: center;
+
 	h2 {
 		font-family: var(--font-elianto);
 		font-size: var(--font-7);
@@ -12,23 +15,19 @@
 	}
 
 	ul.skills-list {
-		list-style-type: none;
-		padding: 0;
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-gap: 20px;
 		justify-content: center;
 
 		li {
-			background: #fff;
+			background: var(--white);
 			border: 1px solid #e0e0e0;
 			border-radius: 10px;
 			padding: 20px;
-			margin: 10px;
 			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 			transition: transform 0.2s;
 			cursor: pointer;
-			flex: 1;
-			min-width: 300px;
 			position: relative;
 			overflow: hidden;
 
