@@ -6,6 +6,7 @@
 	border-bottom: 4px solid var(--green-6);
 	position: relative;
 	transition: background-color 0.3s, box-shadow 0.5s, transform 0.3s;
+	z-index: 100;
 	@media (max-width: $breakpoint-desktop-wide) {
 	}
 	@media (max-width: $breakpoint-desktop) {
