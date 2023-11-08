@@ -16,6 +16,7 @@ h1 {
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	text-align: center;
 }
 
 .project {
@@ -48,28 +49,39 @@ h1 {
 		font-size: 24px;
 		margin: 10px 0;
 		text-transform: uppercase;
+		font-weight: bold;
+		color: #333;
+		letter-spacing: 1px;
 	}
 
 	img {
 		max-width: 100%;
 		height: auto;
 		margin-top: 10px;
-		border-radius: 5px;
+		border-radius: 10px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s ease-in-out;
+
+		&:hover {
+			transform: scale(1.05);
+		}
 	}
 
 	p {
 		font-size: 16px;
 		margin: 10px 0;
-		line-height: 1.4;
+		line-height: 1.6;
+		color: #555;
 	}
 
 	a {
 		color: #007bff;
 		text-decoration: none;
 		font-weight: bold;
+		transition: color 0.3s ease-in-out;
 
 		&:hover {
+			color: #0056b3;
 			text-decoration: underline;
 		}
 	}
