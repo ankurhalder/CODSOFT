@@ -15,7 +15,9 @@ function Navbar({ isMenuOpen, setMenuOpen, closeMenu }) {
 					<div className="bar"></div>
 				</div>
 				<div className="logo">
-					<img src="/Ankur_Halder.jpg" alt="Ankur Halder" />
+					<Link to="/">
+						<img src="/Ankur_Halder.jpg" alt="Ankur Halder" />
+					</Link>
 				</div>
 				<ul className="menu">
 					<li>
@@ -24,13 +26,8 @@ function Navbar({ isMenuOpen, setMenuOpen, closeMenu }) {
 						</Link>
 					</li>
 					<li>
-						<Link to="/about" onClick={closeMenu}>
-							About
-						</Link>
-					</li>
-					<li>
-						<Link to="/contact" onClick={closeMenu}>
-							Contact
+						<Link to="/skills" onClick={closeMenu}>
+							Skills
 						</Link>
 					</li>
 					<li>
@@ -39,13 +36,13 @@ function Navbar({ isMenuOpen, setMenuOpen, closeMenu }) {
 						</Link>
 					</li>
 					<li>
-						<Link to="/resume" onClick={closeMenu}>
-							Resume
+						<Link to="/contact" onClick={closeMenu}>
+							Contact
 						</Link>
 					</li>
 					<li>
-						<Link to="/skills" onClick={closeMenu}>
-							Skills
+						<Link to="/resume" onClick={closeMenu}>
+							Resume
 						</Link>
 					</li>
 				</ul>
