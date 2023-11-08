@@ -192,6 +192,54 @@
 		transform: scale(1.02);
 	}
 
-	// Add a subtle border around the footer
 	border: 1px solid #ff7f50;
+
+	// Add a background gradient to the footer links for an extra touch
+	&__links {
+		background-image: linear-gradient(135deg, #ff7f50 0%, #ff4500 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		border-radius: 10px;
+		padding: 1rem;
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			li {
+				margin: 0 1rem;
+				a {
+					text-decoration: none;
+					font-size: 1.2rem;
+					transition: color 0.3s;
+					position: relative;
+
+					&:before {
+						content: "";
+						width: 100%;
+						height: 2px;
+						background-color: #fff;
+						position: absolute;
+						bottom: -5px;
+						left: 0;
+						transform: scaleX(0);
+						transform-origin: center;
+						transition: transform 0.3s;
+					}
+
+					&:hover {
+						color: #ff7f50;
+						&:before {
+							transform: scaleX(1);
+						}
+					}
+				}
+			}
+		}
+	}
 }
