@@ -34,14 +34,21 @@
 	}
 
 	&__email {
-		margin-top: 1rem;
+		margin: 1% 0 0 0;
+		span {
+			font-family: var(--font-tektur);
+			font-size: var(--font-12);
+			letter-spacing: 2px;
+			text-transform: capitalize;
+		}
 		a {
 			color: var(--orange-5);
 			text-decoration: none;
-			font-weight: bold;
-			font-size: 1.2rem;
-			transition: color 0.3s;
-
+			transition: color 1s ease-in-out;
+			font-family: var(--font-elianto);
+			font-size: var(--font-11);
+			letter-spacing: 2px;
+			text-transform: lowercase;
 			&:hover {
 				color: var(--orange-6);
 				text-decoration: underline;
@@ -168,7 +175,11 @@
 	border: 1px solid var(--orange-5);
 
 	&__links {
-		background-image: linear-gradient(135deg, var(--orange-5) 0%, #ff4500 100%);
+		background-image: linear-gradient(
+			135deg,
+			var(--orange-5) 0%,
+			var(--orange-6) 100%
+		);
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
