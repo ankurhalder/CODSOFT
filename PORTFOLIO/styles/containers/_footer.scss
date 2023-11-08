@@ -2,13 +2,8 @@
 	background: linear-gradient(to bottom, #333, #444);
 	color: #fff;
 	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	font-family: "Arial", sans-serif;
+	@include flex-container(column, nowrap, center, center);
 	position: relative;
-
 	&__links {
 		ul {
 			list-style: none;
