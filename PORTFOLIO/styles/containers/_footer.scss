@@ -126,7 +126,6 @@
 		transform: translateX(-50%);
 	}
 
-	// Add a border at the bottom of the footer
 	&::after {
 		content: "";
 		border-bottom: 1px solid #ff7f50;
@@ -134,7 +133,6 @@
 		margin-top: 1rem;
 	}
 
-	// Add padding and background color to the footer links
 	&__links {
 		background-color: rgba(0, 0, 0, 0.2);
 		padding: 1rem;
@@ -179,5 +177,25 @@
 				}
 			}
 		}
+	}
+
+	// Add a subtle text shadow
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+	// Add a border at the top
+	border-top: 1px solid #ff7f50;
+
+	// Increase the font size
+	font-size: 1.2rem;
+
+	// Increase the padding
+	padding: 3rem 0;
+
+	// Add a transform on hover
+	transform-origin: center;
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: scale(1.02);
 	}
 }
