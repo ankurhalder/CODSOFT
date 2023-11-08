@@ -2,6 +2,16 @@
 	background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
 	padding: 30px 10px;
 	text-align: center;
+	@media (max-width: $breakpoint-desktop-wide) {
+	}
+	@media (max-width: $breakpoint-desktop) {
+	}
+	@media (max-width: $breakpoint-large-tablet) {
+	}
+	@media (max-width: $breakpoint-tablet) {
+	}
+	@media (max-width: $breakpoint-phone) {
+	}
 	h2 {
 		font-family: var(--font-elianto);
 		font-size: var(--font-7);
@@ -9,12 +19,32 @@
 		color: var(--black);
 		margin-bottom: 20px;
 		text-transform: uppercase;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 	ul.skills-list {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 		grid-gap: 20px;
 		justify-content: center;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 		li {
 			background: var(--white);
 			border: 1px solid #e0e0e0;
@@ -25,6 +55,16 @@
 			cursor: pointer;
 			position: relative;
 			overflow: hidden;
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 			&:hover {
 				transform: translateY(-2px);
 				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -38,6 +78,16 @@
 				letter-spacing: 1px;
 				text-decoration: underline;
 				text-transform: uppercase;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			p {
@@ -48,6 +98,16 @@
 				margin-bottom: 2%;
 				letter-spacing: 1px;
 				text-transform: uppercase;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			em {
@@ -58,6 +118,16 @@
 				margin-bottom: 2%;
 				letter-spacing: 1px;
 				text-transform: uppercase;
+				@media (max-width: $breakpoint-desktop-wide) {
+				}
+				@media (max-width: $breakpoint-desktop) {
+				}
+				@media (max-width: $breakpoint-large-tablet) {
+				}
+				@media (max-width: $breakpoint-tablet) {
+				}
+				@media (max-width: $breakpoint-phone) {
+				}
 			}
 
 			&:before {
