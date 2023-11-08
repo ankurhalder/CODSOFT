@@ -37,9 +37,10 @@ h1 {
 	position: relative;
 	overflow: hidden;
 	cursor: pointer;
+	transform-style: preserve-3d;
 
 	&:hover {
-		transform: translateY(-10px);
+		transform: translateY(-10px) rotateX(5deg);
 		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 		background: linear-gradient(45deg, #ff6b6b, #ffb36b);
 	}
