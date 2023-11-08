@@ -179,23 +179,19 @@
 		}
 	}
 
-	// Add a subtle text shadow
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
-	// Add a border at the top
 	border-top: 1px solid #ff7f50;
-
-	// Increase the font size
 	font-size: 1.2rem;
-
-	// Increase the padding
 	padding: 3rem 0;
 
-	// Add a transform on hover
 	transform-origin: center;
 	transition: transform 0.3s;
 
 	&:hover {
 		transform: scale(1.02);
 	}
+
+	// Add a subtle border around the footer
+	border: 1px solid #ff7f50;
 }
