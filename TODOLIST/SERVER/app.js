@@ -39,6 +39,11 @@ app.use((req, res, next) => {
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/profileImage", profileImageRouter);
 app.use("/api/v1/", todoRouter);
+app.head("/api/v1/head", (req, res) => {
+	res.status(200).json({
+		status: "success",
+	});
+});
 app.all("*", (req, res, next) => {
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
