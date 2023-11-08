@@ -1,0 +1,49 @@
+.projects-page {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h1 {
+		font-size: 32px;
+		color: #333;
+		margin-bottom: 20px;
+	}
+
+	.project {
+		border: 1px solid #ddd;
+		padding: 20px;
+		margin: 20px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+		background-color: #f9f9f9;
+		border-radius: 5px;
+		width: 80%;
+		max-width: 600px;
+
+		@media (max-width: 768px) {
+			width: 90%;
+		}
+
+		h2 {
+			font-size: 24px;
+			margin: 0;
+			color: #333;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-top: 10px;
+		}
+
+		p {
+			font-size: 16px;
+			margin: 10px 0;
+			color: #555;
+		}
+
+		a {
+			color: #007bff;
+			text-decoration: none;
+		}
+	}
+}
