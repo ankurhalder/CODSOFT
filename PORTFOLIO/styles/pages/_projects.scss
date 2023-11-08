@@ -49,11 +49,25 @@
 		}
 
 		h2 {
-			font-size: 28px;
-			margin: 15px 0;
+			font-family: var(--font-tektur);
+			font-size: var(--font-9);
+			color: var(--black);
+			font-weight: 500;
+			margin-bottom: 3%;
+			letter-spacing: 1px;
+			text-decoration: underline;
 			text-transform: uppercase;
-			font-weight: bold;
-			color: #333;
+			@media (max-width: $breakpoint-desktop-wide) {
+			}
+			@media (max-width: $breakpoint-desktop) {
+			}
+			@media (max-width: $breakpoint-large-tablet) {
+			}
+			@media (max-width: $breakpoint-tablet) {
+				font-size: var(--font-8);
+			}
+			@media (max-width: $breakpoint-phone) {
+			}
 		}
 
 		img {
