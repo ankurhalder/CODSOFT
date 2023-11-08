@@ -178,29 +178,4 @@
 	}
 
 	border: 1px solid var(--orange-5);
-
-	&__links {
-		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			li {
-				margin: 0 1rem;
-				a {
-					text-decoration: none;
-					font-size: 1.2rem;
-					transition: color 0.3s;
-					position: relative;
-
-					&:hover {
-						color: var(--orange-5);
-					}
-				}
-			}
-		}
-	}
 }
