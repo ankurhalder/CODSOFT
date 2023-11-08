@@ -1,6 +1,10 @@
 .footer {
-	background: linear-gradient(to bottom, #333, #444);
-	color: #fff;
+	background: linear-gradient(
+		to bottom,
+		var(--light-black-2),
+		var(--light-black-3)
+	);
+	color: var(--white);
 	padding: 2rem;
 	@include flex-container(column, nowrap, center, center);
 	position: relative;
@@ -17,7 +21,7 @@
 				margin: 0 1rem;
 				a {
 					text-decoration: none;
-					color: #fff;
+					color: var(--white);
 					font-size: 1.2rem;
 					transition: color 0.3s;
 					position: relative;
@@ -122,7 +126,7 @@
 				margin: 0 1rem;
 				a {
 					text-decoration: none;
-					color: #fff;
+					color: var(--white);
 					font-size: 1.2rem;
 					transition: color 0.3s;
 					position: relative;
