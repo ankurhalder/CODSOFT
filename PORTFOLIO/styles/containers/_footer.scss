@@ -2,11 +2,7 @@
 	background: linear-gradient(to bottom, #333, #444);
 	color: #fff;
 	padding: 2rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	font-family: "Arial", sans-serif;
+	@include flex-container(column, nowrap, center, center);
 	position: relative;
 
 	&__links {
@@ -97,17 +93,6 @@
 	&:hover {
 		transform: scale(1.02);
 	}
-
-	background-image: linear-gradient(
-		45deg,
-		rgba(255, 255, 255, 0.2) 25%,
-		transparent 25%,
-		transparent 50%,
-		rgba(255, 255, 255, 0.2) 50%,
-		rgba(255, 255, 255, 0.2) 75%,
-		transparent 75%,
-		transparent
-	);
 	background-size: 2rem 2rem;
 
 	transition: background 0.3s;
