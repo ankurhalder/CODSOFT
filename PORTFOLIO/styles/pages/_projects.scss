@@ -4,11 +4,23 @@
 	padding: 20px;
 	min-height: 100vh;
 	h1 {
-		font-size: 36px;
-		color: #333;
-		margin-bottom: 30px;
+		font-family: var(--font-elianto);
+		font-size: var(--font-7);
+		letter-spacing: 2px;
+		color: var(--black);
+		margin-bottom: 20px;
 		text-transform: uppercase;
-		text-align: center;
+		@media (max-width: $breakpoint-desktop-wide) {
+		}
+		@media (max-width: $breakpoint-desktop) {
+		}
+		@media (max-width: $breakpoint-large-tablet) {
+		}
+		@media (max-width: $breakpoint-tablet) {
+			font-size: var(--font-6);
+		}
+		@media (max-width: $breakpoint-phone) {
+		}
 	}
 
 	.project {
