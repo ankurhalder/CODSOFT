@@ -6,14 +6,22 @@
 	margin: 0 auto;
 	padding: 30px;
 	border-radius: 12px;
-	background: #1f1f1f; /* Dark background color */
+	background: linear-gradient(
+		135deg,
+		#333,
+		#111
+	); /* Dark gradient background */
 	color: #ecf0f1; /* Light text color */
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
 	transition: background 0.3s ease;
 
 	&:hover {
-		background: #262626; /* Darker background color on hover */
+		background: linear-gradient(
+			135deg,
+			#222,
+			#000
+		); /* Darker gradient background on hover */
 		transform: scale(1.02);
 	}
 
