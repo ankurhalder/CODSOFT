@@ -31,6 +31,19 @@ function Contacts() {
 						</li>
 						<li className="social-link-item">
 							<a
+								href="https://github.com/ankurhalder"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<img
+									src="/footer/github.png"
+									alt="Github"
+									className="social-icon"
+								/>
+							</a>
+						</li>
+						<li className="social-link-item">
+							<a
 								href="https://www.facebook.com/ankur.roxx.9"
 								target="_blank"
 								rel="noopener noreferrer"
