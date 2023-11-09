@@ -10,8 +10,6 @@
 	color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
-	animation: fadeIn 1s ease, pulsate 3s infinite,
-		backgroundAnimation 10s infinite;
 
 	&:hover {
 		transform: scale(1.02);
@@ -34,6 +32,11 @@
 		margin-bottom: 15px;
 		text-align: center;
 		line-height: 1.6;
+
+		.detail-label {
+			font-weight: bold;
+			margin-right: 10px;
+		}
 	}
 
 	.social-links-container {
@@ -87,7 +90,6 @@
 							rgba(255, 255, 255, 0.6)
 						);
 						border-radius: 50%;
-						animation: pulsate 2s infinite;
 					}
 
 					img {
@@ -105,50 +107,6 @@
 					}
 				}
 			}
-		}
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes pulsate {
-		0% {
-			transform: scale(1);
-		}
-		50% {
-			transform: scale(1.05);
-		}
-		100% {
-			transform: scale(1);
-		}
-	}
-
-	@keyframes backgroundAnimation {
-		0% {
-			background-position: 0% 0%;
-			background-color: #3498db;
-		}
-		25% {
-			background-position: 50% 0%;
-			background-color: #2980b9;
-		}
-		50% {
-			background-position: 100% 0%;
-			background-color: #2c3e50;
-		}
-		75% {
-			background-position: 50% 100%;
-			background-color: #1abc9c;
-		}
-		100% {
-			background-position: 0% 100%;
-			background-color: #3498db;
 		}
 	}
 }
