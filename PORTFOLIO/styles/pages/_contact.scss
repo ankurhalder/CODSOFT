@@ -6,7 +6,7 @@
 	margin: 0 auto;
 	padding: 20px;
 	border-radius: 8px;
-	background-color: #f7f7f7;
+	background-color: #f9f9f9;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 	.contacts-heading {
@@ -14,11 +14,12 @@
 		margin-bottom: 20px;
 		color: #2c3e50;
 		text-align: center;
+		text-transform: uppercase;
 	}
 
 	.contacts-detail {
 		margin-bottom: 15px;
-		color: #34495e;
+		color: #555;
 		text-align: center;
 	}
 
