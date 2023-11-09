@@ -63,29 +63,21 @@
 				color: var(--blue-2);
 			}
 			.social-links-list {
-				list-style: none;
-				padding: 0;
-				display: flex;
-				justify-content: center;
-
+				@include flex-container(row, nowrap, center, center);
+				gap: 50px;
 				.social-link-item {
-					margin-right: 20px;
-
 					.social-icon {
-						width: 60px;
-						height: 60px;
+						width: 100%;
+						height: 100%;
+						max-width: 100px;
+						max-height: 100px;
 						border-radius: 50%;
-						border: 3px solid #ecf0f1;
+						border: 3px solid var(--white);
 						background: linear-gradient(45deg, #3498db, #2ecc71);
 						transition: transform 0.3s ease, box-shadow 0.3s ease,
 							filter 0.3s ease;
 						cursor: pointer;
-						display: flex;
-						align-items: center;
-						justify-content: center;
 						overflow: hidden;
-						position: relative;
-
 						&:hover {
 							transform: scale(1.1) rotate(5deg);
 							box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
