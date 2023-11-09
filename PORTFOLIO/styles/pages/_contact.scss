@@ -10,8 +10,7 @@
 	color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
-	animation: fadeIn 1s ease;
-	transition: transform 0.3s ease;
+	animation: fadeIn 1s ease, backgroundAnimation 8s infinite;
 
 	&:hover {
 		transform: scale(1.02);
@@ -71,9 +70,10 @@
 					position: relative;
 
 					&:hover {
-						transform: scale(1.1);
+						transform: scale(1.1) rotate(5deg);
 						box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-						border-color: #fff;
+						border-image: linear-gradient(45deg, #e74c3c, #3498db);
+						border-image-slice: 1;
 					}
 
 					&:before {
@@ -125,6 +125,18 @@
 		}
 		100% {
 			transform: scale(1);
+		}
+	}
+
+	@keyframes backgroundAnimation {
+		0% {
+			background-position: 0% 0%;
+		}
+		50% {
+			background-position: 100% 0%;
+		}
+		100% {
+			background-position: 0% 0%;
 		}
 	}
 }
