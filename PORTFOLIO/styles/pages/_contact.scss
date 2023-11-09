@@ -1,4 +1,3 @@
-// Contacts.scss
 .contact-container {
 	.contacts-container {
 		font-family: "Roboto", sans-serif;
@@ -6,22 +5,14 @@
 		margin: 0 auto;
 		padding: 30px;
 		border-radius: 12px;
-		background: linear-gradient(
-			135deg,
-			#333,
-			#111
-		); /* Dark gradient background */
-		color: #ecf0f1; /* Light text color */
+		background: linear-gradient(135deg, #333, #111);
+		color: #ecf0f1;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		transition: background 0.3s ease, transform 0.3s ease;
 
 		&:hover {
-			background: linear-gradient(
-				135deg,
-				#222,
-				#000
-			); /* Darker gradient background on hover */
+			background: linear-gradient(135deg, #222, #000);
 			transform: scale(1.02);
 		}
 
@@ -32,7 +23,7 @@
 			text-transform: uppercase;
 			letter-spacing: 2px;
 			font-weight: 700;
-			color: #3498db; /* Accent color for heading */
+			color: #3498db;
 			transition: color 0.3s ease;
 		}
 
@@ -48,7 +39,7 @@
 			.detail-label {
 				font-weight: bold;
 				margin-right: 10px;
-				color: #e74c3c; /* Accent color for detail labels */
+				color: #e74c3c;
 			}
 		}
 
@@ -60,7 +51,7 @@
 				font-size: 24px;
 				margin-bottom: 15px;
 				text-align: center;
-				color: #3498db; /* Accent color for connect label */
+				color: #3498db;
 			}
 
 			.social-links-list {
