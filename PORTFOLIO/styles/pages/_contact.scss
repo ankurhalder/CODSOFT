@@ -45,6 +45,7 @@
 			.detail-label {
 				font-family: var(--font-playfair);
 				text-transform: uppercase;
+				letter-spacing: 3px;
 				margin-right: 2%;
 				font-weight: 600;
 				color: var(--orange-6);
@@ -52,16 +53,15 @@
 		}
 
 		.social-links-container {
-			margin-top: 30px;
-
 			.connect-label {
-				display: block;
-				font-size: 24px;
-				margin-bottom: 15px;
-				text-align: center;
-				color: #3498db;
+				@include flex-container(column, nowrap, center, center);
+				font-family: var(--font-playfair);
+				text-transform: capitalize;
+				font-size: var(--font-9);
+				letter-spacing: 3px;
+				margin-bottom: 5%;
+				color: var(--blue-2);
 			}
-
 			.social-links-list {
 				list-style: none;
 				padding: 0;
