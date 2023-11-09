@@ -1,11 +1,40 @@
 .dashboard-container {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: linear-gradient(to right, #1a1a1a, #2d2d2d);
 	font-family: "Montserrat", sans-serif;
 	color: #fff;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	&::before {
+		background: linear-gradient(
+			45deg,
+			rgba(255, 255, 255, 0.05) 25%,
+			transparent 25%,
+			transparent 50%,
+			rgba(255, 255, 255, 0.05) 50%,
+			rgba(255, 255, 255, 0.05) 75%,
+			transparent 75%,
+			transparent
+		);
+		opacity: 0.2; /* Adjust the opacity as needed */
+	}
+
+	&::after {
+		background: linear-gradient(to right, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a);
+	}
 
 	.profile-section {
 		display: flex;
@@ -72,6 +101,10 @@
 
 			.education {
 				margin-top: 30px;
+				background: rgba(255, 255, 255, 0.2);
+				--webkit-backdrop-filter: blur(10px);
+				border-radius: 10px;
+				padding: 20px;
 
 				h3 {
 					font-size: 24px;
@@ -92,6 +125,11 @@
 
 			.resume-section {
 				margin-top: 30px;
+				background: rgba(255, 255, 255, 0.2);
+				--webkit-backdrop-filter: blur(10px);
+
+				border-radius: 10px;
+				padding: 20px;
 
 				.resume-section-heading {
 					font-size: 24px;
@@ -102,12 +140,14 @@
 				.course-item {
 					margin-top: 20px;
 					padding: 20px;
-					background: #272727;
+					background: rgba(255, 255, 255, 0.2);
+					--webkit-backdrop-filter: blur(10px);
+
 					border-radius: 10px;
 					transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
 					&:hover {
-						background-color: #333;
+						background-color: rgba(255, 255, 255, 0.3);
 						box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 					}
 
