@@ -11,6 +11,11 @@
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 	animation: fadeIn 1s ease;
+	transition: transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.02);
+	}
 
 	.contacts-heading {
 		font-size: 36px;
