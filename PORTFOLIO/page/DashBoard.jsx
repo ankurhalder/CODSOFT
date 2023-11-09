@@ -1,28 +1,28 @@
+import React from "react";
 import courseData from "../data/courses";
+
 function DashBoard() {
 	const downloadCV = () => {
 		const cvLink = "/CV.pdf";
 		window.open(cvLink, "_blank");
 	};
+
 	return (
 		<div className="about-me-section">
 			<img src="/Ankur_Halder.jpg" alt="Ankur Halder" className="profile-pic" />
 			<div className="bio">
-				<h2>Your Name</h2>
-				<p>
-					Hi there! I'm a passionate [Your Role] with a love for [Your Field].
-					My journey in the industry has been an exciting ride, filled with
-					challenges and triumphs.
-				</p>
-				<p>
-					I specialize in [Your Skills], bringing [X] years of experience to the
-					table. Whether it's [Specific Skill 1], [Specific Skill 2], or
-					[Specific Skill 3], I thrive on turning ideas into reality.
-				</p>
-				<p>
-					My mission is to [Your Mission Statement]. I believe in the power of
-					[Your Core Beliefs] and am dedicated to [Your Goal].
-				</p>
+				<h2>Ankur Halder</h2>
+				<p>Male | 23 years old</p>
+
+				<div className="intro">
+					<p>
+						Hello! I'm Ankur Halder, a passionate computer science student with
+						a deep love for technology and web development. Currently pursuing
+						my B.Tech in Computer Science, I am on a journey to explore the vast
+						world of MERN stack and beyond.
+					</p>
+				</div>
+
 				<div className="education">
 					<h3>Education</h3>
 					<p>
@@ -30,7 +30,7 @@ function DashBoard() {
 						<br />
 						University Of Engineering & Management, New Town
 						<br />
-						2021 - 2025
+						Currently Pursuing (Expected Graduation: 2025)
 					</p>
 					<p>
 						<strong>Senior Secondary (XII), Science</strong>
@@ -51,6 +51,7 @@ function DashBoard() {
 						Percentage: 85.70%
 					</p>
 				</div>
+
 				<div className="resume-section">
 					<h2 className="resume-section-heading">Trainings/Courses</h2>
 					{courseData.map((course, index) => (
@@ -89,6 +90,7 @@ function DashBoard() {
 						</div>
 					))}
 				</div>
+
 				<button onClick={downloadCV}>Download CV</button>
 			</div>
 		</div>
