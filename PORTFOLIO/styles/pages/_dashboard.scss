@@ -1,0 +1,136 @@
+.dashboard-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// height: 100vh;
+	background-color: #f5f5f5;
+	font-family: "Arial", sans-serif;
+
+	.profile-section {
+		display: flex;
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		border-radius: 10px;
+		overflow: hidden;
+
+		.profile-pic {
+			max-width: 200px;
+			height: auto;
+			border-radius: 10px 0 0 10px;
+		}
+
+		.bio {
+			padding: 20px;
+
+			h2 {
+				font-size: 24px;
+				margin-bottom: 10px;
+				color: #333;
+			}
+
+			.info {
+				font-size: 14px;
+				color: #666;
+			}
+
+			.intro {
+				margin-top: 20px;
+				font-size: 16px;
+				color: #444;
+			}
+
+			.personal-details {
+				margin-top: 20px;
+
+				h3 {
+					font-size: 18px;
+					margin-bottom: 10px;
+					color: #333;
+				}
+
+				p {
+					font-size: 14px;
+					line-height: 1.6;
+					color: #555;
+				}
+			}
+
+			.education {
+				margin-top: 20px;
+
+				h3 {
+					font-size: 18px;
+					margin-bottom: 10px;
+					color: #333;
+				}
+
+				p {
+					font-size: 14px;
+					line-height: 1.6;
+					color: #555;
+
+					strong {
+						color: #007bff;
+					}
+				}
+			}
+
+			.resume-section {
+				margin-top: 20px;
+
+				.resume-section-heading {
+					font-size: 18px;
+					margin-bottom: 10px;
+					color: #333;
+				}
+
+				.course-item {
+					margin-top: 15px;
+					padding: 15px;
+					border: 1px solid #ddd;
+					border-radius: 8px;
+					transition: background-color 0.3s ease;
+
+					&:hover {
+						background-color: #f5f5f5;
+					}
+
+					.course-title {
+						font-size: 16px;
+						color: #333;
+					}
+
+					.course-institution,
+					.course-duration,
+					.course-certificate,
+					.course-credential,
+					.course-skills,
+					.course-description {
+						font-size: 14px;
+						color: #555;
+					}
+
+					.course-skills {
+						margin-top: 5px;
+					}
+				}
+			}
+
+			.download-cv-btn {
+				margin-top: 20px;
+				padding: 10px 15px;
+				font-size: 16px;
+				color: #fff;
+				background-color: #007bff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+
+				&:hover {
+					background-color: #0056b3;
+				}
+			}
+		}
+	}
+}
