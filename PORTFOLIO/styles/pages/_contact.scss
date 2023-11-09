@@ -39,6 +39,7 @@
 		@media (max-width: $breakpoint-tablet) {
 		}
 		@media (max-width: $breakpoint-phone) {
+			max-width: 320px;
 		}
 		.contacts-heading {
 			font-family: var(--font-elianto);
