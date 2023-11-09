@@ -8,6 +8,7 @@
 	@media (max-width: $breakpoint-large-tablet) {
 	}
 	@media (max-width: $breakpoint-tablet) {
+		min-height: 90dvh;
 	}
 	@media (max-width: $breakpoint-phone) {
 	}
@@ -132,6 +133,7 @@
 				@media (max-width: $breakpoint-large-tablet) {
 				}
 				@media (max-width: $breakpoint-tablet) {
+					gap: 30px;
 				}
 				@media (max-width: $breakpoint-phone) {
 				}
@@ -155,6 +157,8 @@
 						@media (max-width: $breakpoint-large-tablet) {
 						}
 						@media (max-width: $breakpoint-tablet) {
+							max-width: 70px;
+							max-height: 70px;
 						}
 						@media (max-width: $breakpoint-phone) {
 						}
