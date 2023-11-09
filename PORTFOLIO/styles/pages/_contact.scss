@@ -11,7 +11,7 @@
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
 	animation: fadeIn 1s ease, pulsate 3s infinite,
-		backgroundAnimation 8s infinite;
+		backgroundAnimation 10s infinite;
 
 	&:hover {
 		transform: scale(1.02);
@@ -62,7 +62,7 @@
 					border: 3px solid transparent;
 					background: linear-gradient(45deg, #e74c3c, #3498db);
 					transition: transform 0.3s ease, box-shadow 0.3s ease,
-						border-color 0.3s ease;
+						border-color 0.3s ease, filter 0.3s ease;
 					cursor: pointer;
 					display: flex;
 					align-items: center;
@@ -74,7 +74,7 @@
 						transform: scale(1.1) rotate(5deg);
 						box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 						border-color: #fff;
-						animation: shake 0.5s ease-in-out;
+						filter: brightness(1.2);
 					}
 
 					&:before {
@@ -132,32 +132,23 @@
 	@keyframes backgroundAnimation {
 		0% {
 			background-position: 0% 0%;
+			background-color: #3498db;
+		}
+		25% {
+			background-position: 50% 0%;
+			background-color: #2980b9;
 		}
 		50% {
 			background-position: 100% 0%;
+			background-color: #2c3e50;
+		}
+		75% {
+			background-position: 50% 100%;
+			background-color: #1abc9c;
 		}
 		100% {
-			background-position: 0% 0%;
-		}
-	}
-
-	@keyframes shake {
-		0%,
-		100% {
-			transform: translateX(0);
-		}
-		10%,
-		30%,
-		50%,
-		70%,
-		90% {
-			transform: translateX(-5px);
-		}
-		20%,
-		40%,
-		60%,
-		80% {
-			transform: translateX(5px);
+			background-position: 0% 100%;
+			background-color: #3498db;
 		}
 	}
 }
