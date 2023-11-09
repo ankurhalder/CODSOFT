@@ -2,7 +2,7 @@
 	min-height: 80dvh;
 	@include flex-container(column, nowrap, center, center);
 	.contacts-container {
-		max-width: 600px;
+		max-width: 700px;
 		margin: 0 auto;
 		padding: 30px;
 		border-radius: 12px;
@@ -19,20 +19,19 @@
 			);
 			transform: scale(1.02);
 		}
-
 		.contacts-heading {
-			font-size: 42px;
-			margin-bottom: 20px;
+			font-family: var(--font-elianto);
+			font-size: var(--font-6);
+			letter-spacing: 4px;
+			color: var(--blue-2);
+			margin-bottom: 4%;
 			text-align: center;
 			text-transform: uppercase;
-			letter-spacing: 2px;
-			font-weight: 700;
-			color: #3498db;
-			transition: color 0.3s ease;
+			transition: color 0.5s ease;
 		}
 
 		&:hover .contacts-heading {
-			color: #ecf0f1;
+			color: var(--white);
 		}
 
 		.contacts-detail {
