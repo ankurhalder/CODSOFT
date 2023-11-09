@@ -40,11 +40,6 @@ function Navbar({ isMenuOpen, setMenuOpen, closeMenu }) {
 							Contact
 						</Link>
 					</li>
-					<li>
-						<Link to="/resume" onClick={closeMenu}>
-							Resume
-						</Link>
-					</li>
 				</ul>
 			</nav>
 		</header>
