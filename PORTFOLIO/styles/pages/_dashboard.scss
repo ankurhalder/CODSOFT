@@ -1,25 +1,16 @@
 .dashboard-container {
 	width: 100%;
 	min-height: 100vh;
-	background: linear-gradient(to right, #0d0d0d, #1a1a1a, #0d0d0d, #1a1a1a);
-
 	.profile-section {
-		display: flex;
-		flex-direction: column;
+		@include flex-container(column, nowrap, center, center);
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
 		background: #272727;
-		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 		border-radius: 15px;
 		overflow: hidden;
 		transition: box-shadow 0.3s ease, transform 0.3s ease;
-
-		&:hover {
-			box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-			transform: scale(1.02);
-		}
-
 		.profile-pic {
 			max-width: 200px;
 			height: auto;
@@ -27,105 +18,122 @@
 			border-radius: 50%;
 			border: 5px solid #4b6cb7;
 			transition: transform 0.3s ease, border 0.3s ease;
-
 			&:hover {
 				transform: scale(1.1);
 				border-color: #182848;
 			}
 		}
-
 		.bio {
+			// @include flex-container(column, wrap, center, center);
 			padding: 30px;
-
 			h2 {
-				font-size: 36px;
-				margin-bottom: 15px;
-				color: #fff;
+				font-family: var(--font-elianto);
+				font-size: var(--font-6);
+				margin-bottom: 2%;
+				letter-spacing: 3px;
+				color: var(--white);
 				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 			}
-
 			.info {
-				font-size: 18px;
+				font-family: var(--font-tektur);
+				font-size: var(--font-12);
+				letter-spacing: 2px;
+				font-weight: 400;
 				color: #a4acc4;
 			}
-
 			.intro {
-				margin-top: 30px;
-				font-size: 20px;
+				margin-top: 3%;
+				font-family: var(--font-tektur);
+				font-size: var(--font-12);
+				letter-spacing: 2px;
+				font-weight: 400;
 				color: #d3d9eb;
 				line-height: 1.5;
 				text-align: justify;
 			}
-
 			.personal-details {
-				margin-top: 30px;
-
+				margin-top: 3%;
 				h3 {
-					font-size: 24px;
-					margin-bottom: 15px;
-					color: #fff;
+					font-family: var(--font-elianto);
+					font-size: var(--font-9);
+					margin-bottom: 2%;
+					letter-spacing: 3px;
+					color: var(--white);
+					text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 				}
 
 				p {
-					font-size: 18px;
+					font-family: var(--font-roboto);
+					font-size: var(--font-12);
+					letter-spacing: 3px;
+					font-weight: 400;
 					line-height: 1.6;
 					color: #a4acc4;
 				}
 			}
 
 			.education {
-				margin-top: 30px;
-				background: rgba(255, 255, 255, 0.2);
+				margin-top: 3%;
+				background: rgba(255, 255, 255, 0.1);
 				--webkit-backdrop-filter: blur(10px);
 				border-radius: 10px;
 				padding: 20px;
-
+				transition: background-color 0.3s ease, box-shadow 0.3s ease;
 				h3 {
-					font-size: 24px;
-					margin-bottom: 15px;
-					color: #fff;
+					font-family: var(--font-elianto);
+					font-size: var(--font-9);
+					margin-bottom: 2%;
+					letter-spacing: 3px;
+					color: var(--white);
+					text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 				}
 
 				p {
-					font-size: 18px;
+					font-family: var(--font-roboto);
+					font-size: var(--font-12);
+					letter-spacing: 3px;
+					font-weight: 400;
 					line-height: 1.6;
 					color: #a4acc4;
 
 					strong {
+						font-family: var(--font-tektur);
 						color: #7d88a8;
+						font-weight: 600;
+						line-height: 2;
 					}
 				}
 			}
 
 			.resume-section {
 				margin-top: 30px;
-				background: rgba(255, 255, 255, 0.2);
+				background: rgba(255, 255, 255, 0.1);
 				--webkit-backdrop-filter: blur(10px);
 				border-radius: 10px;
 				padding: 20px;
-
 				.resume-section-heading {
-					font-size: 24px;
-					margin-bottom: 15px;
-					color: #fff;
+					font-family: var(--font-elianto);
+					font-size: var(--font-9);
+					margin-bottom: 2%;
+					letter-spacing: 3px;
+					color: var(--white);
+					text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 				}
 
 				.course-item {
-					margin-top: 20px;
+					margin-top: 2%;
 					padding: 20px;
-					background: rgba(255, 255, 255, 0.2);
+					background: rgba(255, 255, 255, 0.1);
 					--webkit-backdrop-filter: blur(10px);
 					border-radius: 10px;
 					transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-					&:hover {
-						background-color: rgba(255, 255, 255, 0.3);
-						box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-					}
-
 					.course-title {
-						font-size: 20px;
-						color: #4b6cb7;
+						font-family: var(--font-elianto);
+						font-size: var(--font-11);
+						margin-bottom: 5%;
+						letter-spacing: 2px;
+						color: var(--blue-2);
+						line-height: 2;
 					}
 
 					.course-institution,
@@ -134,8 +142,12 @@
 					.course-credential,
 					.course-skills,
 					.course-description {
-						font-size: 18px;
-						color: #7d88a8;
+						font-family: var(--font-roboto);
+						font-size: var(--font-12);
+						letter-spacing: 3px;
+						font-weight: 400;
+						line-height: 1.6;
+						color: var(--white);
 					}
 
 					.course-skills {
@@ -145,11 +157,15 @@
 			}
 
 			.download-cv-btn {
-				margin-top: 30px;
+				@include flex-container(row, nowrap, center, center);
+				margin: 3% auto;
 				padding: 20px 30px;
-				font-size: 24px;
-				font-weight: bold;
-				color: #fff;
+				font-family: var(--font-orbitron);
+				font-size: var(--font-11);
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: 3px;
+				color: var(--white);
 				background: linear-gradient(to right, #4b6cb7, #182848);
 				border: none;
 				border-radius: 8px;
