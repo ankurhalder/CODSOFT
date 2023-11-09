@@ -12,13 +12,8 @@ export default function Footer({ closeMenu }) {
 						</Link>
 					</li>
 					<li>
-						<Link to="/about" onClick={closeMenu}>
-							About
-						</Link>
-					</li>
-					<li>
-						<Link to="/contact" onClick={closeMenu}>
-							Contact
+						<Link to="/skills" onClick={closeMenu}>
+							Skills
 						</Link>
 					</li>
 					<li>
@@ -27,13 +22,8 @@ export default function Footer({ closeMenu }) {
 						</Link>
 					</li>
 					<li>
-						<Link to="/resume" onClick={closeMenu}>
-							Resume
-						</Link>
-					</li>
-					<li>
-						<Link to="/skills" onClick={closeMenu}>
-							Skills
+						<Link to="/contact" onClick={closeMenu}>
+							Contact
 						</Link>
 					</li>
 				</ul>
