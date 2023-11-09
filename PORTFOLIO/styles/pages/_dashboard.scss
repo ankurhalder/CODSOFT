@@ -2,70 +2,85 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	// height: 100vh;
-	background-color: #f5f5f5;
+	height: 100vh;
+	background: linear-gradient(to right, #3494e6, #ec6ead);
 	font-family: "Arial", sans-serif;
+	color: #fff;
 
 	.profile-section {
 		display: flex;
-		background-color: #fff;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		border-radius: 10px;
+		background: linear-gradient(to right, #fff, #f0f0f0);
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
 		overflow: hidden;
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+			transform: scale(1.02);
+		}
 
 		.profile-pic {
 			max-width: 200px;
 			height: auto;
-			border-radius: 10px 0 0 10px;
+			border-radius: 15px 0 0 15px;
+			transition: transform 0.3s ease;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
 
 		.bio {
-			padding: 20px;
+			padding: 30px;
 
 			h2 {
-				font-size: 24px;
-				margin-bottom: 10px;
+				font-size: 32px;
+				margin-bottom: 15px;
 				color: #333;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 			}
 
 			.info {
-				font-size: 14px;
-				color: #666;
+				font-size: 18px;
+				color: #777;
 			}
 
 			.intro {
-				margin-top: 20px;
-				font-size: 16px;
+				margin-top: 30px;
+				font-size: 20px;
 				color: #444;
+				line-height: 1.5;
+				text-align: justify;
 			}
 
 			.personal-details {
-				margin-top: 20px;
+				margin-top: 30px;
 
 				h3 {
-					font-size: 18px;
-					margin-bottom: 10px;
+					font-size: 24px;
+					margin-bottom: 15px;
 					color: #333;
 				}
 
 				p {
-					font-size: 14px;
+					font-size: 18px;
 					line-height: 1.6;
 					color: #555;
 				}
 			}
 
 			.education {
-				margin-top: 20px;
+				margin-top: 30px;
 
 				h3 {
-					font-size: 18px;
-					margin-bottom: 10px;
+					font-size: 24px;
+					margin-bottom: 15px;
 					color: #333;
 				}
 
 				p {
-					font-size: 14px;
+					font-size: 18px;
 					line-height: 1.6;
 					color: #555;
 
@@ -76,27 +91,28 @@
 			}
 
 			.resume-section {
-				margin-top: 20px;
+				margin-top: 30px;
 
 				.resume-section-heading {
-					font-size: 18px;
-					margin-bottom: 10px;
+					font-size: 24px;
+					margin-bottom: 15px;
 					color: #333;
 				}
 
 				.course-item {
-					margin-top: 15px;
-					padding: 15px;
-					border: 1px solid #ddd;
-					border-radius: 8px;
-					transition: background-color 0.3s ease;
+					margin-top: 20px;
+					padding: 20px;
+					background: #fff;
+					border-radius: 10px;
+					transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
 					&:hover {
-						background-color: #f5f5f5;
+						background-color: #f9f9f9;
+						box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 					}
 
 					.course-title {
-						font-size: 16px;
+						font-size: 20px;
 						color: #333;
 					}
 
@@ -106,29 +122,31 @@
 					.course-credential,
 					.course-skills,
 					.course-description {
-						font-size: 14px;
+						font-size: 18px;
 						color: #555;
 					}
 
 					.course-skills {
-						margin-top: 5px;
+						margin-top: 10px;
 					}
 				}
 			}
 
 			.download-cv-btn {
-				margin-top: 20px;
-				padding: 10px 15px;
-				font-size: 16px;
+				margin-top: 30px;
+				padding: 20px 30px;
+				font-size: 24px;
+				font-weight: bold;
 				color: #fff;
-				background-color: #007bff;
+				background: linear-gradient(to right, #007bff, #0056b3);
 				border: none;
-				border-radius: 5px;
+				border-radius: 8px;
 				cursor: pointer;
-				transition: background-color 0.3s ease;
+				transition: background 0.3s ease, transform 0.3s ease;
 
 				&:hover {
-					background-color: #0056b3;
+					background: linear-gradient(to right, #0056b3, #003366);
+					transform: scale(1.05);
 				}
 			}
 		}
