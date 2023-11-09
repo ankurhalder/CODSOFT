@@ -35,14 +35,19 @@
 		}
 
 		.contacts-detail {
-			margin-bottom: 15px;
+			font-family: var(--font-tektur);
+			font-size: var(--font-10);
+			font-weight: 400;
+			letter-spacing: 3px;
+			margin-bottom: 5%;
 			text-align: center;
-			line-height: 1.6;
-
+			line-height: 2;
 			.detail-label {
-				font-weight: bold;
-				margin-right: 10px;
-				color: #e74c3c;
+				font-family: var(--font-playfair);
+				text-transform: uppercase;
+				margin-right: 2%;
+				font-weight: 600;
+				color: var(--orange-6);
 			}
 		}
 
