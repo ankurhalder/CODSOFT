@@ -10,6 +10,7 @@
 	color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 	overflow: hidden;
+	animation: fadeIn 1s ease;
 
 	.contacts-heading {
 		font-size: 36px;
@@ -48,10 +49,10 @@
 					width: 60px;
 					height: 60px;
 					border-radius: 50%;
-					border: 3px solid #fff;
-					background-color: rgba(255, 255, 255, 0.5);
-					transition: transform 0.3s ease, border-color 0.3s ease,
-						box-shadow 0.3s ease;
+					border: 3px solid transparent;
+					background: linear-gradient(45deg, #e74c3c, #3498db);
+					transition: transform 0.3s ease, box-shadow 0.3s ease,
+						border-color 0.3s ease;
 					cursor: pointer;
 					display: flex;
 					align-items: center;
@@ -61,8 +62,8 @@
 
 					&:hover {
 						transform: scale(1.1);
-						border-color: #fff;
 						box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+						border-color: #fff;
 					}
 
 					&:before {
@@ -93,6 +94,15 @@
 					}
 				}
 			}
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
 		}
 	}
 
