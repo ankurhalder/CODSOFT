@@ -1,26 +1,30 @@
 // Contacts.scss
 
 .contacts-container {
-	font-family: "Arial", sans-serif;
+	font-family: "Roboto", sans-serif;
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 30px;
 	border-radius: 12px;
-	background: linear-gradient(135deg, #3498db, #6c5ce7);
-	color: #fff;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	background: #1f1f1f; /* Dark background color */
+	color: #ecf0f1; /* Light text color */
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
+	transition: background 0.3s ease;
 
 	&:hover {
+		background: #262626; /* Darker background color on hover */
 		transform: scale(1.02);
 	}
 
 	.contacts-heading {
-		font-size: 36px;
+		font-size: 42px;
 		margin-bottom: 20px;
 		text-align: center;
 		text-transform: uppercase;
-		letter-spacing: 1px;
+		letter-spacing: 2px;
+		font-weight: 700;
+		color: #3498db; /* Accent color for heading */
 		transition: color 0.3s ease;
 	}
 
@@ -36,6 +40,7 @@
 		.detail-label {
 			font-weight: bold;
 			margin-right: 10px;
+			color: #e74c3c; /* Accent color for detail labels */
 		}
 	}
 
@@ -47,6 +52,7 @@
 			font-size: 24px;
 			margin-bottom: 15px;
 			text-align: center;
+			color: #3498db; /* Accent color for connect label */
 		}
 
 		.social-links-list {
@@ -62,10 +68,10 @@
 					width: 60px;
 					height: 60px;
 					border-radius: 50%;
-					border: 3px solid transparent;
-					background: linear-gradient(45deg, #e74c3c, #3498db);
+					border: 3px solid #ecf0f1;
+					background: linear-gradient(45deg, #3498db, #2ecc71);
 					transition: transform 0.3s ease, box-shadow 0.3s ease,
-						border-color 0.3s ease, filter 0.3s ease;
+						filter 0.3s ease;
 					cursor: pointer;
 					display: flex;
 					align-items: center;
@@ -76,7 +82,6 @@
 					&:hover {
 						transform: scale(1.1) rotate(5deg);
 						box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-						border-color: #fff;
 						filter: brightness(1.2);
 					}
 
