@@ -1,8 +1,10 @@
+import { Fragment } from "react";
+import { Contacts } from "../components";
 function ContactMe() {
 	return (
-		<div>
-			<h1>Contact Me</h1>
-		</div>
+		<Fragment>
+			<Contacts></Contacts>
+		</Fragment>
 	);
 }
 
