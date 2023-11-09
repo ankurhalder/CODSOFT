@@ -1,7 +1,7 @@
 .contact-container {
-	min-height: 80vh;
+	min-height: 80dvh;
+	@include flex-container(column, nowrap, center, center);
 	.contacts-container {
-		font-family: "Roboto", sans-serif;
 		max-width: 600px;
 		margin: 0 auto;
 		padding: 30px;
