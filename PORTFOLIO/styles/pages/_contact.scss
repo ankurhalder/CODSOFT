@@ -5,20 +5,21 @@
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 20px;
-	border: 1px solid #ddd;
 	border-radius: 8px;
-	background-color: #fff;
+	background-color: #f7f7f7;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 	.contacts-heading {
 		font-size: 28px;
 		margin-bottom: 15px;
 		color: #333;
+		text-align: center;
 	}
 
 	.contacts-detail {
 		margin-bottom: 10px;
 		color: #555;
+		text-align: center;
 	}
 
 	.social-links-container {
@@ -29,12 +30,14 @@
 			font-size: 20px;
 			margin-bottom: 10px;
 			color: #333;
+			text-align: center;
 		}
 
 		.social-links-list {
 			list-style: none;
 			padding: 0;
 			display: flex;
+			justify-content: center;
 
 			.social-link-item {
 				margin-right: 15px;
