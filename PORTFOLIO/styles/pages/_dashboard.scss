@@ -3,13 +3,13 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: linear-gradient(to right, #3494e6, #ec6ead);
-	font-family: "Arial", sans-serif;
+	background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+	font-family: "Montserrat", sans-serif;
 	color: #fff;
 
 	.profile-section {
 		display: flex;
-		background: linear-gradient(to right, #fff, #f0f0f0);
+		background: #272727;
 		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 		border-radius: 15px;
 		overflow: hidden;
@@ -35,21 +35,21 @@
 			padding: 30px;
 
 			h2 {
-				font-size: 32px;
+				font-size: 36px;
 				margin-bottom: 15px;
-				color: #333;
+				color: #fff;
 				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 			}
 
 			.info {
 				font-size: 18px;
-				color: #777;
+				color: #a4acc4;
 			}
 
 			.intro {
 				margin-top: 30px;
 				font-size: 20px;
-				color: #444;
+				color: #d3d9eb;
 				line-height: 1.5;
 				text-align: justify;
 			}
@@ -60,13 +60,13 @@
 				h3 {
 					font-size: 24px;
 					margin-bottom: 15px;
-					color: #333;
+					color: #fff;
 				}
 
 				p {
 					font-size: 18px;
 					line-height: 1.6;
-					color: #555;
+					color: #a4acc4;
 				}
 			}
 
@@ -76,16 +76,16 @@
 				h3 {
 					font-size: 24px;
 					margin-bottom: 15px;
-					color: #333;
+					color: #fff;
 				}
 
 				p {
 					font-size: 18px;
 					line-height: 1.6;
-					color: #555;
+					color: #a4acc4;
 
 					strong {
-						color: #007bff;
+						color: #7d88a8;
 					}
 				}
 			}
@@ -96,24 +96,24 @@
 				.resume-section-heading {
 					font-size: 24px;
 					margin-bottom: 15px;
-					color: #333;
+					color: #fff;
 				}
 
 				.course-item {
 					margin-top: 20px;
 					padding: 20px;
-					background: #fff;
+					background: #272727;
 					border-radius: 10px;
 					transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
 					&:hover {
-						background-color: #f9f9f9;
+						background-color: #333;
 						box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 					}
 
 					.course-title {
 						font-size: 20px;
-						color: #333;
+						color: #4b6cb7;
 					}
 
 					.course-institution,
@@ -123,7 +123,7 @@
 					.course-skills,
 					.course-description {
 						font-size: 18px;
-						color: #555;
+						color: #7d88a8;
 					}
 
 					.course-skills {
@@ -138,7 +138,7 @@
 				font-size: 24px;
 				font-weight: bold;
 				color: #fff;
-				background: linear-gradient(to right, #007bff, #0056b3);
+				background: linear-gradient(to right, #4b6cb7, #182848);
 				border: none;
 				border-radius: 8px;
 				cursor: pointer;
@@ -146,7 +146,7 @@
 					box-shadow 0.3s ease;
 
 				&:hover {
-					background: linear-gradient(to right, #0056b3, #003366);
+					background: linear-gradient(to right, #182848, #001030);
 					transform: scale(1.05);
 					box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 				}
