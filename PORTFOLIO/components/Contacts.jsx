@@ -1,12 +1,16 @@
-import React from "react";
-
 function Contacts() {
 	return (
 		<div className="contacts-container">
 			<h2 className="contacts-heading">Contact Information</h2>
-			<p className="contacts-detail">Email: ankur.halder12345@gmail.com</p>
-			<p className="contacts-detail">Phone: +91 97489 03490</p>
-			<p className="contacts-detail">Nationality: Indian</p>
+			<p className="contacts-email contacts-detail">
+				<span className="detail-label">Email:</span> ankur.halder12345@gmail.com
+			</p>
+			<p className="contacts-phone contacts-detail">
+				<span className="detail-label">Phone:</span> +91 97489 03490
+			</p>
+			<p className="contacts-nationality contacts-detail">
+				<span className="detail-label">Nationality:</span> Indian
+			</p>
 			<div className="social-links-container">
 				<span className="connect-label">Connect Me With:</span>
 				<ul className="social-links-list">
