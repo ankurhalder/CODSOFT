@@ -14,7 +14,7 @@
 	color: #ecf0f1; /* Light text color */
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 	overflow: hidden;
-	transition: background 0.3s ease;
+	transition: background 0.3s ease, transform 0.3s ease;
 
 	&:hover {
 		background: linear-gradient(
