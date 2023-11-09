@@ -142,11 +142,13 @@
 				border: none;
 				border-radius: 8px;
 				cursor: pointer;
-				transition: background 0.3s ease, transform 0.3s ease;
+				transition: background 0.3s ease, transform 0.3s ease,
+					box-shadow 0.3s ease;
 
 				&:hover {
 					background: linear-gradient(to right, #0056b3, #003366);
 					transform: scale(1.05);
+					box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 				}
 			}
 		}
