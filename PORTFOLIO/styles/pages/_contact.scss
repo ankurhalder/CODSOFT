@@ -4,15 +4,15 @@
 	font-family: "Arial", sans-serif;
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 20px;
-	border-radius: 8px;
+	padding: 30px;
+	border-radius: 12px;
 	background-color: #f9f9f9;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
 	.contacts-heading {
-		font-size: 32px;
+		font-size: 36px;
 		margin-bottom: 20px;
-		color: #2c3e50;
+		color: #3498db;
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -30,7 +30,7 @@
 			display: block;
 			font-size: 24px;
 			margin-bottom: 15px;
-			color: #2c3e50;
+			color: #3498db;
 			text-align: center;
 		}
 
@@ -48,11 +48,13 @@
 					height: 60px;
 					border-radius: 50%;
 					border: 3px solid #3498db;
-					transition: transform 0.3s ease;
+					background-color: #fff;
+					transition: transform 0.3s ease, border-color 0.3s ease;
 					cursor: pointer;
 
 					&:hover {
 						transform: scale(1.2);
+						border-color: #2c3e50;
 					}
 				}
 			}
